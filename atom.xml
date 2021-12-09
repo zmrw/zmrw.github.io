@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zmrw.github.io</id>
     <title>追梦人物</title>
-    <updated>2021-12-09T05:30:20.966Z</updated>
+    <updated>2021-12-09T05:41:54.236Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zmrw.github.io"/>
     <link rel="self" href="https://zmrw.github.io/atom.xml"/>
@@ -10,6 +10,43 @@
     <logo>https://zmrw.github.io/images/avatar.png</logo>
     <icon>https://zmrw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 追梦人物</rights>
+    <entry>
+        <title type="html"><![CDATA[digitalocean创建16.04版本水滴]]></title>
+        <id>https://zmrw.github.io/post/digitalocean-chuang-jian-1604-ban-ben-shui-di/</id>
+        <link href="https://zmrw.github.io/post/digitalocean-chuang-jian-1604-ban-ben-shui-di/">
+        </link>
+        <updated>2021-12-09T05:31:40.000Z</updated>
+        <content type="html"><![CDATA[<p>因为程序只能在ubuntu16.04上运行，但是digitalocean停止该镜像，创建不成功</p>
+<pre><code class="language-python">data = {
+    &quot;name&quot;: &quot;ceshi&quot;,
+    &quot;region&quot;: &quot;nyc3&quot;,
+    &quot;size&quot;: &quot;s-1vcpu-2gb&quot;,
+    &quot;image&quot;: &quot;ubuntu-16-04-x64&quot;,
+}
+b = requests.post(url='https://api.digitalocean.com/v2/droplets', data=json.dumps(data), headers=headers)
+print(b.text)
+# {&quot;id&quot;:&quot;unprocessable_entity&quot;,&quot;message&quot;:&quot;You specified an invalid image for Droplet creation.&quot;}
+</code></pre>
+<p>给他们技术发送邮件，可以通过自建镜像创建</p>
+<h3 id="方法链接">方法链接</h3>
+<pre><code class="language-python">https://docs.digitalocean.com/products/images/custom-images/how-to/
+</code></pre>
+<h3 id="镜像下载">镜像下载</h3>
+<pre><code class="language-python">https://cloud-images.ubuntu.com/releases/xenial/release/
+</code></pre>
+<p><em><strong>注意：digitalocean不支持iso，需要下载img格式</strong></em></p>
+<p>镜像创建好申请vps就可以选择自己的镜像，但是只能通过密钥方式来申请，通过密钥来登录十分不习惯，因此我们只能申请后在进行修改</p>
+<h3 id="设置root账户密码">设置root账户密码</h3>
+<pre><code class="language-python">sudo passwd root
+</code></pre>
+<h3 id="修改sshd_config">修改sshd_config</h3>
+<pre><code class="language-python">vi /etc/ssh/sshd_config
+</code></pre>
+<h3 id="重启sshd">重启sshd</h3>
+<pre><code class="language-python">service sshd restart
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Python requests模块使用代理]]></title>
         <id>https://zmrw.github.io/post/python-requests-mo-kuai-shi-yong-dai-li/</id>
@@ -1109,45 +1146,6 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 </code></pre>
 <p>系统打印出这些信息，说明服务器启动成功了</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Django常用命令]]></title>
-        <id>https://zmrw.github.io/post/django-chang-yong-ming-ling/</id>
-        <link href="https://zmrw.github.io/post/django-chang-yong-ming-ling/">
-        </link>
-        <updated>2021-12-09T02:56:35.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="1-创建一个项目django-adminpy-startproject-项目名称">1. 创建一个项目：django-admin.py startproject &lt;项目名称&gt;</h3>
-<pre><code class="language-python">django-admin.py startproject my_project
-</code></pre>
-<h3 id="2-创建一个应用python-managepy-startapp-应用名称">2. 创建一个应用：python manage.py startapp &lt;应用名称&gt;</h3>
-<pre><code class="language-python">python manage.py startapp my_app
-</code></pre>
-<h3 id="3-启动项目python-managepy-runserver-web端口号">3. 启动项目：python manage.py runserver &lt;web端口号&gt;</h3>
-<pre><code class="language-python">python manage.py runserver 0.0.0.0:9999
-</code></pre>
-<h3 id="4-同步更改数据库表或字段">4. 同步更改数据库表或字段</h3>
-<pre><code class="language-python">   创建更改的文件
-   python manage.py makemigrations
-   将生成的py文件应用到数据库
-   python manage.py migrate
-
-</code></pre>
-<h3 id="5-清空数据库">5. 清空数据库</h3>
-<pre><code class="language-python">python manage.py flush
-</code></pre>
-<h3 id="6-创建超级管理员">6. 创建超级管理员</h3>
-<pre><code class="language-python">python manage.py createsuperuser
-</code></pre>
-<h3 id="7-修改用户密码">7. 修改用户密码</h3>
-<pre><code class="language-python">python manage.py changepassword username
-</code></pre>
-<h3 id="8收集静态文件">8.收集静态文件</h3>
-<pre><code class="language-python">python3 manage.py collectstatic
-</code></pre>
-<h3 id="9导出数据">9.导出数据</h3>
-<pre><code class="language-python">python manage.py dumpdata &gt; mysite_all_data.json
-</code></pre>
 ]]></content>
     </entry>
 </feed>
