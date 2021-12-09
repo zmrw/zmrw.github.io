@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zmrw.github.io</id>
     <title>追梦人物</title>
-    <updated>2021-12-09T05:17:32.281Z</updated>
+    <updated>2021-12-09T05:22:49.355Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zmrw.github.io"/>
     <link rel="self" href="https://zmrw.github.io/atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://zmrw.github.io/images/avatar.png</logo>
     <icon>https://zmrw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 追梦人物</rights>
+    <entry>
+        <title type="html"><![CDATA[通过js将网站跳转到另一个网站]]></title>
+        <id>https://zmrw.github.io/post/tong-guo-js-jiang-wang-zhan-tiao-zhuan-dao-ling-yi-ge-wang-zhan/</id>
+        <link href="https://zmrw.github.io/post/tong-guo-js-jiang-wang-zhan-tiao-zhuan-dao-ling-yi-ge-wang-zhan/">
+        </link>
+        <updated>2021-12-09T05:22:01.000Z</updated>
+        <content type="html"><![CDATA[<p>制作了一下采集内容网站，想将客户点击采集页面跳转到正规页面，可以使用以下js</p>
+<pre><code class="language-javascript">var regexp=/\.(google|yahoo|msn|goo|ask|docomo|aol|bing|biglobe|nifty|fresheye|ceek|excite)(\.[a-z0-9\-]+){1,2}\//ig;
+var where =document.referrer;
+if(regexp.test(where))
+{
+window.location.href='https://www.sensorco2.com/product_list/'
+}
+</code></pre>
+<p>将js代码放在采集页面最上方即可</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Google Ads 学习笔记]]></title>
         <id>https://zmrw.github.io/post/google-ads-xue-xi-bi-ji/</id>
