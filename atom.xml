@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zmrw.github.io</id>
-    <title>Gridea</title>
-    <updated>2021-12-09T03:07:38.820Z</updated>
+    <title>追梦人物</title>
+    <updated>2021-12-09T03:11:44.060Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zmrw.github.io"/>
     <link rel="self" href="https://zmrw.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://zmrw.github.io/images/avatar.png</logo>
     <icon>https://zmrw.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, 追梦人物</rights>
     <entry>
         <title type="html"><![CDATA[通过bing获取潜在客户电话，邮箱]]></title>
         <id>https://zmrw.github.io/post/tong-guo-bing-huo-qu-qian-zai-ke-hu-dian-hua-you-xiang/</id>
