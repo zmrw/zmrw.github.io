@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zmrw.github.io</id>
     <title>追梦人物</title>
-    <updated>2021-12-11T02:10:49.867Z</updated>
+    <updated>2021-12-11T02:12:23.677Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zmrw.github.io"/>
     <link rel="self" href="https://zmrw.github.io/atom.xml"/>
@@ -141,15 +141,10 @@ with open(keywords, encoding='utf-8') as f:
             domain: str = 'com',
             proxies: Dict = proxies
     ):
-    ```
-    
-## 总结
-目前使用的方式三进行翻译，以这样的目录结构存放对应的语种，直接运行脚本即可，会自动以目录为目标语种进行翻译
-![](https://zmrw.github.io/post-images/1639188511209.png)
-
-
-    
 </code></pre>
+<h2 id="总结">总结</h2>
+<p>目前使用的方式三进行翻译，以这样的目录结构存放对应的语种，直接运行脚本即可，会自动以目录为目标语种进行翻译<br>
+<img src="https://zmrw.github.io/post-images/1639188511209.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
