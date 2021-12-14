@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zmrw.github.io</id>
     <title>追梦人物</title>
-    <updated>2021-12-11T02:14:55.145Z</updated>
+    <updated>2021-12-14T03:15:29.497Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zmrw.github.io"/>
     <link rel="self" href="https://zmrw.github.io/atom.xml"/>
@@ -10,6 +10,57 @@
     <logo>https://zmrw.github.io/images/avatar.png</logo>
     <icon>https://zmrw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 追梦人物</rights>
+    <entry>
+        <title type="html"><![CDATA[markdown代码高亮，并显示行号]]></title>
+        <id>https://zmrw.github.io/post/markdown-dai-ma-gao-liang-bing-xian-shi-xing-hao/</id>
+        <link href="https://zmrw.github.io/post/markdown-dai-ma-gao-liang-bing-xian-shi-xing-hao/">
+        </link>
+        <updated>2021-12-14T03:13:46.000Z</updated>
+        <content type="html"><![CDATA[<p>使用django,制作一个博客网站，详情页内容使用markdown编写，记录一下使代码高亮，已经加行号</p>
+<h3 id="1引入css文件">1.引入css文件</h3>
+<pre><code class="language-python">&lt;link href=&quot;https://cdn.bootcss.com/highlight.js/9.15.8/styles/github.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;style&gt;
+        .codehilite {
+            padding: 0;
+        }
+
+        /* for block of numbers */
+        .hljs-ln-numbers {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            text-align: center;
+            color: #ccc;
+            border-right: 1px solid #CCC;
+            vertical-align: top;
+            padding-right: 5px;
+        }
+
+        .hljs-ln-n {
+            width: 30px;
+        }
+
+        /* for block of code */
+        .hljs-ln .hljs-ln-code {
+            padding-left: 10px;
+            white-space: pre;
+        }
+    &lt;/style&gt;
+</code></pre>
+<h3 id="2引入js文件">2.引入js文件</h3>
+<pre><code class="language-python">&lt;script src=&quot;https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.bootcss.com/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        hljs.initHighlightingOnLoad();
+        hljs.initLineNumbersOnLoad();
+    &lt;/script&gt;
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[批量翻译英语关键词到其它小语种]]></title>
         <id>https://zmrw.github.io/post/pi-liang-fan-yi-ying-yu-guan-jian-ci-dao-qi-ta-xiao-yu-chong/</id>
@@ -755,279 +806,6 @@ https://www.example.com/kidsbikes</p>
 </code></pre>
 <h3 id="12重启lnmp">12.重启lnmp</h3>
 <p>至此，项目配置完毕</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[通过bing获取潜在客户电话，邮箱]]></title>
-        <id>https://zmrw.github.io/post/tong-guo-bing-huo-qu-qian-zai-ke-hu-dian-hua-you-xiang/</id>
-        <link href="https://zmrw.github.io/post/tong-guo-bing-huo-qu-qian-zai-ke-hu-dian-hua-you-xiang/">
-        </link>
-        <updated>2021-12-09T03:05:39.000Z</updated>
-        <content type="html"><![CDATA[<p>公司做的是传感器行业，属于上游企业，下游很多生产厂家需要用到传感器，以此为背景，编写爬虫帮助公司获取潜在客户邮箱，电话，这里以<strong>CO2 DETECTION</strong>这个关键词为例，如需获取其他产品，只需要更换关键词即可</p>
-<h3 id="1根据关键词生成bing-base_url">1.根据关键词生成bing base_url</h3>
-<pre><code class="language-python">import re
-
-
-def get_bing_url(keywords):
-    keywords = keywords.strip('\n')
-    bing_url = re.sub(r'^', 'https://www.bing.com/search?q=', keywords)
-    bing_url = re.sub(r'\s', '+', bing_url)
-    return bing_url
-
-
-if __name__ == '__main__':
-    bing_url = get_bing_url('CO2 DETECTION')
-    print(bing_url)
-
-</code></pre>
-<h3 id="2根据bing翻页规则模拟bing翻页链接">2.根据bing翻页规则，模拟bing翻页链接</h3>
-<pre><code class="language-python">bing_url = get_bing_url(keywords.keywords)
-    for i in range(1, 100):  # 通过for in来翻页
-        print(i)
-        time.sleep(random.randint(3, 5))
-        if i == 1:
-            url = bing_url
-        else:
-            url = bing_url + '&amp;qs=ds&amp;first=' + str((i * 10) - 1) + '&amp;FORM=PERE'
-</code></pre>
-<h3 id="3使用selenium模拟打开链接获取网站源码">3.使用selenium模拟打开链接，获取网站源码</h3>
-<p>我这里用的是selenium，模拟游览器打开翻页，当然也可以用requests(访问量大的话，爬取的数据相同，所以更换selenium)</p>
-<pre><code class="language-python">        try:
-            browser.set_page_load_timeout(100)  # 设置网页加载超时时间为20秒
-            browser.get(url)
-            cookie_ = browser.get_cookies()
-            # browser.add_cookie(cookie_dict=cookie_)
-            html = browser.page_source
-        except Exception as e:
-            with open('error.txt', 'a', encoding='utf-8') as f:
-                f.write(str(e) + '\n')
-            pass
-</code></pre>
-<h3 id="4利用xpath获取网站源码从中提取url">4.利用xpath获取网站源码，从中提取url</h3>
-<pre><code class="language-python">tree = etree.HTML(html)
-            li_list = tree.xpath('//ol[@id=&quot;b_results&quot;]//li[@class=&quot;b_algo&quot;]')
-            for li in li_list:
-                try:
-                    url_text = li.xpath('./div/a/@href')[0]
-                    # print(url_text)
-                except Exception as e:
-                    with open('url.txt', 'a', encoding='utf-8') as f:
-                        f.write(str(e) + url + '\n')
-                    pass
-                else:
-                    domain_pattern = re.compile(r'[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+\.?')
-                    domain_text = re.search(r'[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+\.?',url_text).group()
-                    print(domain_text)
-                    domain = Domain.objects.filter(domain=domain_text).exists()
-                    if domain:
-                        print('domain存在:' + url_text)
-                        pass
-                    else:
-                        domain = Domain(domain=domain_text, keywords=keywords)
-                        domain.save()
-                    pass
-</code></pre>
-<p>在这个使用了正则获取链接中域名，因为有可能一个产品有很多不同的链接，减少工作量，直接以域名去重</p>
-<h3 id="5完整代码如下">5.完整代码如下</h3>
-<pre><code class="language-python">import requests
-import re
-from lxml.html import etree
-import os, sys
-import django
-from workhelp import settings
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-import time
-import random
-
-sys.path.append('../../')
-os.environ.setdefault(&quot;DJANGO_SETTINGS_MODULE&quot;, &quot;workhelp.settings&quot;)
-django.setup()
-from infomation.models import Domain, KeyWords
-
-chrome_options = Options()
-# chrome_options.add_argument('--headless')
-chrome_options.add_argument(
-    'user-agent=&quot;Mozilla/5.0 (iPod; U; CPU iPhone OS 2_1 like Mac OS X; ja-jp) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5F137 Safari/525.20&quot;')
-chrome_options.add_argument('--log-level=3')
-browser = webdriver.Chrome(chrome_options=chrome_options)
-
-
-def get_bing_url(keywords):
-    keywords = keywords.strip('\n')
-    bing_url = re.sub(r'^', 'https://www.bing.com/search?q=', keywords)
-    bing_url = re.sub(r'\s', '+', bing_url)
-    return bing_url
-
-
-keywords_list = KeyWords.objects.all().filter(status=True)
-for keywords in keywords_list:
-    bing_url = get_bing_url(keywords.keywords)
-    for i in range(1, 100):  # 通过for in来翻页
-        print(i)
-        time.sleep(random.randint(3, 5))
-        if i == 1:
-            url = bing_url
-        else:
-            url = bing_url + '&amp;qs=ds&amp;first=' + str((i * 10) - 1) + '&amp;FORM=PERE'
-        try:
-            browser.set_page_load_timeout(100)  # 设置网页加载超时时间为20秒
-            browser.get(url)
-            cookie_ = browser.get_cookies()
-            # browser.add_cookie(cookie_dict=cookie_)
-            html = browser.page_source
-        except Exception as e:
-            with open('error.txt', 'a', encoding='utf-8') as f:
-                f.write(str(e) + '\n')
-            pass
-        else:
-            tree = etree.HTML(html)
-            li_list = tree.xpath('//ol[@id=&quot;b_results&quot;]//li[@class=&quot;b_algo&quot;]')
-            for li in li_list:
-                try:
-                    url_text = li.xpath('./div/a/@href')[0]
-                    # print(url_text)
-                except Exception as e:
-                    with open('url.txt', 'a', encoding='utf-8') as f:
-                        f.write(str(e) + url + '\n')
-                    pass
-                else:
-                    domain_pattern = re.compile(r'[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+\.?')
-                    domain_text = re.search(r'[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+\.?',url_text).group()
-                    print(domain_text)
-                    domain = Domain.objects.filter(domain=domain_text).exists()
-                    if domain:
-                        print('domain存在:' + url_text)
-                        pass
-                    else:
-                        domain = Domain(domain=domain_text, keywords=keywords)
-                        domain.save()
-                    pass
-    keywords.status = False
-    keywords.save()
-
-</code></pre>
-<p>简单的说一下上面代码，我是使用django搭建的模型，所以我直接与django模型进行了结合。有不懂得小伙伴可以直接留言与我联系。</p>
-<h3 id="6域名提取到了接下来就是打开链接查找邮箱电话进行开发了">6.域名提取到了，接下来就是打开链接，查找邮箱，电话，进行开发了</h3>
-<p>作为一名会写程序的SEOer，肯定不会这样做，我们继续使用上面的方法，直接模拟浏览器打开，获取源码，保存数据库，并将打开的页面截图，方便业务人员区分是否是潜在客户，这仅仅是一个思路，有更好的方法可以一起探讨，代码如下</p>
-<pre><code class="language-python">import os
-import django
-import re
-import datetime
-import uuid
-import sys
-
-sys.path.append('../../')
-from workhelp import settings
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-
-os.environ.setdefault(&quot;DJANGO_SETTINGS_MODULE&quot;, &quot;workhelp.settings&quot;)
-django.setup()
-
-
-def replaceCharEntity(htmlstr):
-    &quot;&quot;&quot;
-    替换常用HTML字符
-    :param htmlstr: 要替换的字符
-    :return:
-    &quot;&quot;&quot;
-    CHAR_ENTITIES = {'nbsp': ' ', '160': ' ',
-                     'lt': '&lt;', '60': '&lt;',
-                     'gt': '&gt;', '62': '&gt;',
-                     'amp': '&amp;', '38': '&amp;',
-                     'quot': '&quot;', '34': '&quot;', }
-    re_charEntity = re.compile(r'&amp;#?(?P&lt;name&gt;\w+);')
-    sz = re_charEntity.search(htmlstr)
-    while sz:
-        entity = sz.group()  # entity全称，如&gt;
-        key = sz.group('name')  # 去除&amp;;后entity,如&gt;为gt
-        try:
-            htmlstr = re_charEntity.sub(CHAR_ENTITIES[key], htmlstr, 1)
-            sz = re_charEntity.search(htmlstr)
-        except KeyError:
-            # 以空串代替
-            htmlstr = re_charEntity.sub('', htmlstr, 1)
-            sz = re_charEntity.search(htmlstr)
-    return htmlstr
-
-
-def filter_tags(htmlstr):
-    &quot;&quot;&quot;
-    过滤HTML中的标签
-    :param htmlstr: 要过滤的内容
-    :return:
-    &quot;&quot;&quot;
-    re_cdata = re.compile('//&lt;!\[CDATA\[[^&gt;]*//\]\]&gt;', re.I)  # 匹配CDATA
-    re_script = re.compile('&lt;\s*script[^&gt;]*&gt;[^&lt;]*&lt;\s*/\s*script\s*&gt;', re.I)  # Script
-    re_style = re.compile('&lt;\s*style[^&gt;]*&gt;[^&lt;]*&lt;\s*/\s*style\s*&gt;', re.I)  # style
-    re_br = re.compile('&lt;br\s*?/?&gt;')  # 处理换行
-    re_h = re.compile('&lt;/?\w+[^&gt;]*&gt;')  # HTML标签
-    re_comment = re.compile('&lt;!--[^&gt;]*--&gt;')  # HTML注释
-    s = re_cdata.sub('', htmlstr)  # 去掉CDATA
-    s = re_script.sub('', s)  # 去掉SCRIPT
-    s = re_style.sub('', s)  # 去掉style
-    s = re_br.sub('\n', s)  # 将br转换为换行
-    s = re_h.sub('', s)  # 去掉HTML 标签
-    s = re_comment.sub('', s)  # 去掉HTML注释
-    # 去掉多余的空行
-    blank_line = re.compile('\n+')
-    s = blank_line.sub(' ', s)
-    s = replaceCharEntity(s)  # 替换实体
-    return s
-
-
-from infomation.models import Domain,Info
-
-while True:
-    urls = Domain.objects.all().filter(is_cut=False)[:300]
-    print(urls.count())
-    chrome_options = Options()
-    # chrome_options.add_argument('--headless')
-    # chrome_options.add_argument(
-    #     'user-agent=&quot;Mozilla/5.0 (iPod; U; CPU iPhone OS 2_1 like Mac OS X; ja-jp) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5F137 Safari/525.20&quot;')
-    chrome_options.add_argument('--log-level=3')
-    browser = webdriver.Chrome(chrome_options=chrome_options)
-    for url in urls:
-        print(url.domain)
-        pic_path = os.path.join(settings.MEDIA_ROOT, 'images', 'jietu')
-        if not os.path.exists(pic_path):
-            os.makedirs(pic_path)
-        else:
-            pass
-        try:
-            browser.set_page_load_timeout(100)  # 设置网页加载超时时间为20秒
-            browser.get('http://'+url.domain)
-            html = browser.page_source
-            s = filter_tags(html)
-            pic_name = '{}.{}'.format(url, '.png')
-            browser.get_screenshot_as_file(os.path.join(pic_path, pic_name))
-
-        except Exception as e:
-            with open('error.txt', 'a', encoding='utf-8') as f:
-                f.write(str(e) + '\n')
-            pass
-        else:
-            pic_path = os.path.join('images', 'jietu', pic_name)
-            url = Domain.objects.get(domain=url)
-            url.image = pic_path
-            url.html = html
-            url.content = s
-            url.is_cut = True
-            url.save()
-            # email_pattern = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}')
-            # emails = email_pattern.findall(html)
-            # new_emails = list(set(emails))
-            # print(new_emails)
-            # emails_str = ','.join(new_emails)
-            # print(emails_str)
-            # info = Info(email=emails_str, url=url)
-            # info.save()
-
-    browser.quit()
-
-</code></pre>
-<p>最后就是利用正则，或者其他方法，分析源码，从中提取信息</p>
 ]]></content>
     </entry>
 </feed>
