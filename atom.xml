@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zmrw.github.io</id>
     <title>追梦人物</title>
-    <updated>2021-12-14T03:15:29.497Z</updated>
+    <updated>2021-12-14T05:22:21.567Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zmrw.github.io"/>
     <link rel="self" href="https://zmrw.github.io/atom.xml"/>
@@ -10,6 +10,351 @@
     <logo>https://zmrw.github.io/images/avatar.png</logo>
     <icon>https://zmrw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 追梦人物</rights>
+    <entry>
+        <title type="html"><![CDATA[Django前端循环截取数据展示]]></title>
+        <id>https://zmrw.github.io/post/django-qian-duan-xun-huan-jie-qu-shu-ju-zhan-shi/</id>
+        <link href="https://zmrw.github.io/post/django-qian-duan-xun-huan-jie-qu-shu-ju-zhan-shi/">
+        </link>
+        <updated>2021-12-14T05:21:28.000Z</updated>
+        <content type="html"><![CDATA[<p>制作一个网站时，网站原模版需要展示三张图片，我定义model时，定义相关图片来存储</p>
+<pre><code class="language-python">class ApplicationRelatedImage(models.Model):
+    image = models.ImageField(upload_to=application_directory_path, verbose_name=&quot;应用相关图片&quot;, blank=True,
+                              null=True)
+    application = models.ForeignKey(Application, on_delete=models.CASCADE, blank=True, null=True)
+
+    def __str__(self):
+        return self.application.title
+
+    class Meta:
+        verbose_name = &quot;应用相关图片&quot;
+        verbose_name_plural = verbose_name
+</code></pre>
+<p>在做前端显示时，循环调用即可展示图片，但是三张图片都有自己的样式，直接使用循环不能更改样式，可以使用<strong>forloop.counter</strong>来完成</p>
+<pre><code class="language-python">{% for image in application.applicationrelatedimage_set.all %}
+                    {% if forloop.counter == 1 %}
+                        &lt;li class=&quot;pull_left&quot;&gt;&lt;img src=&quot;{{ image.image.url }}&quot; width=&quot;291&quot; height=&quot;197&quot;
+                                                   alt=&quot;&quot;/&gt;
+                        &lt;/li&gt;
+
+                    {% endif %}
+                    {% if forloop.counter == 2 %}
+                        &lt;li class=&quot;pull_right&quot;&gt;&lt;img src=&quot;{{ image.image.url }}&quot; width=&quot;212&quot; height=&quot;197&quot; alt=&quot;&quot;
+                                                    class=&quot;frist&quot;/&gt;&lt;/li&gt;
+
+                    {% endif %}
+                    {% if forloop.counter == 3 %}
+                        &lt;li class=&quot;pull_right&quot;&gt;&lt;img src=&quot;{{ image.image.url }}&quot; width=&quot;212&quot; height=&quot;197&quot; alt=&quot;&quot;
+                                                    class=&quot;frist&quot;/&gt;&lt;/li&gt;
+
+                    {% endif %}
+                {% empty %}
+                    &lt;div class=&quot;no-post&quot;&gt;暂时还没有banner图片！&lt;/div&gt;
+                {% endfor %}
+</code></pre>
+<h3 id="参考链接">参考链接</h3>
+<p><a href="https://pythonandseo.com/article/djangoqian-duan-xun-huan-jie-qu-shu-ju-zhan-shi/" title="Django前端循环截取数据展示">Django前端循环截取数据展示</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Django 配置xadmin]]></title>
+        <id>https://zmrw.github.io/post/django-pei-zhi-xadmin/</id>
+        <link href="https://zmrw.github.io/post/django-pei-zhi-xadmin/">
+        </link>
+        <updated>2021-12-14T05:20:34.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1安装xamin">1.安装xamin</h3>
+<pre><code class="language-python">pip install https://codeload.github.com/sshwsfc/xadmin/zip/django2
+</code></pre>
+<h3 id="2将xadmin-app-添加到setthing中">2.将xadmin app 添加到setthing中</h3>
+<pre><code class="language-python">'xadmin',
+'crispy_forms',
+'reversion',
+</code></pre>
+<h3 id="3执行python-managepy-migrate">3.执行python manage.py migrate</h3>
+<pre><code class="language-python">python manage.py migrate
+</code></pre>
+<p>我使用的是django2.2,这里会报错</p>
+<pre><code class="language-python">Traceback (most recent call last):
+  File &quot;manage.py&quot;, line 21, in &lt;module&gt;
+    main()
+  File &quot;manage.py&quot;, line 17, in main
+    execute_from_command_line(sys.argv)
+  File &quot;F:\djangoweb\env\lib\site-packages\django\core\management\__init__.py&quot;, line 381, in execute_from_command_line
+    utility.execute()
+  File &quot;F:\djangoweb\env\lib\site-packages\django\core\management\__init__.py&quot;, line 357, in execute
+    django.setup()
+  File &quot;F:\djangoweb\env\lib\site-packages\django\__init__.py&quot;, line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File &quot;F:\djangoweb\env\lib\site-packages\django\apps\registry.py&quot;, line 122, in populate
+    app_config.ready()
+  File &quot;F:\djangoweb\env\lib\site-packages\xadmin\apps.py&quot;, line 14, in ready
+    self.module.autodiscover()
+  File &quot;F:\djangoweb\env\lib\site-packages\xadmin\__init__.py&quot;, line 49, in autodiscover
+    register_builtin_plugins(site)
+  File &quot;F:\djangoweb\env\lib\site-packages\xadmin\plugins\__init__.py&quot;, line 41, in register_builtin_plugins
+    [import_module('xadmin.plugins.%s' % plugin) for plugin in PLUGINS if plugin not in exclude_plugins]
+  File &quot;F:\djangoweb\env\lib\site-packages\xadmin\plugins\__init__.py&quot;, line 41, in &lt;listcomp&gt;
+    [import_module('xadmin.plugins.%s' % plugin) for plugin in PLUGINS if plugin not in exclude_plugins]
+  File &quot;C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\importlib\__init__.py&quot;, line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1014, in _gcd_import
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 991, in _find_and_load
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 975, in _find_and_load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 671, in _load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap_external&gt;&quot;, line 848, in exec_module
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 219, in _call_with_frames_removed
+  File &quot;F:\djangoweb\env\lib\site-packages\xadmin\plugins\importexport.py&quot;, line 48, in &lt;module&gt;
+    from import_export.admin import DEFAULT_FORMATS, SKIP_ADMIN_LOG, TMP_STORAGE_CLASS
+ImportError: cannot import name 'SKIP_ADMIN_LOG' from 'import_export.admin' (F:\djangoweb\env\lib\site-packages\import_export\admin.py)
+
+</code></pre>
+<p>百度查找之后可以使用这个方法解决（<a href="https://blog.csdn.net/weixin_40459875/article/details/112412145" title="python报错 ImportError: cannot import name ‘SKIP_ADMIN_LOG‘ from ‘import_export.admin">python报错 ImportError: cannot import name ‘SKIP_ADMIN_LOG‘ from ‘import_export.admin</a>）<br>
+但是水平有限，看的云里雾里，只能继续查找，最终使用如下方法</p>
+<h3 id="1注释报错48行代码">1.注释报错48行代码</h3>
+<pre><code class="language-python">from import_export.admin import DEFAULT_FORMATS, SKIP_ADMIN_LOG, TMP_STORAGE_CLASS
+</code></pre>
+<h3 id="2添加如下代码">2.添加如下代码</h3>
+<pre><code class="language-python">from import_export.admin import DEFAULT_FORMATS,ImportMixin
+</code></pre>
+<p><strong>参考链接（<a href="https://blog.csdn.net/qq_42092076/article/details/114787517?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-1.control" title="django xadmin的安装及出错的解决方法">django xadmin的安装及出错的解决方法</a>）</strong></p>
+<h3 id="3配置url即可">3.配置url即可</h3>
+<pre><code class="language-python">path('xadmin/', xadmin.site.urls),
+</code></pre>
+<p>将xadmin部署至服务器时，发现没有样式，执行</p>
+<pre><code class="language-python">python3 manage.py collectstatic
+</code></pre>
+<p>重启服务器，即可</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Django Xadmin中关联数据的显示方式配置]]></title>
+        <id>https://zmrw.github.io/post/django-xadmin-zhong-guan-lian-shu-ju-de-xian-shi-fang-shi-pei-zhi/</id>
+        <link href="https://zmrw.github.io/post/django-xadmin-zhong-guan-lian-shu-ju-de-xian-shi-fang-shi-pei-zhi/">
+        </link>
+        <updated>2021-12-14T05:19:54.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1django-admin关联数据显示方式">1.Django admin关联数据显示方式</h3>
+<p>在使用django自带的admin时，如果涉及到一对多关系，并且能够在一的一方查看多的一方和编辑多的一方时，我们可以使用如下的方式来实现。而多的一方显示样式可以通过继承不同的类来实现：<br>
+StackedInline：以块的形式嵌入<br>
+TabularInline：以表格的形式嵌入</p>
+<h4 id="tabularinline以表格的形式嵌入">TabularInline：以表格的形式嵌入</h4>
+<pre><code class="language-python">class ProductApplicationInline(admin.TabularInline):
+    model = ProductApplication
+    # 设置列表可显示的字段
+    fields = ('application',)
+
+
+class ProductFeaturesInline(admin.TabularInline):
+    model = ProductFeatures
+    # 设置列表可显示的字段
+    fields = ('features',)
+
+
+class ProductRelatedImageInline(admin.TabularInline):
+    model = ProductRelatedImage
+    # 设置列表可显示的字段
+    fields = ('image',)
+
+
+class ProductAdmin(admin.ModelAdmin):
+    # 设置列表可显示的字段
+    list_display = ('title', 'category', 'views')
+    # 添加可显示的字段
+    fields = ('title', 'image', 'gzyl', 'jscs', 'category')
+    inlines = [ProductApplicationInline, ProductRelatedImageInline, ProductFeaturesInline]
+
+</code></pre>
+<p>但是当使用xadmin时就不存在这种继承方式了，经过查找资料可以这样实现<br>
+这里的实现方式是通过style属性来实现的，可选值有：<br>
+one，accordion，tab，stacked，table<br>
+至于具体显示效果，需要自己去实验，找那个适合你的方式</p>
+<pre><code class="language-python">class CountryTabularInline(object):
+    model = Info
+    extra = 0
+    style = 'table'  # 列表显示，one：只显示一条  accordion：缩略列表显示，可下拉  tab：横向tab显示 stacked：块显示 table：列表
+    # readonly_fields = ['url', 'country', 'email']
+
+
+class CountryAdmin(object):
+    inlines = [CountryTabularInline]
+
+xadmin.site.register(Country, CountryAdmin)
+</code></pre>
+<h3 id="参考链接">参考链接</h3>
+<p><a href="https://pythonandseo.com/article/django-xadminzhong-guan-lian-shu-ju-de-xian-shi-fang-shi-pei-zhi/">Django Xadmin中关联数据的显示方式配置</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[设置django后台 导出excel表]]></title>
+        <id>https://zmrw.github.io/post/she-zhi-django-hou-tai-dao-chu-excel-biao/</id>
+        <link href="https://zmrw.github.io/post/she-zhi-django-hou-tai-dao-chu-excel-biao/">
+        </link>
+        <updated>2021-12-14T05:18:55.000Z</updated>
+        <content type="html"><![CDATA[<p>帮助公司写了一个爬虫，需要将获取的邮箱导出到本地，因为之前接触过xadmin,所以知道可以直接通过后台导出来</p>
+<h3 id="1-安装xlwt-和-openpyxl">1. 安装xlwt 和 openpyxl</h3>
+<pre><code class="language-python">pip3 install xlwt
+</code></pre>
+<pre><code class="language-python">pip3 install openpyxl 
+</code></pre>
+<h3 id="2修改对应app的-adminpy">2.修改对应APP的 admin.py</h3>
+<pre><code class="language-python">from django.contrib import admin
+from .models import Url, Country, KeyWords, Info
+import xlwt
+from openpyxl import Workbook
+from django.http import HttpResponse
+
+
+class IndoAdmin(admin.ModelAdmin):
+    actions = [&quot;export_as_excel&quot;]
+    list_per_page = 500
+
+    def export_as_excel(self, request, queryset):
+        # print(&quot;queryset&quot;, queryset)
+        meta = self.model._meta  # 用于定义文件名, 格式为: app名.模型类名
+        # print(&quot;meta&quot;, meta)
+        field_names = [field.name for field in meta.fields]  # 模型所有字段名
+
+        response = HttpResponse(content_type='application/msexcel')  # 定义响应内容类型
+        response['Content-Disposition'] = f'attachment; filename={meta}.xlsx'  # 定义响应数据格式
+        wb = Workbook()  # 新建Workbook
+        ws = wb.active  # 使用当前活动的Sheet表
+        ws.append(field_names)  # 将模型字段名作为标题写入第一行
+        for obj in queryset:  # 遍历选择的对象列表
+            # print(obj)
+            for field in field_names:
+                data = [f'{getattr(obj, field)}' for field in field_names]  # 将模型属性值的文本格式组成列表
+
+            ws.append(data)  # 写入模型属性值
+        wb.save(response)  # 将数据存入响应内容
+        return response
+
+    export_as_excel.short_description = '导出Excel'  # 该动作在admin中的显示文字
+
+
+admin.site.register(Url)
+admin.site.register(Country)
+admin.site.register(KeyWords)
+admin.site.register(Info, IndoAdmin)
+</code></pre>
+<p>这里添加的主要是这个代码，代码写有注释，很详细</p>
+<pre><code class="language-python">    def export_as_excel(self, request, queryset):
+        # print(&quot;queryset&quot;, queryset)
+        meta = self.model._meta  # 用于定义文件名, 格式为: app名.模型类名
+        # print(&quot;meta&quot;, meta)
+        field_names = [field.name for field in meta.fields]  # 模型所有字段名
+
+        response = HttpResponse(content_type='application/msexcel')  # 定义响应内容类型
+        response['Content-Disposition'] = f'attachment; filename={meta}.xlsx'  # 定义响应数据格式
+        wb = Workbook()  # 新建Workbook
+        ws = wb.active  # 使用当前活动的Sheet表
+        ws.append(field_names)  # 将模型字段名作为标题写入第一行
+        for obj in queryset:  # 遍历选择的对象列表
+            # print(obj)
+            for field in field_names:
+                data = [f'{getattr(obj, field)}' for field in field_names]  # 将模型属性值的文本格式组成列表
+
+            ws.append(data)  # 写入模型属性值
+        wb.save(response)  # 将数据存入响应内容
+        return response
+
+    export_as_excel.short_description = '导出Excel'  # 该动作在admin中的显示文字
+</code></pre>
+<h4 id="参考链接">参考链接</h4>
+<p><a href="https://www.cnblogs.com/wanghong1994/p/12656817.html" title="【django】 django后台管理 导出excel表">【django】 django后台管理 导出excel表</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[wordpress更新主题插件需要提供ftp信息]]></title>
+        <id>https://zmrw.github.io/post/wordpress-geng-xin-zhu-ti-cha-jian-xu-yao-ti-gong-ftp-xin-xi/</id>
+        <link href="https://zmrw.github.io/post/wordpress-geng-xin-zhu-ti-cha-jian-xu-yao-ti-gong-ftp-xin-xi/">
+        </link>
+        <updated>2021-12-14T05:17:17.000Z</updated>
+        <content type="html"><![CDATA[<p>第一次在ubuntu安装wordpress,更新主题时，提示</p>
+<blockquote>
+<p>To perform the requested action, WordPress needs to access your web server. Please enter your FTP credentials to proceed. If you do not remember your credentials, you should contact your web host.</p>
+</blockquote>
+<p>原因是php-fpm的用户并没有wordpress解压目录的写权限</p>
+<h2 id="1查看php-fpm的用户是谁">1.查看php-fpm的用户是谁</h2>
+<pre><code class="language-bash">ps -ef | grep &quot;php-fpm&quot;
+</code></pre>
+<p>结果如下：</p>
+<pre><code class="language-bash">root@ubuntu:/home/lnmp1.8# ps -ef | grep &quot;php-fpm&quot;
+root      3848     1  0 09:49 ?        00:00:00 php-fpm: master process (/usr/local/php/etc/php-fpm.conf)
+www       3850  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3851  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3852  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3853  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3854  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3855  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3856  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3857  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3858  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3859  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3891  3848  0 09:50 ?        00:00:00 php-fpm: pool www
+root      3949 18961  0 09:56 pts/2    00:00:00 grep --color=auto php-fpm
+</code></pre>
+<p>这里用户为www</p>
+<h2 id="2修改wordpress解压所在的目录权限">2.修改wordpress解压所在的目录权限</h2>
+<pre><code class="language-bash">sudo chown -R www /home/wordpress/wordpress.keinder.nl
+</code></pre>
+<p>sudo chown -R www 加上部署路径<br>
+重新更新主题，插件即可</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Django提交表单，获取提交页面url]]></title>
+        <id>https://zmrw.github.io/post/django-ti-jiao-biao-dan-huo-qu-ti-jiao-ye-mian-url/</id>
+        <link href="https://zmrw.github.io/post/django-ti-jiao-biao-dan-huo-qu-ti-jiao-ye-mian-url/">
+        </link>
+        <updated>2021-12-14T05:15:47.000Z</updated>
+        <content type="html"><![CDATA[<p>使用django制作一个网站，每个页面都有一个表单，为了统计表单是通过哪一个url提交，因此是需要获取当前页面url</p>
+<h3 id="本以为在表单中就可以获取到错误">本以为在表单中就可以获取到（错误）</h3>
+<pre><code class="language-python">def xunpan(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', 0)
+        email = request.POST.get('email', 0)
+        phone = request.POST.get('phone', 0)
+        subject = request.POST.get('subject', 0)
+        body = request.POST.get('body', 0)
+        url = request.get_raw_uri()
+        xunpan = XunPan(name=name, email=email, phone=phone, subject=subject, body=body, url=url)
+        xunpan.save()
+        return redirect(&quot;juhe08:product_list&quot;)
+    else:
+        pass
+</code></pre>
+<p>但是提交后台发现，url是提交页面url,及http://127.0.0.1:8000/xupan ,并不符合我们的要求</p>
+<h3 id="1在提交表单中加入一个隐藏标签记录当前url然后在提交表单中获取">1.在提交表单中，加入一个隐藏标签，记录当前url，然后在提交表单中获取</h3>
+<pre><code class="language-html">&lt;div class=&quot;col-lg-12 col-md-12 col-sm-12 form-group&quot;&gt;
+     &lt;input type=&quot;hidden&quot; name=&quot;url&quot; value=&quot;{{ request.url }}&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="2在后端获取">2.在后端获取</h3>
+<pre><code class="language-python">def xunpan(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', 0)
+        email = request.POST.get('email', 0)
+        phone = request.POST.get('phone', 0)
+        subject = request.POST.get('subject', 0)
+        body = request.POST.get('body', 0)
+        url = request.POST.get('url', 0)
+        xunpan = XunPan(name=name, email=email, phone=phone, subject=subject, body=body, url=url)
+        xunpan.save()
+        return redirect(&quot;juhe08:product_list&quot;)
+    else:
+        pass
+</code></pre>
+<p>这样即可，这可能不是最好的方法，先解决问题，以后在研究</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu修改中国时间]]></title>
+        <id>https://zmrw.github.io/post/ubuntu-xiu-gai-zhong-guo-shi-jian/</id>
+        <link href="https://zmrw.github.io/post/ubuntu-xiu-gai-zhong-guo-shi-jian/">
+        </link>
+        <updated>2021-12-14T05:13:02.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="language-python">timedatectl set-timezone &quot;Asia/Shanghai&quot;
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[markdown代码高亮，并显示行号]]></title>
         <id>https://zmrw.github.io/post/markdown-dai-ma-gao-liang-bing-xian-shi-xing-hao/</id>
@@ -213,599 +558,6 @@ with open(keywords, encoding='utf-8') as f:
 <p>现在需要解决的方式是对关键词，广告语，落地页的相关性要加强，增加关键词的质量得分，同时对部分关键词的出价提高，让广告有更好的排名。</p>
 <h3 id="目前的账户里面的落地页广告语太笼统">目前的账户里面的落地页，广告语太笼统，</h3>
 <p>需要根据关键词进行细化和增加，让客户的体验感更好，增加质量得分，也较少网站跳出率。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[digitalocean创建16.04版本水滴]]></title>
-        <id>https://zmrw.github.io/post/digitalocean-chuang-jian-1604-ban-ben-shui-di/</id>
-        <link href="https://zmrw.github.io/post/digitalocean-chuang-jian-1604-ban-ben-shui-di/">
-        </link>
-        <updated>2021-12-09T05:31:40.000Z</updated>
-        <content type="html"><![CDATA[<p>因为程序只能在ubuntu16.04上运行，但是digitalocean停止该镜像，创建不成功</p>
-<pre><code class="language-python">data = {
-    &quot;name&quot;: &quot;ceshi&quot;,
-    &quot;region&quot;: &quot;nyc3&quot;,
-    &quot;size&quot;: &quot;s-1vcpu-2gb&quot;,
-    &quot;image&quot;: &quot;ubuntu-16-04-x64&quot;,
-}
-b = requests.post(url='https://api.digitalocean.com/v2/droplets', data=json.dumps(data), headers=headers)
-print(b.text)
-# {&quot;id&quot;:&quot;unprocessable_entity&quot;,&quot;message&quot;:&quot;You specified an invalid image for Droplet creation.&quot;}
-</code></pre>
-<p>给他们技术发送邮件，可以通过自建镜像创建</p>
-<h3 id="方法链接">方法链接</h3>
-<pre><code class="language-python">https://docs.digitalocean.com/products/images/custom-images/how-to/
-</code></pre>
-<h3 id="镜像下载">镜像下载</h3>
-<pre><code class="language-python">https://cloud-images.ubuntu.com/releases/xenial/release/
-</code></pre>
-<p><em><strong>注意：digitalocean不支持iso，需要下载img格式</strong></em></p>
-<p>镜像创建好申请vps就可以选择自己的镜像，但是只能通过密钥方式来申请，通过密钥来登录十分不习惯，因此我们只能申请后在进行修改</p>
-<h3 id="设置root账户密码">设置root账户密码</h3>
-<pre><code class="language-python">sudo passwd root
-</code></pre>
-<h3 id="修改sshd_config">修改sshd_config</h3>
-<pre><code class="language-python">vi /etc/ssh/sshd_config
-</code></pre>
-<h3 id="重启sshd">重启sshd</h3>
-<pre><code class="language-python">service sshd restart
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python requests模块使用代理]]></title>
-        <id>https://zmrw.github.io/post/python-requests-mo-kuai-shi-yong-dai-li/</id>
-        <link href="https://zmrw.github.io/post/python-requests-mo-kuai-shi-yong-dai-li/">
-        </link>
-        <updated>2021-12-09T05:29:51.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="python设置代理">Python设置代理</h3>
-<pre><code class="language-python">proxies = {'http': '127.0.0.1:10809', 'https': '127.0.0.1:10809'}
-content = requests.post(url=url, timeout=20, proxies=proxies)
-</code></pre>
-<p>刚开始在网上找的代码是这样的</p>
-<pre><code class="language-python"># proxies = {'http': 'http://127.0.0.1:10809', 'https': 'https://127.0.0.1:10809'}
-</code></pre>
-<p>这样是不能用的，也可能是我的方法出问题，第一次使用代理没有成功就放弃了，后来直接不使用代理爬取信息，<br>
-但是现在封ip越来越严重，重新找了一下，发现是proxies配置错误</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[通过js将网站跳转到另一个网站]]></title>
-        <id>https://zmrw.github.io/post/tong-guo-js-jiang-wang-zhan-tiao-zhuan-dao-ling-yi-ge-wang-zhan/</id>
-        <link href="https://zmrw.github.io/post/tong-guo-js-jiang-wang-zhan-tiao-zhuan-dao-ling-yi-ge-wang-zhan/">
-        </link>
-        <updated>2021-12-09T05:22:01.000Z</updated>
-        <content type="html"><![CDATA[<p>制作了一下采集内容网站，想将客户点击采集页面跳转到正规页面，可以使用以下js</p>
-<pre><code class="language-javascript">var regexp=/\.(google|yahoo|msn|goo|ask|docomo|aol|bing|biglobe|nifty|fresheye|ceek|excite)(\.[a-z0-9\-]+){1,2}\//ig;
-var where =document.referrer;
-if(regexp.test(where))
-{
-window.location.href='https://www.sensorco2.com/product_list/'
-}
-</code></pre>
-<p>将js代码放在采集页面最上方即可</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Google Ads 学习笔记]]></title>
-        <id>https://zmrw.github.io/post/google-ads-xue-xi-bi-ji/</id>
-        <link href="https://zmrw.github.io/post/google-ads-xue-xi-bi-ji/">
-        </link>
-        <updated>2021-12-09T05:10:41.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="一了解-google-ads">一.了解 Google Ads</h2>
-<p>每一秒都有用户访问 Google 搜索处理各种事务所需的信息。Google Ads 是一个可以帮助您覆盖这些受众群体并将他们转化为高价值客户的数字广告解决方案</p>
-<h3 id="为什么选择-google-ads">为什么选择 Google Ads？</h3>
-<p>通过 Google Ads，您可以使用各式各样的广告产品来帮助您在关键时刻覆盖客户。您可以全心专注于发展您的业务，让 Google 的智能技术帮助您取得更理想的广告效果。</p>
-<h4 id="1提升销售额">1.提升销售额</h4>
-<p>提高线上销售额、应用内销售额、线下销售额和电话销售额。</p>
-<h4 id="2挖掘潜在客户">2.挖掘潜在客户</h4>
-<p>吸引用户采取行动，提高转化次数。</p>
-<h4 id="3增加网站访问次数">3.增加网站访问次数</h4>
-<p>吸引目标受众访问您的网站。</p>
-<h4 id="4影响钟意度">4.影响钟意度</h4>
-<p>吸引用户了解您的产品和服务。</p>
-<h4 id="5培养认知度">5.培养认知度</h4>
-<p>覆盖广泛的受众群体，尽可能提高曝光率。</p>
-<h4 id="6推广您的应用">6.推广您的应用</h4>
-<p>吸引更多用户安装您的应用并与之互动。</p>
-<h3 id="利用-google-ads-的优势">利用 Google Ads 的优势</h3>
-<p>为帮助您拓展业务，我们围绕三大原则来构建 Google Ads：相关性、控制权和成效。</p>
-<h4 id="1相关性">1.相关性</h4>
-<p>Google Ads 可以帮助您抓住最恰当的时机，利用最合适的讯息与最理想的用户建立联系。当用户搜索同类产品或服务时，您的广告可以在 Google 搜索、YouTube 等地方展示。您还可以自定义关键字和地理位置等选项，确保向最相关的用户展示您的广告。</p>
-<h4 id="2有效掌控">2.有效掌控</h4>
-<p>Google Ads 将预算决定权完全交到您手上。您可以自行选择每月、每日以及每个广告的花费。根据您的设置，Google Ads 会通过快速进行的竞价来确定要展示的广告。如果想要改变策略，您可以轻松调整广告，修改预算或者暂停和重新启动广告系列。</p>
-<h4 id="3成效">3.成效</h4>
-<p>您只需为广告带来的效果付费，例如用户点击进入您的网站或致电联系您的企业。我们的衡量工具可让您轻松了解您的网站、应用和广告表现如何。此外，您还可以运用智能技术制作、管理和优化广告系列，从而充分利用您的投资。</p>
-<h2 id="二让-google-ads-助力您实现业务目标">二.让 Google Ads 助力您实现业务目标</h2>
-<p>通过 Google Ads，您可以吸引在 Google 搜索上找寻答案、在 YouTube 上观看视频、在 Google Play 上查找应用及执行其他操作的用户。在选择广告系列类型时，您可以指定用户能在哪些地方看到您的广告。</p>
-<p>通过本单元的学习，您可以了解如何使用 Google Ads 广告系列来达成您的业务目标。</p>
-<h3 id="google-ads-广告系列类型">Google Ads 广告系列类型</h3>
-<p>要通过 Google Ads 投放广告，首先要根据您的业务目标制作广告系列。每种广告系列类型都决定着您的广告可以在哪些地方展示，以及以哪种格式展示。让我们研究下不同的广告系列类型（搜索广告系列、展示广告系列、视频广告系列、购物广告系列和应用广告系列）如何支持您达成业务目标。</p>
-<h4 id="1搜索广告系列">1.搜索广告系列</h4>
-<p>当用户搜索与您类似的企业时，搜索广告会显示在 Google 搜索结果旁边以及 YouTube 等其他 Google 合作伙伴网站上。</p>
-<p>通过搜索广告系列，您可以确保潜在客户会注意到您的品牌、考虑您提供的产品并采取行动。</p>
-<h4 id="2展示广告系列">2.展示广告系列</h4>
-<p>Google 展示广告可以投放到由两百多万个网站和应用组成的广告网络上，覆盖 90% 的互联网用户。系统会将您的广告定位到与您的业务或您客户的兴趣相关的内容。</p>
-<p>投放展示广告系列可以提升广告曝光率，覆盖网络上具有特定兴趣的受众群体。</p>
-<h4 id="3视频广告系列">3.视频广告系列</h4>
-<p>用视频广告，您可以大规模覆盖理想的受众群体并吸引他们的注意力。您可以在 YouTube 以及 Google 广告网络（由网站和应用组成）中独立展示广告或在这些地方的其他流式视频内容中展示广告。只有用户选择观看广告时，您才需要付费。</p>
-<p>视频广告系列可以帮助您将企业故事生动道来。它们能以不同的方式吸引用户，例如在他们喜欢的音乐视频播放前展示广告，或者在他们研究将要购买的商品时展示广告。</p>
-<h4 id="4购物广告系列">4.购物广告系列</h4>
-<p>购物广告会在 Google 购物上的搜索结果旁边以及文字广告和自适应广告附近展示。购物广告甚至可以在消费者选择您的广告之前，向他们提供有关您所售产品的详细信息，以此宣传您的产品。</p>
-<p>您可以使用购物广告系列来宣传您的网上产品和本地实体店产品，以增加您网站的访问流量或本地店面的客流量，获得更优质的潜在客户。</p>
-<h4 id="5应用广告系列">5.应用广告系列</h4>
-<p>只需完成简单的设置，应用广告系列就会在 Google 规模最大的媒体资源中投放广告，包括 Google 搜索、Google Play、YouTube，以及数以千计的移动网站和应用。系统会自动调整您的广告和出价，以争取尽可能多的下载量。您只需添加几行文字，设置好出价，提供一些素材资源，系统会自动优化其余部分，从而帮助用户找到您。</p>
-<p>借助应用广告系列，您可以提高互动度、应用安装量，甚至是应用内操作量（如注册简报或订购产品）。</p>
-<h3 id="投放智能广告系列效率更高">投放智能广告系列，效率更高</h3>
-<p>想要寻找适合小型企业的解决方案？不妨试试智能广告系列！您只需选择您的业务目标，然后让机器学习系统通过 Google 搜索、展示广告网络和 Google 地图等广告网络带给您理想的广告效果。</p>
-<p>智能广告系列是刚开始使用 Google Ads 的广告客户的默认选项。如果您想要轻松覆盖相关的客户并获得理想的广告效果，但因时间或经验有限而无法管理 Google Ads 广告系列，此类广告系列是您的理想之选。</p>
-<p>将优化广告的工作交给我们的智能技术，您可以集中精力处理最重要的事情 - 经营您的业务。</p>
-<h3 id="优化您的广告系列">优化您的广告系列</h3>
-<p>您选择的广告系列类型决定着用户会在哪些地方看到您的广告，但您可以对许多功能进行自定义，确保吸引最有意义的受众群体，无论他们身在何处。</p>
-<h4 id="1设备定位">1.设备定位</h4>
-<p>在任意设备（包括桌面设备、平板电脑和智能手机）上覆盖您的客户。</p>
-<h4 id="2地理位置和语言定位">2.地理位置和语言定位</h4>
-<p>广告系列中的广告可以向特定地理位置的用户展示，或者展示给在浏览器语言设置中指定了您所选语言的用户。</p>
-<h4 id="3出价和预算设置">3.出价和预算设置</h4>
-<p>出价策略控制如何针对用户与您广告的互动进行出价。出价限制是指您愿意针对广告组中广告所获得的每次点击支付的最高金额。预算是指您愿意每天为广告系列支付的平均金额。预算的多少完全由您自己决定，而且您随时都可以对预算金额进行调整。</p>
-<h4 id="4广告附加信息">4.广告附加信息</h4>
-<p>向广告中添加更多信息，例如位置信息、网站上网页的链接以及您的电话号码。</p>
-<h2 id="三探索-google-搜索的价值">三.探索 Google 搜索的价值</h2>
-<p>就在此刻，海量的潜在客户正在搜索您提供的产品和服务。如果能在他们最需要您的时刻显示您的信息，岂非美事一桩！了解 Google 搜索广告系列如何帮助您在适当的时刻吸引合适的用户，从而实现您的业务目标。</p>
-<h3 id="认识-google-搜索广告的价值">认识 Google 搜索广告的价值</h3>
-<p>此时此刻就有潜在客户在搜索您提供的产品或服务。您可以制作 Google 搜索广告系列，帮助他们在最需要您的时刻找到您！</p>
-<p>通过本单元的学习，您将了解什么是搜索广告系列，以及在适当的时刻向用户展示广告的重要性。</p>
-<h3 id="google-搜索的重要性">Google 搜索的重要性</h3>
-<p>Google 搜索上的搜索量每天约为 35 亿次。人们随时随地都在搜索信息、在线购物、比较产品价格、查询路线，或者学习新东西。</p>
-<p>Google 的使命是整合所有这些可用信息，供大众使用，使人人受益。</p>
-<p>当人们想要了解什么信息、买什么东西、去什么地方或做什么事情时，Google 搜索都是他们的第一站！</p>
-<h3 id="将用户意图转化为业绩">将用户意图转化为业绩</h3>
-<p>在用户搜索您提供的产品或服务时，Google 搜索广告系列会在搜索结果旁边展示您的广告。</p>
-<h2 id="四掌握-google-搜索广告系列的基础">四.掌握 Google 搜索广告系列的基础</h2>
-<p>要向潜在客户展示您的文字广告，首先要制作 Google 搜索广告系列。</p>
-<p>通过本单元的学习，您将了解如何制作和定制 Google 搜索广告系列，以实现您的业务目标。</p>
-<h3 id="设置搜索广告系列">设置搜索广告系列</h3>
-<p>设置搜索广告系列时，想一想可通过哪些不同方式为您的网站、服务或产品吸引更多流量。</p>
-<ul>
-<li>
-<p>您希望在什么地方展示广告？</p>
-</li>
-<li>
-<p>您希望投入多少资金？</p>
-</li>
-<li>
-<p>您希望在广告中传达什么信息？</p>
-</li>
-<li>
-<p>哪些关键字与用户的搜索字词相匹配？</p>
-</li>
-</ul>
-<h4 id="1广告系列">1.广告系列</h4>
-<p>广告系列应围绕营销目标进行制作，并根据您希望用户采取的行动进行设置。</p>
-<h4 id="2营销目标">2.营销目标</h4>
-<p>营销目标应是您希望实现的主要业务目标，可以随时调整。搜索广告系列营销目标可以设为“销售”、“潜在客户”或“网站流量”。（展示广告系列、视频广告系列和应用广告系列还有其他可选择的目标。）</p>
-<p>例如，如果阿久想要吸引更多人注册接收他们网店的电子邮件，就可以制作以潜在客户为营销目标的广告系列。</p>
-<h4 id="3google-搜索网络">3.Google 搜索网络</h4>
-<p>Google 搜索网络（默认包括 Google 搜索合作伙伴）。她的广告不仅会在 Google 搜索上展示，而且还会在成百上千个与 Google 合作的其他网站上展示。向更多用户展示广告应该有助于她壮大业务！</p>
-<h4 id="4广告网络">4.广告网络</h4>
-<p>根据您选择的广告系列类型，您可以用广告网络设置来指明要在哪些地方展示您的广告。</p>
-<p>例如，如果选择 Google 搜索网络，您的广告就可以在 Google 搜索网站上以及 Google Play、Google 购物和 Google 地图（包括地图应用）上的搜索结果中展示。您的广告还可以在与 Google 合作展示搜索广告的非 Google 搜索网站（称为搜索网络合作伙伴，比如 CNN）上展示。此外，您还有机会将广告展示范围延伸至 Google 展示广告网络，让您的文字广告可以在与 Google 合作展示广告的网站上展示。</p>
-<h4 id="5设备">5.设备</h4>
-<p>广告系列会定位所有类型的设备，包括桌面设备、平板电脑和移动设备。您也可以针对不同的设备定制广告。</p>
-<h4 id="6地理位置">6.地理位置</h4>
-<p>广告系列中的广告可以向居住在特定地理位置的用户或对特定地理位置感兴趣的用户展示。</p>
-<p>例如，巴黎的西饼店店主可以选择只覆盖身处巴黎的用户，而支持发货至加拿大和美国的网上鞋靴零售店可以吸引这两个国家的用户。</p>
-<h4 id="7语言">7.语言</h4>
-<p>语言定位可让您根据用户的语言设置和网站所使用的语言来限制广告的展示位置。</p>
-<h4 id="8预算">8.预算</h4>
-<p>预算是指您每天愿意为广告系列支付的平均金额。预算的多少完全由您自己决定，而且您随时都可以对预算金额进行调整。</p>
-<h4 id="9出价策略">9.出价策略</h4>
-<p>出价策略控制着您如何针对用户与您广告的互动进行付费。为广告系列选择要关注的指标后，您会看到可帮助您优化该指标的不同出价选项。您可以选择手动设置您对广告点击的出价，也可让 Google Ads 为您代劳。</p>
-<h3 id="如何让合适的受众看到您的广告">如何让合适的受众看到您的广告</h3>
-<p>在完成搜索广告系列的基本设置后，阿久随时可以制作文字广告并展示给合适的受众。</p>
-<h4 id="1她首先制作广告组">1.她首先制作广告组。</h4>
-<p>针对每个广告组，她可以制作具体的文字广告和一个搜索关键字列表 — 包含会触发她的广告进行展示的字词和词组。广告组最好是围绕主题或产品制作，因此阿久计划制作多个广告组，每个广告组对应一个自行车类型：儿童自行车、山地自行车和公路自行车。</p>
-<p>这种粒度级别赋予她更大的控制权，让她可以向目标用户传达恰当的广告讯息。</p>
-<h4 id="2她为每个广告组都创建了一个专属的关键字列表">2.她为每个广告组都创建了一个专属的关键字列表。</h4>
-<p>她仔细思考用户在研究或搜索自行车时可能使用的搜索字词，然后将这些字词用作关键字。创建可靠的关键字列表可帮助她将自己的广告与目标用户匹配起来！</p>
-<p>我们看看她为儿童自行车广告组所选择的部分关键字：</p>
-<ul>
-<li>
-<p>儿童自行车</p>
-</li>
-<li>
-<p>儿童的自行车</p>
-</li>
-<li>
-<p>女童自行车</p>
-</li>
-<li>
-<p>男童自行车</p>
-</li>
-<li>
-<p>第一辆自行车</p>
-</li>
-</ul>
-<p>在关键字列表就绪后，她确定了出价金额 — 即骑遇记在用户点击自己的广告时要支付的最高金额。</p>
-<h4 id="3为每个广告组制作了一组文字广告">3.为每个广告组制作了一组文字广告</h4>
-<p><strong>标题</strong> - 应吸引客户的注意力<br>
-<strong>网址</strong> - 应指向骑遇记网站上的特定页面<br>
-<strong>广告内容描述</strong> - 应突显骑遇记所售产品的详细信息</p>
-<p><strong>下面是她的其中一条广告：</strong></p>
-<p>骑遇记儿童自行车促销 | 儿童自行车全部优惠 20%，免费送货<br>
-https://www.example.com/kidsbikes</p>
-<p>顶级的品质、丰富的选择，以及值得信赖的专家建议。提供聊天支持服务。先请浏览我们的顾客评价！支持手机下单。</p>
-<h4 id="4制作由动态创建的文字广告和关键字列表组成的广告组">4.制作由动态创建的文字广告和关键字列表组成的广告组</h4>
-<p>为使广告组更显完美，阿久选择了制作由动态创建的文字广告和关键字列表组成的广告组。这些广告和关键字列表是由系统根据她的网站内容自动创建的。这使得阿久的广告可由她制作标准广告组时未曾想到的搜索字词触发并展示。我们稍后将会更详细地介绍动态搜索广告。</p>
-<p>在阿久的搜索广告系列就绪后，她的广告开始在购买儿童自行车和男童自行车促销等搜索字词的触发下展示，让她的店铺能更轻松地完成销售！</p>
-<h3 id="更多搜索广告系列设置">更多搜索广告系列设置</h3>
-<p>除了选择您希望在哪些地方展示广告以及您愿意支出多少费用之外，您还可以进一步设置其他选项：</p>
-<h4 id="1广告附加信息">1.广告附加信息</h4>
-<p>向广告中添加更多信息，例如位置信息、网站上网页的链接和电话号码。</p>
-<p>例如，因为骑遇记也有实体店，因此阿久可以添加店铺位置信息和电话号码。她还可以添加网站上介绍所售不同自行车的具体页面的链接。</p>
-<h4 id="2开始日期和结束日期">2.开始日期和结束日期</h4>
-<p>此选项用于设置广告系列的开始日期和结束日期。</p>
-<p>假设阿久要在夏天举办山地自行车优惠促销活动。她想要用专门的广告来宣传活动。此次促销仅持续 30 天，因此她不希望促销广告的投放时间超出此范围。</p>
-<h4 id="3广告投放时间设置">3.广告投放时间设置</h4>
-<p>允许您选择在每周的某几天或特定时段展示您的广告。</p>
-<p>例如，如果知道用户在晚上和周末会更频繁地搜索儿童自行车，阿久可以选择在这些时间展示儿童自行车广告。</p>
-<h3 id="广告是如何展示在用户面前的">广告是如何展示在用户面前的？</h3>
-<h4 id="第-1-步用户进行搜索">第 1 步：用户进行搜索</h4>
-<p>搜索内容为“购买城市自行车”。</p>
-<h4 id="第-2-步竞价开始">第 2 步：竞价开始</h4>
-<p>Google 的搜索引擎会检查广告客户（包括阿久）的所有广告系列，查找他们广告组中与用户的搜索字词“购买城市自行车”相匹配的关键字。</p>
-<p>广告客户（包括阿久）之前制作广告组时，都为其关键字设置了出价，指明当有人点击他们的广告时他们愿意支付的金额。</p>
-<p>每当有人执行搜索时，这种竞价都会进行一次。</p>
-<h4 id="第-3-步google-搜索引擎为所有广告排名">第 3 步：Google 搜索引擎为所有广告排名</h4>
-<p>在给所有广告排名后，搜索引擎会根据广告客户出价和广告与搜索结果的相关性决定展示哪些广告。如果系统认为某个广告不相关，该广告就不会展示。</p>
-<h4 id="第-4-步搜索转化为销售">第 4 步：搜索转化为销售</h4>
-<p>当阿久的文字广告向用户展示时，用户只要点击或点按该广告就会转到阿久的着陆页。她已经将着陆页指定为网站上的城市自行车页面。</p>
-<p>这就是搜索转化为销售的过程！使用 Google Ads，您可以轻松制作和管理在整个 Google 广告网络中投放广告的搜索引擎营销广告系列，并帮助每个人找到他们寻找的东西。</p>
-<h2 id="五控制哪些搜索可以触发您的广告进行展示">五.控制哪些搜索可以触发您的广告进行展示</h2>
-<p>在广告组中创建关键字列表后，Google 的算法会根据您创建的列表确定将哪些用户搜索与您的广告匹配起来。</p>
-<p>通过本单元的学习，您将了解如何自定义关键字列表以扩大或缩小这些匹配项的范围，使之最适合您的广告系列目标。</p>
-<h3 id="如何控制哪些搜索可以触发您的广告">如何控制哪些搜索可以触发您的广告</h3>
-<h4 id="第-1-步站在用户的立场思考">第 1 步：站在用户的立场思考</h4>
-<p>关键字应与用户在搜索您的产品或服务时可能使用的字词保持一致。这就是所谓的<strong>关键字定位</strong>。</p>
-<h4 id="第-2-步想想您的业务目标">第 2 步：想想您的业务目标</h4>
-<p>您是希望更多人访问您的网站，还是想要覆盖已经准备好进行购买的用户？<br>
-关键字有五个匹配类型选项可以选择，按照从宽泛到具体的顺序依次为：<em><strong>广泛匹配、带修饰符的广泛匹配、词组匹配、完全匹配和否定匹配</strong></em>。</p>
-<p>有些搜索字词是您可以确定用户一定会使用的，还有一些搜索字词则不那么容易预测。无论您的目标是什么，都可以利用匹配类型来尽可能多地吸引有可能对您业务感兴趣的用户。</p>
-<h4 id="第-3-步将工作交给-google-代劳">第 3 步：将工作交给 Google 代劳</h4>
-<p>让 Google 根据您的网站内容自动创建动态生成的文字广告和关键字列表。如此一来，可以触发您广告的搜索字词将比您最初在列表中包含的更多。稍后我们将详细介绍如何使用动态搜索广告。</p>
-<p>我们来看看不同的匹配类型，您可以使用它们来控制哪些搜索能够触发您的广告。</p>
-<h3 id="如何利用不同类型的匹配方式覆盖广泛的受众群体">如何利用不同类型的匹配方式覆盖广泛的受众群体</h3>
-<p>阿久是一家大型自行车和冒险运动用品网店的数字营销经理，让我们看看她是如何使用匹配类型来设置关键字列表的。</p>
-<p>为使广告面向更广泛的受众群体进行展示，同时确保不会漏掉用户可能使用的任何搜索字词，她使用了广泛匹配和广泛匹配修饰符这两种关键字匹配类型。下面我们来仔细了解一下这两种匹配类型。</p>
-<h4 id="1广泛匹配默认的匹配类型">1.广泛匹配（默认的匹配类型）</h4>
-<p>阿久的冒险用品商店刚刚扩充了自行车产品目录，她想要对新的车型进行宣传。为使广告面向尽可能广泛的受众群体进行展示，并确保不错过任何搜索，她为关键字使用了广泛匹配。</p>
-<p>如果用户的搜索字词中包含关键字（或者拼写错误、同义词或相关搜索等任意变体），广泛匹配就会触发您的广告进行展示。</p>
-<p>通过广泛匹配，阿久可以使用更笼统的关键字（如自行车），并面向搜索自行车或其变体形式（如单车）的任何人展示她的广告。</p>
-<p>例如，如果用户搜索送给 6 岁小孩最好的第一辆单车或男士山地车促销，阿久的广告就会展示，因为用户的搜索字词包含她的关键字自行车的变体形式。此功能不仅使阿久的店铺网站更有机会向用户进行展示，而且还能增加她的广告在她可能未曾想到的搜索字词触发下展示的机会。</p>
-<h4 id="2广泛匹配修饰符">2.广泛匹配修饰符</h4>
-<p>阿久想要宣传店里最畅销的蓝色女童自行车。为使广告面向想要购买自行车的广泛受众群体进行展示，同时又锁定搜索蓝色女童自行车的用户，她为关键字添加了广泛匹配修饰符。</p>
-<p>在关键字前面添加 + 号就可以将其变为广泛匹配修饰符。这样一来，只有在搜索字词中的任意部分包含关键字或其紧密变体形式时，才会触发您的广告进行展示。</p>
-<p>这种匹配方式不同于广泛匹配，后者允许搜索字词中出现关键字的任何变体形式。广泛匹配修饰符只允许紧密变体形式。</p>
-<p>如果阿久使用广泛匹配修饰符关键字 +蓝色、+女孩和 +自行车，她的广告就会面向在搜索引擎中搜索这些字词的任意组合（可包含额外字词）的用户进行展示。但是，如果这些关键字中有任何一个不在搜索字词中，广告就不会展示。</p>
-<p>例如，她的广告会在搜索字词适合 6 岁女孩的蓝色自行车的触发下展示，因为该搜索中包含全部三个广泛匹配修饰符关键字。不过，搜索字词女孩自行车不会触发她的广告，因为缺少蓝色这个关键字。</p>
-<p>阿久的广泛匹配修饰符关键字是 +蓝色、+女孩和 +自行车。为什么在有人搜索适合运动风女孩的蓝色单时，她的广告会展示？</p>
-<p>因为搜索字词单车是自行车的紧密变体形式，而且搜索字词中出现了所有广泛匹配修饰符关键字。</p>
-<h4 id="3提示">3.提示</h4>
-<p>如果不希望花太多时间来制作详尽的关键字列表，建议选择广泛匹配。在这种匹配机制下，您的关键字将与搜索字词的更多变体进行匹配，并且您可以覆盖不一定在搜索您的特定品牌或业务的用户。这就好比是撒一张大网来覆盖与您的关键字相关的搜索。</p>
-<p>借助广泛匹配修饰符，您可以指明您覆盖的搜索中是否必须出现与关键字相关的特定概念。</p>
-<h3 id="如何利用匹配类型缩小覆盖面">如何利用匹配类型缩小覆盖面</h3>
-<p>至此，您已了解如何覆盖广泛的受众群体，接下来我们看看阿久如何使用词组匹配和完全匹配这两种关键字匹配类型缩小看到她广告的受众群体范围。</p>
-<h4 id="1词组匹配">1.词组匹配</h4>
-<p>阿久想要宣传新儿童自行车品牌“我的第一辆大自行车”开展的优惠活动。为确保广告只向搜索该自行车品牌的用户展示，她为关键字选择了词组匹配。</p>
-<p>以引号括住关键字即可将关键字设为词组匹配。这样一来，只有在用户搜索字词与引号内的关键字或其紧密变体形式匹配时，才会触发您的广告进行展示。</p>
-<p>这种匹配方式与广泛匹配修饰符的不同之处在于它要求用户的搜索字词之间不能有任何额外字词，而相似之处在于允许词组前后出现额外字词。</p>
-<p>如果阿久使用词组匹配关键字“我的第一辆大自行车”，她的广告就不会匹配包含第一辆大自行车的搜索，因为我的也必须出现。她的广告只会面向搜索自行车品牌“我的第一辆大自行车”的用户展示。</p>
-<p>如果阿久为关键字“我的第一辆大自行车”使用词组匹配，搜索字词我的第一辆大自行车值得买吗？是否会触发阿久的广告展示？</p>
-<p>会！这个搜索字词包含完整且顺序正确的关键字词组我的第一辆大自行车。词组前后可以加上其他字词。</p>
-<h4 id="2完全匹配">2.完全匹配</h4>
-<p>阿久要举办儿童自行车促销活动，她非常希望吸引那些搜索优惠活动的用户。为了向只搜索儿童自行车促销活动的用户展示广告，她为关键字设置了完全匹配。</p>
-<p>要使用完全匹配，应当用方括号括住关键字。如此一来，您的广告就只会在搜索字词的含义与您的关键字一致时展示。触发字词可包括关键字的紧密变体形式，例如拼写错误、复数形式和同义词。</p>
-<p>这种匹配方式不同于词组匹配，它要求搜索字词前后不能有任何其他字词。</p>
-<p>例如，关键字 [男士自行车] 会在有人搜索男士自行车或男自行车时触发广告，但不会针对男士自行车促销触发广告。</p>
-<p>如果阿久使用完全匹配关键字 [儿童自行车促销]，用户无论是搜索儿童的自行车促销、促销儿童自行车还是儿童自行车的促销，都会看到她的广告。这可以帮助她缩小受众群体的范围，以便只覆盖潜在客户。她的广告不会面向只是搜索儿童自行车的任何人展示，因为此查询未包含促销这个概念。</p>
-<p>如果阿久使用完全匹配关键字 [儿童自行车促销]，她的广告会不会与搜索字词力度最大的儿童自行车促销匹配？</p>
-<p>不会的。完全匹配关键字只会匹配与关键字含义相同的搜索。换句话说，此类关键字不会匹配包含原始关键字中没有的其他概念或详细信息的搜索。</p>
-<h4 id="3提示-2">3.提示</h4>
-<p>如果需要比完全匹配更灵活，比广泛匹配更具针对性的匹配方式，建议选择词组匹配。词组匹配可以帮助您覆盖更多用户，同时仍然保证向最可能搜索您的产品或服务的用户展示广告。</p>
-<p>如果您非常重视与特别具体的用户搜索进行匹配，建议选择完全匹配。完全匹配关键字可让您只覆盖与关键字含义相同的搜索。</p>
-<h3 id="如何使用匹配类型来避免广告针对不适合的搜索进行展示">如何使用匹配类型，来避免广告针对不适合的搜索进行展示</h3>
-<p>让我们看看阿久如何使用否定关键字来确保她的广告只向相关用户展示。</p>
-<h4 id="1否定关键字">1.否定关键字</h4>
-<p>阿久在使用广泛匹配关键字儿童自行车来定位广告，却发现有时候她的广告会在搜索字词儿童滑板车的触发下展示。但是，她的产品目录中目前并没有任何滑板车。在店铺补充滑板车之前，她希望仅向对自行车感兴趣的用户展示广告，因此在关键字列表中添加了 -滑板车作为否定关键字。</p>
-<p>在关键字滑板车前面加个减号，这个关键字就会变成否定关键字（-滑板车）。这意味着，当有人在搜索中使用了该否定关键字时，相应广告就不会展示。</p>
-<p>使用否定关键字 -滑板车，阿久的广告就不会向搜索滑板车的用户展示。</p>
-<h4 id="2比较匹配类型">2.比较匹配类型</h4>
-<p>为关键字选择合适的匹配类型可以帮助您向适当的用户展示您的广告。请查看下面的所有匹配类型，了解它们如何扩大或缩小您的覆盖范围。<br>
-<img src="https://img-blog.csdnimg.cn/20210630112010812.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NsbF84NjkyNDE=,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
-<table>
-<thead>
-<tr>
-<th>匹配类型</th>
-<th>特殊符号</th>
-<th>假如您使用以下关键字</th>
-<th>只要搜索字词符合以下条件</th>
-<th>而且用户搜索的是以下内容，您的广告便可能展示：</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>广泛匹配</td>
-<td>无</td>
-<td>儿童自行车</td>
-<td>搜索字词的任意部分包含关键字或任何变体形式（如拼写错误、同义词或相关搜索）。</td>
-<td>购买小孩子骑的自行车,儿童滑板车</td>
-</tr>
-<tr>
-<td>广泛匹配修饰符</td>
-<td>+关键字</td>
-<td>+儿童 +自行车</td>
-<td>搜索字词的任何部分包含关键字或其紧密变体形式。在这些字词之前、之后或之间可以有其他字词。</td>
-<td>儿童玩具和自行车,儿童山地自行车</td>
-</tr>
-<tr>
-<td>词组匹配</td>
-<td>&quot;关键字&quot;</td>
-<td>&quot;儿童自行车&quot;</td>
-<td>引号内的关键字或其紧密变体形式与搜索字词相匹配。搜索字词之间不能有任何额外的字词。</td>
-<td>安全的儿童自行车，购买儿童自行车，儿童自行车促销</td>
-</tr>
-<tr>
-<td>完全匹配</td>
-<td>[关键字]</td>
-<td>[儿童自行车]</td>
-<td>关键字或其紧密变体形式的含义与搜索字词一致。搜索字词之前或之后不能有任何额外的字词。</td>
-<td>儿童自行车，孩童自行车，适合儿童的自行车</td>
-</tr>
-</tbody>
-</table>
-<h4 id="3提示-3">3.提示</h4>
-<p>较宽泛的匹配类型（广泛匹配和广泛匹配修饰符）可以帮助您发现您可能没有意识到的字词。完全匹配则适用于以下情况：您知道用户会使用什么搜索字词来搜索您希望专门宣传的产品或服务。</p>
-<h2 id="六用动态搜索广告补充您的关键字策略">六.用动态搜索广告补充您的关键字策略</h2>
-<p>如果您希望让与您业务相关的搜索触发您的广告（包括您未曾想到的搜索），动态搜索广告可以助您一臂之力！</p>
-<p>通过本单元的学习，您将了解如何利用动态搜索广告补充您的关键字策略。</p>
-<h4 id="1创建关键字列表的挑战">1.创建关键字列表的挑战</h4>
-<p>要针对与您业务相关的用户搜索创建关键字列表，不仅挑战重重，而且也耗费时间。随着使用智能手机以及语音搜索和数字助理的人快速增加，客户找到您的方式发生了改变，导致出现了大量您无法预见的搜索。</p>
-<p>现在每天都会出现越来越多涉及新搜索的搜索时刻。事实上，每天在 Google 上进行的搜索中有 15% 从来未曾出现过！这种情况下，手动覆盖所有搜索成了一项永无止境的工作，并且会导致错失机会。</p>
-<p>大规模创作广告素材并将它们与每个不同的着陆页正确相匹配也是一项艰巨的任务。您的网站上可能有数百、数千甚或数百万个不断变化的着陆页，这就要求您不断更新广告标题和显示网址。</p>
-<p><strong>面对这个棘手的问题，我们的解决方案是：动态搜索广告！</strong></p>
-<h4 id="2-什么是动态搜索广告">2. 什么是动态搜索广告？</h4>
-<p>动态搜索广告可以帮助您扩大搜索广告系列的覆盖面。动态搜索广告会根据 Google 对您网站的了解情况来定制和定位您的广告，让您不必为网站上的每个网页制作广告或为每个广告添加关键字。</p>
-<h4 id="3动态搜索广告的运作方式">3.动态搜索广告的运作方式</h4>
-<p>您、您的潜在客户以及 Google 如何参与动态搜索广告的运作过程？</p>
-<ol>
-<li>
-<p>您指定网站页面、每日预算和广告模板。</p>
-</li>
-<li>
-<p>用户在 Google 搜索上输入搜索字词。</p>
-</li>
-<li>
-<p>如果您有与搜索相关的内容，Google 就会动态生成广告标题和目标网址（指向您网站上与搜索最相符的网页）。</p>
-</li>
-</ol>
-<p>动态搜索广告基于Google 的网页抓取技术，并且会为您的网站编制索引并利用该索引列表来最终确定用户的搜索是否与您的业务相关。如果搜索字词与索引匹配，动态搜索广告就会自动按照用户的搜索字词定制标题和目标网址，并在 Google Ads 竞价中提交一个基于您的模板制作的动态搜索广告。您只需要事先在模板中创建广告内容描述 - 其他所有内容都会基于用户的搜索字词自动生成。</p>
-<h4 id="4注意">4.注意</h4>
-<p>动态搜索广告会生成高度相关的广告来补充您的其他 Google Ads 广告系列。这些广告可为现有关键字未覆盖的相关搜索带去价值，补充您的关键字策略，并确保您不会错失任何相关搜索。</p>
-<h3 id="动态搜索广告的运作机制">动态搜索广告的运作机制</h3>
-<p>我们来看看动态搜索广告的制作过程。</p>
-<h4 id="1用户输入搜索字词">1.用户输入搜索字词。</h4>
-<h4 id="2google-将该搜索与您网站上最相关的着陆页相匹配">2.Google 将该搜索与您网站上最相关的着陆页相匹配。</h4>
-<h4 id="3google-的算法会根据您的模板制作广告并定制标题">3.Google 的算法会根据您的模板制作广告并定制标题。</h4>
-<h3 id="动态搜索广告的定位选项">动态搜索广告的定位选项</h3>
-<p>您可以控制 Google 如何将用户的搜索与您网站的内容进行匹配。有多个网站定位选项可供选择，每个选项都提供不同的控制级别。</p>
-<h4 id="1标准广告组所使用的着陆页">1.标准广告组所使用的着陆页</h4>
-<p>这是最简单的选项，因为它包含您已在帐户内的广告中用作着陆页的所有网页。</p>
-<h4 id="2类别">2.类别</h4>
-<p>Google 会根据您网站的内容创建出可定位的类别，也就是按主题整理的多组着陆页。您可以决定要定位哪些网页组、如何对类似的网页进行分组，以及粒度级别。</p>
-<p>示例：在电子产品网店中，您可以只定位网店的“数码相机”类别。</p>
-<h4 id="3您可以定位网站上包含特定字符串的网页">3.您可以定位网站上包含特定字符串的网页。</h4>
-<p>示例：您希望根据用户在浏览您的电子产品网站时显示的网址字符串，定位网站中的所有博客相关页面。如果所有这些网址都遵循类似的格式（例如 example.com/blog/），您应该定位包含“blog”的每个网址。</p>
-<h4 id="4网址为">4.网址为</h4>
-<p>您可以定位到特定网址。</p>
-<p>示例：如果想要根据您的“特别优惠”页面制作动态广告组，您可以选择只定位到该页面。</p>
-<h4 id="5页面-feed">5.页面 Feed</h4>
-<p>基于包含特定网址的 Feed（映射到可自动更新的自定义标签）生成广告组的动态搜索广告定位。</p>
-<p>示例：您想要为正在促销的电视机制作一个广告系列。为此，您需要创建一个 Feed 并为所有折价销售的电视机添加标签“ON_SALE”。在动态广告组中，选择定位自定义标签，然后输入“ON_SALE”作为自定义标签。此外，您还可以为该定位条件添加自定义出价</p>
-<h3 id="动态搜索广告的主要优势">动态搜索广告的主要优势</h3>
-<h4 id="1广泛覆盖">1.广泛覆盖</h4>
-<p>覆盖更多搜索！</p>
-<p>匹配与您网站高度相关但您可能错失的搜索。</p>
-<h4 id="2高效省时">2.高效省时</h4>
-<p>无需管理拉不到底的关键字列表。不必再根据季节性因素或需求暂停或制作广告，因为我们的网页抓取技术会为您代劳，而且深知您的网站在何时提供什么产品或服务。*</p>
-<p>*抓取工具更新信息需要几天时间</p>
-<h4 id="3透明度和控制权">3.透明度和控制权</h4>
-<p>不牺牲控制权！</p>
-<p>动态搜索广告以搜索字词报告提供完全的透明度，通过动态定位条件级别的出价提供控制权，且支持排除不相关的流量。</p>
-<h3 id="根据您的业务目标投放动态搜索广告">根据您的业务目标投放动态搜索广告</h3>
-<p>您的业务目标是什么？动态搜索广告如何帮助您达成目标？</p>
-<h4 id="1扩大覆盖面">1.扩大覆盖面</h4>
-<p>“我希望确保广告针对更多的相关用户搜索进行展示。”</p>
-<p>使用动态搜索广告作为现有关键字策略的补充，可以确保良好的覆盖面，不用花什么精力，也无需复杂的实施或广告系列管理。</p>
-<h4 id="2长尾自动化">2.长尾自动化</h4>
-<p>“我希望用户可以找到我的长尾产品。”</p>
-<p>如果您的网站上有着大量的动态内容，且您担心仅采用关键字定位的广告系列有错失长尾流量的风险，动态搜索广告非常适合您。</p>
-<h4 id="3快速扩张">3.快速扩张</h4>
-<p>“我想快速进入新市场。”</p>
-<p>动态搜索广告可以帮助您将当前的业务活动扩大至新的业务地区或国家。</p>
-<h4 id="4回顾">4.回顾</h4>
-<p>要在用户最需要您的时刻（也就是当他们使用 Google 搜索引擎搜索您的产品和服务的那一刻）吸引他们，Google 搜索广告系列是一种行之有效的方法。通过提供不同的匹配和关键字选项，再配以动态搜索广告中的机器学习算法，我们让您和您的广告可以轻松地与客户建立持久的联系。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[什么是 Google Ads 竞价]]></title>
-        <id>https://zmrw.github.io/post/shi-me-shi-google-ads-jing-jie/</id>
-        <link href="https://zmrw.github.io/post/shi-me-shi-google-ads-jing-jie/">
-        </link>
-        <updated>2021-12-09T05:05:57.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="google-ads-竞价的运作机制">Google Ads 竞价的运作机制</h3>
-<p>Google Ads 采用一种竞价系统来排列搜索结果页上广告的展示顺序和决定每次广告点击的费用。广告在网页上展示的顺序取决于一项称作“广告评级”的计算。</p>
-<p>首先，Google 用户希望看到的广告与自己切实相关。他们不愿意看到与自己所搜索的内容没有密切关系的广告。广告主也希望展示具有相关性的广告，这样才会有效吸引用户点击。</p>
-<p>Google 希望为用户提供良好的体验，并为广告主创造价值，这样他们今后才愿意再次使用我们的服务。</p>
-<p>Google 采用一种特殊的次高价格竞价机制，这种机制不止考虑出价（后面会详细介绍）。在只考虑出价的标准次高价格竞价中，广告主无需全额支付出价金额，只需支付比次高出价金额高 0.01 美元的费用即可。</p>
-<p>假设有四家广告主出价竞争搜索结果页上的广告空间，每有一位用户点击他们的广告并访问他们的网站，他们分别愿意支付 4 美元、3 美元、2 美元和 1 美元。</p>
-<p>在这种情况下，最高出价为 4 美元，但该广告主只需支付 3.01 美元，也就是比次高出价 3 美元多出 0.01 美元。次高出价和第三高出价的广告主也是如此。在这种机制下，每位广告主都可以实实在在地按照他们愿意为每次点击支付的最高金额出价，但只需支付足以击败对手的金额。</p>
-<h3 id="广告评级如何决定广告排名">广告评级如何决定广告排名</h3>
-<p>Google Ads 会为参与竞价的每个广告计算广告评级。广告评级决定了广告排名以及您的广告是否有资格展示。一般而言，广告评级最高的广告会展示在首位，广告评级第二高的广告会展示在第二个位置（假设广告达到了评级门槛要求），以此类推。<br>
-概括来讲，广告评级由以下五个因素共同决定。</p>
-<ol>
-<li>
-<p><strong>出价</strong>：设置出价是指告诉 Google Ads 您愿意为每次广告点击支付的最高金额。您最终实际支付的金额通常会低于您设置的出价金额，并且您可以随时更改出价。</p>
-</li>
-<li>
-<p><strong>广告评级门槛</strong>：为确保展示的是优质广告，我们设定了最低质量要求，广告必须达到该最低要求才能在特定广告位置展示。</p>
-</li>
-<li>
-<p><strong>查询时的情境</strong>：在广告竞价中，用户当前所处的情境非常重要。计算广告评级时，我们会分析用户输入的搜索字词、用户搜索时所在的位置、用户使用的设备类型（如移动设备或桌面设备）、搜索时间、搜索字词的性质、网页上显示的其他广告和搜索结果，以及其他用户信号和属性。</p>
-</li>
-<li>
-<p><strong>广告附加信息的影响</strong>：制作广告时，您可以向广告中添加一些额外的信息，例如添加电话号码，或添加更多指向您网站上具体网页的链接。此类信息就称为“广告附加信息”。Google Ads 会评估您使用的附加信息及其他广告格式对广告的效果将有何影响。</p>
-</li>
-<li>
-<p><strong>竞价时的广告质量</strong>：Google Ads 还会分析：对于将会看到广告的用户来说，您的广告及其链接到的网站的相关程度和实用性如何。质量得分是一个综合估算值，体现了我们对广告质量的评估结果。</p>
-</li>
-</ol>
-<h3 id="决定广告质量的三个主要因素">决定广告质量的三个主要因素</h3>
-<p>广告主只有在自己的广告真正获得点击时，才需要付费；广告的排名不仅仅取决于出价。为什么呢？因为我们希望把比较有用的广告展示在搜索结果页面中排名靠前的位置。下面就来详细了解一下哪些因素决定着广告的质量。</p>
-<ol>
-<li>
-<p><strong>预计点击率</strong>：这是我们预计广告在展示时将获得点击的可能性。在 Google 整个公司，我们都是根据用户反馈来做出决策，而用户点击率 (CTR) 就很好地体现了用户的反应。这相当于让用户通过决定是否点击来投票，这样我们就征集到了数百万用户的意见，有助于我们确定对于每一次搜索查询，哪些广告最为合适。</p>
-</li>
-<li>
-<p><strong>广告着陆页体验</strong>：用户希望广告着陆页能够帮助他们找到所需的内容。着陆页的相关程度越高，广告的评分也就越高。高质量的着陆页应包含合适的原创内容，能够帮助用户完成任务。着陆页应易于导航，一目了然地说明业务的性质、网站是如何与用户计算机交互的以及网站打算如何使用用户的个人信息。</p>
-</li>
-<li>
-<p><strong>广告相关性</strong>：广告相关性用于衡量广告与用户搜索内容的匹配程度，有助于确保只展示对用户有用的广告。这样也就不会导致商家付费投放广告，却在用户搜索与其产品或服务无关的内容时展示了。</p>
-</li>
-</ol>
-<h3 id="广告评级如何影响实际的每次点击费用">广告评级如何影响实际的每次点击费用</h3>
-<p>平均每次点击费用 (CPC) 通常并不是您为每次点击支付的价格。由于系统是动态变化的，不同竞价的每次点击费用可能会有很大差异，这取决于各种因素，例如用户每次查询时所处的情境。务必要注意的是，平均每次点击费用只是一个平均值，也就是说您支付的价格可能高于或低于该平均值。</p>
-<p>质量较高的广告通常能够以较低的价格获得较为理想的广告排名，广告效果也就更好。用户看到的广告越好，他们就越满意，实际点击这些广告的可能性也就越高。</p>
-<h3 id="如何提升广告评级">如何提升广告评级</h3>
-<p>具体内容包括质量得分的定义，以及如何提升预计点击率、广告相关性和着陆页体验。</p>
-<ol>
-<li>
-<p><strong>什么是质量得分</strong>:质量得分估算的是广告、关键字和着陆页的质量。质量较好的广告能够以更低的价格获得更好的广告排名。影响质量得分的因素有<strong>预计点击率、广告相关性和着陆页体验</strong>。</p>
-</li>
-<li>
-<p><strong>如何在 Google Ads 中找到质量得分</strong>:通过 Google Ads 界面中的四个质量得分状态列，就可以了解您当前的质量得分及其各个组成要素的得分，即：质量得分、着陆页体验、广告相关性和预计点击率 (eCTR)。如需了解如何查看状态列，请<a href="https://support.google.com/google-ads/answer/6167118?visit_id=637630323825585702-3238729685&amp;rd=1" title="参阅这些说明">参阅这些说明</a>。</p>
-</li>
-</ol>
-<p><strong>提示</strong>：您应使用所有适合您业务的广告附加信息，因为计算广告评级时会考虑广告附加信息的预期影响。有关更多详情，请参阅此最佳做法指南：<a href="https://support.google.com/google-ads/answer/6167123" title="参考质量得分做出优化决策">参考质量得分做出优化决策</a>。</p>
-<h3 id="要提高广告质量可以重点提升质量得分的三个组成要素">要提高广告质量，可以重点提升质量得分的三个组成要素</h3>
-<ol>
-<li>
-<p>预计点击率 (eCTR) 用于预测您的关键字是否有可能带来广告点击。不过，您应该着力提高的是点击率 (CTR)，即看到您广告的用户中实际点击广告的用户占比。</p>
-<p><strong>广告内容要有针对性</strong>：在广告文字中加入关键字（特别是在标题中），让用户可以看出您的广告与他们搜索的内容直接相关。</p>
-<p><strong>尝试使用不同的号召性用语</strong>：您提供免费送货或免费退货服务吗？是想要用户立即致电还是立即预订？</p>
-<p><strong>强调产品或服务的独特优势</strong>：是什么让您在竞争中脱颖而出？不妨想一想用户看重的是什么（比如极佳的保修服务或十分宽松的退货政策）。</p>
-<p><strong>广告文字要因时因地而异</strong>：在节日或特别活动前后，可以测试旺季专用的广告素材；也可以测试针对地点进行了优化的广告素材。</p>
-</li>
-<li>
-<p>要提高广告的相关性，建议您做到以下几点：</p>
-<p><strong>添加否定关键字</strong>：以免在用户搜索查询您排斥的内容或者与您的产品或服务不紧密相关的内容时展示您的广告。</p>
-<p><strong>在移动设备上要有针对性</strong>：如果用户在移动设备上的搜索体验与在桌面设备上不同，不妨测试专门针对移动设备的广告素材。</p>
-<p><strong>本土化</strong>：为了定位到适合您开展业务的区域，请只使用相关的语言和地理位置。</p>
-<p><strong>在广告文案中加入相关的搜索字词</strong>：在广告文案中添加与您的业务相关的搜索字词，可以让您的广告更能引起用户共鸣。</p>
-</li>
-<li>
-<p>要改进着陆页体验，建议您做到以下几点：</p>
-<p><strong>将流量引导至合适的着陆页</strong>：用户点击后，应将用户引导至与用户查询的内容相关的页面。如果用户搜索“条纹衬衫”，那么着陆页就应该介绍条纹衬衫，而不是一些其他款式的衬衫或笼统的服装。</p>
-<p><strong>内容要一致</strong>：确保着陆页自然接棒广告，继续介绍广告中宣传的产品/服务或引导用户完成广告中号召的行动。</p>
-<p><strong>网站内容一目了然、值得信赖</strong>：让访客能够轻松找到您的联系信息，同时清楚明确地介绍您的业务。如果您要求客户提供个人信息，请明确说明索取这些信息的目的，以及您将如何处理和使用它们。</p>
-<p><strong>着力提升加载速度和明晰程度</strong>：首屏上展示的内容要主次分明，以便用户快速找到他们要找的内容。</p>
-<p><strong>重新思考移动设备体验</strong>：移动网站的用户更重视导航的便捷性，因此务必要优化移动网站体验。</p>
-</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[好用的扩展关键词工具]]></title>
-        <id>https://zmrw.github.io/post/hao-yong-de-kuo-zhan-guan-jian-ci-gong-ju/</id>
-        <link href="https://zmrw.github.io/post/hao-yong-de-kuo-zhan-guan-jian-ci-gong-ju/">
-        </link>
-        <updated>2021-12-09T03:18:31.000Z</updated>
-        <content type="html"><![CDATA[<p>1.扩展关键词网站</p>
-<pre><code class="language-python">https://keywordsheeter.com/project/f99486939c7ab43c834caf32631c9c2e
-</code></pre>
-<p>2.关键词分组</p>
-<pre><code class="language-python">https://marketbold.com/KeywordGrouperPro/app/
-</code></pre>
-<p>3.好用的插件</p>
-<pre><code class="language-python">SeoStack Keyword Tool（）
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LNMP部署Django项目总结]]></title>
-        <id>https://zmrw.github.io/post/lnmp-bu-shu-django-xiang-mu-zong-jie/</id>
-        <link href="https://zmrw.github.io/post/lnmp-bu-shu-django-xiang-mu-zong-jie/">
-        </link>
-        <updated>2021-12-09T03:16:59.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="1在本地生成所需依赖">1.在本地生成所需依赖</h3>
-<pre><code class="language-python">pip freeze &gt; requirements.txt
-</code></pre>
-<h3 id="2在服务器生成虚拟环境">2.在服务器生成虚拟环境</h3>
-<pre><code class="language-python">virtualenv --python=python3 env
-</code></pre>
-<h3 id="3激活虚拟环境">3.激活虚拟环境</h3>
-<pre><code class="language-python">source env/bin/activate
-</code></pre>
-<h3 id="4安装依赖">4.安装依赖</h3>
-<pre><code class="language-python">pip3 install -r requirements.txt
-</code></pre>
-<h3 id="5修改settingspy">5.修改settings.py</h3>
-<h4 id="51配置allowed_hosts">5.1配置ALLOWED_HOSTS</h4>
-<pre><code class="language-python">ALLOWED_HOSTS = ['*','.suwandratour.com']
-</code></pre>
-<h4 id="52配置静态文件收集目录">5.2配置静态文件收集目录</h4>
-<pre><code class="language-python">STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
-</code></pre>
-<h3 id="6收集文件">6.收集文件</h3>
-<pre><code class="language-python">python3 manage.py collectstatic
-</code></pre>
-<h3 id="7生成数据库">7.生成数据库</h3>
-<pre><code class="language-python">python3 manage.py migrate
-</code></pre>
-<h3 id="8导入数据导出数据-python-managepy-dumpdata-mysite_all_datajson">8.导入数据(导出数据 python manage.py dumpdata &gt; mysite_all_data.json)</h3>
-<pre><code class="language-python">python3 manage.py loaddata mysite_all_data.json
-</code></pre>
-<h3 id="9测试是否能运行">9.测试是否能运行</h3>
-<pre><code class="language-python">python3 manage.py runserver 0.0.0.0:9999
-</code></pre>
-<h3 id="10配置nginx">10.配置nginx</h3>
-<h4 id="101-进入nginx配置文件目录">10.1 进入nginx配置文件目录</h4>
-<pre><code class="language-bash">cd /usr/local/nginx/conf/vhost
-</code></pre>
-<h4 id="102-新建配置文件youdomainconf">10.2 新建配置文件youdomain.conf</h4>
-<pre><code class="language-python">server {
-    charset utf-8;
-    listen 80;
-    server_name suwandratour.com www.suwandratour.com;
-
-    location /static {
-        alias /home/juhe/suwandratour.com/collected_static;
-    }
-    location /media {
-        alias /home/juhe/suwandratour.com/media;
-    }
-
-    location / {
-        proxy_set_header Host $host;
-        proxy_pass http://127.0.0.1:8003;
-    }
-}
-</code></pre>
-<h3 id="11安装gunicorn-pip3-install-gunicorn">11.安装gunicorn （pip3 install gunicorn）</h3>
-<p>在项目根目录执行</p>
-<pre><code class="language-python">gunicorn 项目名称.wsgi -w 2 -k gthread -b 127.0.0.1:Nginx配置端口
-</code></pre>
-<h3 id="12重启lnmp">12.重启lnmp</h3>
-<p>至此，项目配置完毕</p>
 ]]></content>
     </entry>
 </feed>

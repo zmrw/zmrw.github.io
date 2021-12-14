@@ -2,18 +2,19 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>通过js将网站跳转到另一个网站 | 追梦人物</title>
+<title>Django前端循环截取数据展示 | 追梦人物</title>
 <link rel="shortcut icon" href="https://zmrw.github.io/favicon.ico?v=1639459309782">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://zmrw.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="通过js将网站跳转到另一个网站 | 追梦人物 - Atom Feed" href="https://zmrw.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Django前端循环截取数据展示 | 追梦人物 - Atom Feed" href="https://zmrw.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="制作了一下采集内容网站，想将客户点击采集页面跳转到正规页面，可以使用以下js
-var regexp=/\.(google|yahoo|msn|goo|ask|docomo|aol|bing|biglobe|nifty|fresheye|ce..." />
-    <meta name="keywords" content="JS,SEO" />
+    <meta name="description" content="制作一个网站时，网站原模版需要展示三张图片，我定义model时，定义相关图片来存储
+class ApplicationRelatedImage(models.Model):
+    image = models.ImageField(upl..." />
+    <meta name="keywords" content="Django" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -75,41 +76,76 @@ var regexp=/\.(google|yahoo|msn|goo|ask|docomo|aol|bing|biglobe|nifty|fresheye|c
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              通过js将网站跳转到另一个网站
+              Django前端循环截取数据展示
             </h2>
             <div class="post-info">
               <span>
-                2021-12-09
+                2021-12-14
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
               
-                <a href="https://zmrw.github.io/tag/oOVJZ8mBR/" class="post-tag">
-                  # JS
-                </a>
-              
-                <a href="https://zmrw.github.io/tag/4pZbw1Sf0/" class="post-tag">
-                  # SEO
+                <a href="https://zmrw.github.io/tag/7WQ6WUx3R/" class="post-tag">
+                  # Django
                 </a>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>制作了一下采集内容网站，想将客户点击采集页面跳转到正规页面，可以使用以下js</p>
-<pre><code class="language-javascript">var regexp=/\.(google|yahoo|msn|goo|ask|docomo|aol|bing|biglobe|nifty|fresheye|ceek|excite)(\.[a-z0-9\-]+){1,2}\//ig;
-var where =document.referrer;
-if(regexp.test(where))
-{
-window.location.href='https://www.sensorco2.com/product_list/'
-}
+                <p>制作一个网站时，网站原模版需要展示三张图片，我定义model时，定义相关图片来存储</p>
+<pre><code class="language-python">class ApplicationRelatedImage(models.Model):
+    image = models.ImageField(upload_to=application_directory_path, verbose_name=&quot;应用相关图片&quot;, blank=True,
+                              null=True)
+    application = models.ForeignKey(Application, on_delete=models.CASCADE, blank=True, null=True)
+
+    def __str__(self):
+        return self.application.title
+
+    class Meta:
+        verbose_name = &quot;应用相关图片&quot;
+        verbose_name_plural = verbose_name
 </code></pre>
-<p>将js代码放在采集页面最上方即可</p>
+<p>在做前端显示时，循环调用即可展示图片，但是三张图片都有自己的样式，直接使用循环不能更改样式，可以使用<strong>forloop.counter</strong>来完成</p>
+<pre><code class="language-python">{% for image in application.applicationrelatedimage_set.all %}
+                    {% if forloop.counter == 1 %}
+                        &lt;li class=&quot;pull_left&quot;&gt;&lt;img src=&quot;{{ image.image.url }}&quot; width=&quot;291&quot; height=&quot;197&quot;
+                                                   alt=&quot;&quot;/&gt;
+                        &lt;/li&gt;
+
+                    {% endif %}
+                    {% if forloop.counter == 2 %}
+                        &lt;li class=&quot;pull_right&quot;&gt;&lt;img src=&quot;{{ image.image.url }}&quot; width=&quot;212&quot; height=&quot;197&quot; alt=&quot;&quot;
+                                                    class=&quot;frist&quot;/&gt;&lt;/li&gt;
+
+                    {% endif %}
+                    {% if forloop.counter == 3 %}
+                        &lt;li class=&quot;pull_right&quot;&gt;&lt;img src=&quot;{{ image.image.url }}&quot; width=&quot;212&quot; height=&quot;197&quot; alt=&quot;&quot;
+                                                    class=&quot;frist&quot;/&gt;&lt;/li&gt;
+
+                    {% endif %}
+                {% empty %}
+                    &lt;div class=&quot;no-post&quot;&gt;暂时还没有banner图片！&lt;/div&gt;
+                {% endfor %}
+</code></pre>
+<h3 id="参考链接">参考链接</h3>
+<p><a href="https://pythonandseo.com/article/djangoqian-duan-xun-huan-jie-qu-shu-ju-zhan-shi/" title="Django前端循环截取数据展示">Django前端循环截取数据展示</a></p>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5">参考链接</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>
@@ -118,9 +154,9 @@ window.location.href='https://www.sensorco2.com/product_list/'
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://zmrw.github.io/post/google-ads-xue-xi-bi-ji/">
+            <a href="https://zmrw.github.io/post/django-pei-zhi-xadmin/">
               <h3 class="post-title">
-                Google Ads 学习笔记
+                Django 配置xadmin
               </h3>
             </a>
           </div>
