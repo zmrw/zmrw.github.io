@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zmrw.github.io</id>
     <title>追梦人物</title>
-    <updated>2021-12-20T10:11:51.338Z</updated>
+    <updated>2021-12-20T10:12:29.324Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zmrw.github.io"/>
     <link rel="self" href="https://zmrw.github.io/atom.xml"/>
@@ -52,6 +52,7 @@
 <h3 id="域名抢注脚本">域名抢注脚本</h3>
 <pre><code class="language-python">buydomain.pythonandseo.com
 </code></pre>
+<h3 id="python其他脚本定制">Python其他脚本定制</h3>
 ]]></content>
     </entry>
     <entry>
