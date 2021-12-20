@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zmrw.github.io</id>
     <title>追梦人物</title>
-    <updated>2021-12-20T10:04:16.826Z</updated>
+    <updated>2021-12-20T10:10:40.690Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zmrw.github.io"/>
     <link rel="self" href="https://zmrw.github.io/atom.xml"/>
@@ -43,6 +43,15 @@
 2020年询盘第三名（疫情影响询盘都受影响，开始制作中文采集站）<br>
 2019年询盘第二名（享受主管待遇）<br>
 <img src="https://zmrw.github.io/post-images/1639994430577.PNG" alt="" loading="lazy"></p>
+<h3 id="域名截图程序">域名截图程序</h3>
+<p><img src="https://zmrw.github.io/post-images/1639994943037.png" alt="" loading="lazy"><br>
+<img src="https://zmrw.github.io/post-images/1639994885339.png" alt="" loading="lazy"></p>
+<h3 id="翻译脚本">翻译脚本</h3>
+<pre><code class="language-python">https://zmrw.github.io/post/pi-liang-fan-yi-ying-yu-guan-jian-ci-dao-qi-ta-xiao-yu-chong/
+</code></pre>
+<h3 id="域名抢注脚本">域名抢注脚本</h3>
+<pre><code class="language-python">buydomain.pythonandseo.com
+</code></pre>
 ]]></content>
     </entry>
     <entry>
