@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zmrw.github.io</id>
     <title>追梦人物</title>
-    <updated>2021-12-20T10:12:29.324Z</updated>
+    <updated>2021-12-21T00:45:18.035Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zmrw.github.io"/>
     <link rel="self" href="https://zmrw.github.io/atom.xml"/>
@@ -10,51 +10,6 @@
     <logo>https://zmrw.github.io/images/avatar.png</logo>
     <icon>https://zmrw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 追梦人物</rights>
-    <entry>
-        <title type="html"><![CDATA[2021.12.20面试准备]]></title>
-        <id>https://zmrw.github.io/post/20211220-mian-shi-zhun-bei/</id>
-        <link href="https://zmrw.github.io/post/20211220-mian-shi-zhun-bei/">
-        </link>
-        <updated>2021-12-20T09:35:31.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="4年矿山机械工作经验">4年矿山机械工作经验</h3>
-<p>2017年毕业，校招进入上海世邦工业科技集团股份有限公司，从事采集站工作，2017-2019年，询盘优异，2019年主动申请回郑州，在郑州担任组长，负责采集站优化与制作工作。</p>
-<h4 id="采集站模板">采集站模板</h4>
-<p>工作四年，积累矿山相关采集站模板100套，只需要修改商务通与邮箱就可使用<br>
-<img src="https://zmrw.github.io/post-images/1639993331659.jpg" alt="" loading="lazy"></p>
-<h3 id="采集站数据库">采集站数据库</h3>
-<p>数据是采集站最关键的一部分<br>
-<img src="https://zmrw.github.io/post-images/1639993765501.png" alt="" loading="lazy"></p>
-<h3 id="采集网站备份">采集网站备份</h3>
-<p>四年采集站全部备份，做部分修改即可上传服务器，共计500G+<br>
-<img src="https://zmrw.github.io/post-images/1639993440248.png" alt="" loading="lazy"><br>
-<img src="https://zmrw.github.io/post-images/1639993507591.png" alt="" loading="lazy"><br>
-<img src="https://zmrw.github.io/post-images/1639993556695.png" alt="" loading="lazy"><br>
-<img src="https://zmrw.github.io/post-images/1639993709074.png" alt="" loading="lazy"></p>
-<h3 id="关键词整理">关键词整理</h3>
-<p>已积累关键词100万+<br>
-<img src="https://zmrw.github.io/post-images/1639993718260.png" alt="" loading="lazy"></p>
-<h3 id="kiss-cms快速建站">Kiss CMS快速建站</h3>
-<p>手里有世邦使用采集站全套程序，快速部署采集站</p>
-<h3 id="工作中使用的脚本提高工作效率">工作中使用的脚本，提高工作效率</h3>
-<figure data-type="image" tabindex="1"><img src="https://zmrw.github.io/post-images/1639993896860.png" alt="" loading="lazy"></figure>
-<h3 id="矿山机械设计模板100套">矿山机械设计模板100+套</h3>
-<h3 id="个人成就">个人成就</h3>
-<p>2021年世邦询盘第一名离职，截止到2021年11月底，询盘依旧是世邦团队第二名.<br>
-2020年询盘第三名（疫情影响询盘都受影响，开始制作中文采集站）<br>
-2019年询盘第二名（享受主管待遇）<br>
-<img src="https://zmrw.github.io/post-images/1639994430577.PNG" alt="" loading="lazy"></p>
-<h3 id="域名截图程序">域名截图程序</h3>
-<p><img src="https://zmrw.github.io/post-images/1639994943037.png" alt="" loading="lazy"><br>
-<img src="https://zmrw.github.io/post-images/1639994885339.png" alt="" loading="lazy"></p>
-<h3 id="翻译脚本">翻译脚本</h3>
-<pre><code class="language-python">https://zmrw.github.io/post/pi-liang-fan-yi-ying-yu-guan-jian-ci-dao-qi-ta-xiao-yu-chong/
-</code></pre>
-<h3 id="域名抢注脚本">域名抢注脚本</h3>
-<pre><code class="language-python">buydomain.pythonandseo.com
-</code></pre>
-<h3 id="python其他脚本定制">Python其他脚本定制</h3>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[2021郑州中跨峰会感悟]]></title>
         <id>https://zmrw.github.io/post/2021-zheng-zhou-zhong-kua-feng-hui-gan-wu/</id>
@@ -594,6 +549,16 @@ root      3949 18961  0 09:56 pts/2    00:00:00 grep --color=auto php-fpm
         pass
 </code></pre>
 <p>这样即可，这可能不是最好的方法，先解决问题，以后在研究</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu修改中国时间]]></title>
+        <id>https://zmrw.github.io/post/ubuntu-xiu-gai-zhong-guo-shi-jian/</id>
+        <link href="https://zmrw.github.io/post/ubuntu-xiu-gai-zhong-guo-shi-jian/">
+        </link>
+        <updated>2021-12-14T05:13:02.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="language-python">timedatectl set-timezone &quot;Asia/Shanghai&quot;
+</code></pre>
 ]]></content>
     </entry>
 </feed>
