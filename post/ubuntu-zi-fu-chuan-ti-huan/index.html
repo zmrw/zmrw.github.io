@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Ubuntu字符串替换 | 追梦人物</title>
-<link rel="shortcut icon" href="https://zmrw.github.io/favicon.ico?v=1640140850462">
+<link rel="shortcut icon" href="https://zmrw.github.io/favicon.ico?v=1640141394176">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://zmrw.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Ubuntu字符串替换 | 追梦人物 - Atom Feed" href="https://zmrw.github.io/atom.xml">
@@ -12,8 +12,8 @@
 
 
     <meta name="description" content="公司有两个商务通，今年弃用一个，但是很多网站使用的还是之前商务通，因此需要替换新的商务通
-我尝试这样操作
-sed -i &quot;s/&lt;script language=&quot;javascript&quot; src=&quot..." />
+第一个是要替换的内容，第二个是替换的内容，第三个也是替换的内容
+sed -i &quot;s/要替换的内容/替换的内容/g&quot; `grep 要..." />
     <meta name="keywords" content="Ubuntu" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -23,7 +23,7 @@ sed -i &quot;s/&lt;script language=&quot;javascript&quot; src=&quot..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://zmrw.github.io">
-  <img class="avatar" src="https://zmrw.github.io/images/avatar.png?v=1640140850462" alt="">
+  <img class="avatar" src="https://zmrw.github.io/images/avatar.png?v=1640141394176" alt="">
   </a>
   <h1 class="site-title">
     追梦人物
@@ -94,7 +94,10 @@ sed -i &quot;s/&lt;script language=&quot;javascript&quot; src=&quot..." />
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>公司有两个商务通，今年弃用一个，但是很多网站使用的还是之前商务通，因此需要替换新的商务通</p>
+                <p>公司有两个商务通，今年弃用一个，但是很多网站使用的还是之前商务通，因此需要替换新的商务通<br>
+第一个是要替换的内容，第二个是替换的内容，第三个也是替换的内容</p>
+<pre><code class="language-bash">sed -i &quot;s/要替换的内容/替换的内容/g&quot; `grep 要替换的内容 -rl /home/wwwroot/`
+</code></pre>
 <p>我尝试这样操作</p>
 <pre><code class="language-bash">sed -i &quot;s/&lt;script language=&quot;javascript&quot; src=&quot;https://pqt.zoosnet.net/JS/LsJS.aspx?siteid=PQT59458327&amp;amp;float=1&amp;amp;lng=en&quot;&gt;&lt;/script&gt;/&lt;script language=&quot;javascript&quot; src=&quot;https://lr.zoosnet.net/JS/LsJS.aspx?siteid=LEF55473249&amp;float=1&amp;lng=en&quot;&gt;&lt;/script&gt;/g&quot; `grep &lt;script language=&quot;javascript&quot; src=&quot;https://pqt.zoosnet.net/JS/LsJS.aspx?siteid=PQT59458327&amp;amp;float=1&amp;amp;lng=en&quot;&gt;&lt;/script&gt; -rl /home/wwwroot/strange-red-haired.be`
 </code></pre>

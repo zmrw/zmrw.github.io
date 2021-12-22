@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zmrw.github.io</id>
     <title>追梦人物</title>
-    <updated>2021-12-22T02:47:54.860Z</updated>
+    <updated>2021-12-22T02:49:57.997Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zmrw.github.io"/>
     <link rel="self" href="https://zmrw.github.io/atom.xml"/>
@@ -16,7 +16,10 @@
         <link href="https://zmrw.github.io/post/ubuntu-zi-fu-chuan-ti-huan/">
         </link>
         <updated>2021-12-22T02:37:19.000Z</updated>
-        <content type="html"><![CDATA[<p>公司有两个商务通，今年弃用一个，但是很多网站使用的还是之前商务通，因此需要替换新的商务通</p>
+        <content type="html"><![CDATA[<p>公司有两个商务通，今年弃用一个，但是很多网站使用的还是之前商务通，因此需要替换新的商务通<br>
+第一个是要替换的内容，第二个是替换的内容，第三个也是替换的内容</p>
+<pre><code class="language-bash">sed -i &quot;s/要替换的内容/替换的内容/g&quot; `grep 要替换的内容 -rl /home/wwwroot/`
+</code></pre>
 <p>我尝试这样操作</p>
 <pre><code class="language-bash">sed -i &quot;s/&lt;script language=&quot;javascript&quot; src=&quot;https://pqt.zoosnet.net/JS/LsJS.aspx?siteid=PQT59458327&amp;amp;float=1&amp;amp;lng=en&quot;&gt;&lt;/script&gt;/&lt;script language=&quot;javascript&quot; src=&quot;https://lr.zoosnet.net/JS/LsJS.aspx?siteid=LEF55473249&amp;float=1&amp;lng=en&quot;&gt;&lt;/script&gt;/g&quot; `grep &lt;script language=&quot;javascript&quot; src=&quot;https://pqt.zoosnet.net/JS/LsJS.aspx?siteid=PQT59458327&amp;amp;float=1&amp;amp;lng=en&quot;&gt;&lt;/script&gt; -rl /home/wwwroot/strange-red-haired.be`
 </code></pre>
