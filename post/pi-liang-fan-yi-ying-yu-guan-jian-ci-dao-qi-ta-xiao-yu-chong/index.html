@@ -1,0 +1,336 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>批量翻译英语关键词到其它小语种 | 追梦人物</title>
+<link rel="shortcut icon" href="https://zmrw.github.io/favicon.ico?v=1711418573538">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://zmrw.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="批量翻译英语关键词到其它小语种 | 追梦人物 - Atom Feed" href="https://zmrw.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="方法一，使用Selenium模拟Google翻译自动翻译关键词
+1.使用selenium模拟打开Google翻译
+from selenium import webdriver
+import time
+
+driver = webdriver...." />
+    <meta name="keywords" content="SEO,Python" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://zmrw.github.io">
+  <img class="avatar" src="https://zmrw.github.io/images/avatar.png?v=1711418573538" alt="">
+  </a>
+  <h1 class="site-title">
+    追梦人物
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="https://zmrw.github.io/post/wo-de-xiang-mu" class="menu">
+          我的项目
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              批量翻译英语关键词到其它小语种
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-12-11
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+                <a href="https://zmrw.github.io/tag/4pZbw1Sf0/" class="post-tag">
+                  # SEO
+                </a>
+              
+                <a href="https://zmrw.github.io/tag/t8DfkWnYM/" class="post-tag">
+                  # Python
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h2 id="方法一使用selenium模拟google翻译自动翻译关键词">方法一，使用Selenium模拟Google翻译自动翻译关键词</h2>
+<h3 id="1使用selenium模拟打开google翻译">1.使用selenium模拟打开Google翻译</h3>
+<pre><code class="language-python">from selenium import webdriver
+import time
+
+driver = webdriver.Chrome()
+kw_text = '我爱你'
+driver.get('https://translate.google.cn/#view=home&amp;op=translate&amp;sl=auto&amp;tl=en&amp;text=' + kw_text)
+time.sleep(3)
+ele = driver.find_element_by_css_selector('span[jsname=&quot;W297wb&quot;]')
+print(ele.text)
+
+</code></pre>
+<h3 id="2循环批量翻译">2.循环批量翻译</h3>
+<pre><code class="language-python">from selenium import webdriver
+import re
+import time
+import random
+
+with open('en.txt', encoding='utf-8') as f:
+    lines = f.readlines()
+
+driver = webdriver.Chrome()
+# driver.maximize_window()
+n = 0
+every_time_trans_nums = 100
+kw_num = len(lines)
+
+while n &lt; kw_num:
+    kw_text = ''
+    keywords = lines[n:n + every_time_trans_nums]
+    for i in keywords:
+        kw_text += i.replace(' ', '%20') + '%0A'
+
+    try:
+
+        # tl可以改为es,en,id,fr等
+        driver.get('https://translate.google.cn/#view=home&amp;op=translate&amp;sl=auto&amp;tl=vi&amp;text=' + kw_text)
+        time.sleep(3)
+        ele = driver.find_element_by_css_selector('span[jsname=&quot;W297wb')
+        print(ele.text)
+
+    except Exception as e:
+        print(e)
+        time.sleep(5)
+
+    else:
+        with open('vn.txt', 'a', encoding='utf-8') as f:
+            f.write(ele.text + '\n')
+
+    finally:
+        if kw_num - n &lt; every_time_trans_nums:
+            every_time_trans_nums = kw_num - n
+        else:
+            n += 50
+
+    if n % 500 == 0:
+        print('已翻译完成 [%s]' % n)
+    time.sleep(random.random())
+
+driver.quit()
+
+</code></pre>
+<h2 id="方法二使用googletrans库">方法二，使用googletrans库</h2>
+<h3 id="1安装googletrans">1.安装googletrans</h3>
+<pre><code class="language-python">pip instal googletrans
+</code></pre>
+<h3 id="2循环翻译关键词">2.循环翻译关键词</h3>
+<pre><code class="language-python">from googletrans import Translator
+translator = Translator()
+
+lange = 'en'
+
+with open('Google搜索字词包含sensor.txt', encoding='utf-8') as f:
+    lines = f.readlines()
+
+    for line in lines:
+        try:
+            result = translator.translate(line.strip(), dest=lange)
+            with open(lange + '_Google搜索字词包含sensor.txt', 'a', encoding='utf-8') as f:
+                f.write(result.text + '\n')
+        except Exception as e:
+            with open(lange + '_Google搜索字词包含sensor_error.txt', 'a', encoding='utf-8') as f:
+                f.write(line.strip() + '\n')
+</code></pre>
+<h2 id="方法三使用pygtrans库这个需要国外网络">方法三，使用pygtrans库（这个需要国外网络）</h2>
+<h3 id="1安装pygtrans">1.安装pygtrans</h3>
+<pre><code class="language-python"># coding=utf8
+from pygtrans import Translate
+import sys
+import os
+
+client = Translate()
+
+lange = os.path.split(sys.argv[0])[0][-2:]
+print('正在翻译语种:' + lange)
+
+keywords = 'dingqinghua.txt'
+
+with open(keywords, encoding='utf-8') as f:
+    lines = f.readlines()
+    for line in lines:
+        try:
+            text = client.translate(line, target=lange)
+            with open(lange + '_' + keywords, 'a', encoding='utf-8') as f:
+                f.write(text.translatedText + '\n')
+        except Exception as e:
+            with open('error_'+lange + '_' + keywords, 'a', encoding='utf-8') as f:
+                f.write(line.strip() + '\n')
+</code></pre>
+<p>经过测试，三种方法有如下优缺点<br>
+<strong>方法一：</strong> 速度最快，但是需要安装<strong>selenium</strong>，有一定的技术要求，还有一点Google可以检测到使用脚本翻译，翻译结果为<strong>直译</strong>，和手动翻译结果存在一定差异，如果翻译要求不高，可以使用。</p>
+<p><strong>方法二：</strong> 需要使用国外网络，如果国外网络断开，翻译结果为机器直接翻译，并不是我想要的，时间长了翻译也会停止，不符合我的要求。</p>
+<p><strong>方法三：</strong> 这个应该是国内大佬编写，调用的是Google.cn接口，将中文翻译成英文，而我们需求是将英文翻译成其他小语种，因此需要对源码进行部分修改，而且也需要国外网络，我直接在源码中添加了代理，修改如下。</p>
+<pre><code class="language-python">proxies = {'http': '127.0.0.1:10809', 'https': '127.0.0.1:10809'}
+
+    def __init__(
+            self,
+            target: str = 'en',
+            source: str = 'auto',
+            _format='html',
+            user_agent: str = None,
+            domain: str = 'com',
+            proxies: Dict = proxies
+    ):
+</code></pre>
+<h2 id="总结">总结</h2>
+<p>目前使用的方式三进行翻译，以这样的目录结构存放对应的语种，直接运行脚本即可，会自动以目录为目标语种进行翻译<br>
+<img src="https://zmrw.github.io/post-images/1639188511209.png" alt="" loading="lazy"></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E4%BD%BF%E7%94%A8selenium%E6%A8%A1%E6%8B%9Fgoogle%E7%BF%BB%E8%AF%91%E8%87%AA%E5%8A%A8%E7%BF%BB%E8%AF%91%E5%85%B3%E9%94%AE%E8%AF%8D">方法一，使用Selenium模拟Google翻译自动翻译关键词</a>
+<ul>
+<li><a href="#1%E4%BD%BF%E7%94%A8selenium%E6%A8%A1%E6%8B%9F%E6%89%93%E5%BC%80google%E7%BF%BB%E8%AF%91">1.使用selenium模拟打开Google翻译</a></li>
+<li><a href="#2%E5%BE%AA%E7%8E%AF%E6%89%B9%E9%87%8F%E7%BF%BB%E8%AF%91">2.循环批量翻译</a></li>
+</ul>
+</li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E4%BD%BF%E7%94%A8googletrans%E5%BA%93">方法二，使用googletrans库</a>
+<ul>
+<li><a href="#1%E5%AE%89%E8%A3%85googletrans">1.安装googletrans</a></li>
+<li><a href="#2%E5%BE%AA%E7%8E%AF%E7%BF%BB%E8%AF%91%E5%85%B3%E9%94%AE%E8%AF%8D">2.循环翻译关键词</a></li>
+</ul>
+</li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%B8%89%E4%BD%BF%E7%94%A8pygtrans%E5%BA%93%E8%BF%99%E4%B8%AA%E9%9C%80%E8%A6%81%E5%9B%BD%E5%A4%96%E7%BD%91%E7%BB%9C">方法三，使用pygtrans库（这个需要国外网络）</a>
+<ul>
+<li><a href="#1%E5%AE%89%E8%A3%85pygtrans">1.安装pygtrans</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://zmrw.github.io/post/jing-jie-zhang-hu-you-hua-diao-zheng/">
+              <h3 class="post-title">
+                竞价账户优化调整
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://zmrw.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

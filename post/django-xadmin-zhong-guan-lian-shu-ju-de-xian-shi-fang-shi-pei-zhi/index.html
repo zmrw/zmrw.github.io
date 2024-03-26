@@ -1,0 +1,241 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Django Xadmin中关联数据的显示方式配置 | 追梦人物</title>
+<link rel="shortcut icon" href="https://zmrw.github.io/favicon.ico?v=1711418573538">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://zmrw.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Django Xadmin中关联数据的显示方式配置 | 追梦人物 - Atom Feed" href="https://zmrw.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="1.Django admin关联数据显示方式
+在使用django自带的admin时，如果涉及到一对多关系，并且能够在一的一方查看多的一方和编辑多的一方时，我们可以使用如下的方式来实现。而多的一方显示样式可以通过继承不同的类来实现：
+Stac..." />
+    <meta name="keywords" content="Django" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://zmrw.github.io">
+  <img class="avatar" src="https://zmrw.github.io/images/avatar.png?v=1711418573538" alt="">
+  </a>
+  <h1 class="site-title">
+    追梦人物
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="https://zmrw.github.io/post/wo-de-xiang-mu" class="menu">
+          我的项目
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Django Xadmin中关联数据的显示方式配置
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-12-14
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://zmrw.github.io/tag/7WQ6WUx3R/" class="post-tag">
+                  # Django
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h3 id="1django-admin关联数据显示方式">1.Django admin关联数据显示方式</h3>
+<p>在使用django自带的admin时，如果涉及到一对多关系，并且能够在一的一方查看多的一方和编辑多的一方时，我们可以使用如下的方式来实现。而多的一方显示样式可以通过继承不同的类来实现：<br>
+StackedInline：以块的形式嵌入<br>
+TabularInline：以表格的形式嵌入</p>
+<h4 id="tabularinline以表格的形式嵌入">TabularInline：以表格的形式嵌入</h4>
+<pre><code class="language-python">class ProductApplicationInline(admin.TabularInline):
+    model = ProductApplication
+    # 设置列表可显示的字段
+    fields = ('application',)
+
+
+class ProductFeaturesInline(admin.TabularInline):
+    model = ProductFeatures
+    # 设置列表可显示的字段
+    fields = ('features',)
+
+
+class ProductRelatedImageInline(admin.TabularInline):
+    model = ProductRelatedImage
+    # 设置列表可显示的字段
+    fields = ('image',)
+
+
+class ProductAdmin(admin.ModelAdmin):
+    # 设置列表可显示的字段
+    list_display = ('title', 'category', 'views')
+    # 添加可显示的字段
+    fields = ('title', 'image', 'gzyl', 'jscs', 'category')
+    inlines = [ProductApplicationInline, ProductRelatedImageInline, ProductFeaturesInline]
+
+</code></pre>
+<p>但是当使用xadmin时就不存在这种继承方式了，经过查找资料可以这样实现<br>
+这里的实现方式是通过style属性来实现的，可选值有：<br>
+one，accordion，tab，stacked，table<br>
+至于具体显示效果，需要自己去实验，找那个适合你的方式</p>
+<pre><code class="language-python">class CountryTabularInline(object):
+    model = Info
+    extra = 0
+    style = 'table'  # 列表显示，one：只显示一条  accordion：缩略列表显示，可下拉  tab：横向tab显示 stacked：块显示 table：列表
+    # readonly_fields = ['url', 'country', 'email']
+
+
+class CountryAdmin(object):
+    inlines = [CountryTabularInline]
+
+xadmin.site.register(Country, CountryAdmin)
+</code></pre>
+<h3 id="参考链接">参考链接</h3>
+<p><a href="https://pythonandseo.com/article/django-xadminzhong-guan-lian-shu-ju-de-xian-shi-fang-shi-pei-zhi/">Django Xadmin中关联数据的显示方式配置</a></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1django-admin%E5%85%B3%E8%81%94%E6%95%B0%E6%8D%AE%E6%98%BE%E7%A4%BA%E6%96%B9%E5%BC%8F">1.Django admin关联数据显示方式</a>
+<ul>
+<li><a href="#tabularinline%E4%BB%A5%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%BD%A2%E5%BC%8F%E5%B5%8C%E5%85%A5">TabularInline：以表格的形式嵌入</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5">参考链接</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://zmrw.github.io/post/she-zhi-django-hou-tai-dao-chu-excel-biao/">
+              <h3 class="post-title">
+                设置django后台 导出excel表
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://zmrw.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

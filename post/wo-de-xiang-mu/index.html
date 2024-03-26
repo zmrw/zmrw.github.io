@@ -1,0 +1,195 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>我的项目 | 追梦人物</title>
+<link rel="shortcut icon" href="https://zmrw.github.io/favicon.ico?v=1711418573538">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://zmrw.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="我的项目 | 追梦人物 - Atom Feed" href="https://zmrw.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="个人博客
+https://zmrw.net/
+无损行业
+https://ndtmachine.com/
+成人用品
+https://torsosexdolls.com/
+餐车
+https://twoweekstrailer.com/
+传感器
+..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://zmrw.github.io">
+  <img class="avatar" src="https://zmrw.github.io/images/avatar.png?v=1711418573538" alt="">
+  </a>
+  <h1 class="site-title">
+    追梦人物
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="https://zmrw.github.io/post/wo-de-xiang-mu" class="menu">
+          我的项目
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              我的项目
+            </h2>
+            <div class="post-info">
+              <span>
+                2024-03-26
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h3 id="个人博客">个人博客</h3>
+<p>https://zmrw.net/</p>
+<h3 id="无损行业">无损行业</h3>
+<p>https://ndtmachine.com/</p>
+<h3 id="成人用品">成人用品</h3>
+<p>https://torsosexdolls.com/</p>
+<h3 id="餐车">餐车</h3>
+<p>https://twoweekstrailer.com/</p>
+<h3 id="传感器">传感器</h3>
+<p>https://sensor1stop.com/</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2">个人博客</a></li>
+<li><a href="#%E6%97%A0%E6%8D%9F%E8%A1%8C%E4%B8%9A">无损行业</a></li>
+<li><a href="#%E6%88%90%E4%BA%BA%E7%94%A8%E5%93%81">成人用品</a></li>
+<li><a href="#%E9%A4%90%E8%BD%A6">餐车</a></li>
+<li><a href="#%E4%BC%A0%E6%84%9F%E5%99%A8">传感器</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://zmrw.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

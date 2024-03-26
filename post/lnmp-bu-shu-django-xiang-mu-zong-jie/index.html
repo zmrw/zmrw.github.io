@@ -1,0 +1,281 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LNMP部署Django项目总结 | 追梦人物</title>
+<link rel="shortcut icon" href="https://zmrw.github.io/favicon.ico?v=1711418573538">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://zmrw.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="LNMP部署Django项目总结 | 追梦人物 - Atom Feed" href="https://zmrw.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="1.在本地生成所需依赖
+pip freeze &gt; requirements.txt
+
+2.在服务器生成虚拟环境
+virtualenv --python=python3 env
+
+3.激活虚拟环境
+source env/bin/acti..." />
+    <meta name="keywords" content="LNMP,Python,Django" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://zmrw.github.io">
+  <img class="avatar" src="https://zmrw.github.io/images/avatar.png?v=1711418573538" alt="">
+  </a>
+  <h1 class="site-title">
+    追梦人物
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="https://zmrw.github.io/post/wo-de-xiang-mu" class="menu">
+          我的项目
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              LNMP部署Django项目总结
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-12-09
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://zmrw.github.io/tag/XxnFhi0hB/" class="post-tag">
+                  # LNMP
+                </a>
+              
+                <a href="https://zmrw.github.io/tag/t8DfkWnYM/" class="post-tag">
+                  # Python
+                </a>
+              
+                <a href="https://zmrw.github.io/tag/7WQ6WUx3R/" class="post-tag">
+                  # Django
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h3 id="1在本地生成所需依赖">1.在本地生成所需依赖</h3>
+<pre><code class="language-python">pip freeze &gt; requirements.txt
+</code></pre>
+<h3 id="2在服务器生成虚拟环境">2.在服务器生成虚拟环境</h3>
+<pre><code class="language-python">virtualenv --python=python3 env
+</code></pre>
+<h3 id="3激活虚拟环境">3.激活虚拟环境</h3>
+<pre><code class="language-python">source env/bin/activate
+</code></pre>
+<h3 id="4安装依赖">4.安装依赖</h3>
+<pre><code class="language-python">pip3 install -r requirements.txt
+</code></pre>
+<h3 id="5修改settingspy">5.修改settings.py</h3>
+<h4 id="51配置allowed_hosts">5.1配置ALLOWED_HOSTS</h4>
+<pre><code class="language-python">ALLOWED_HOSTS = ['*','.suwandratour.com']
+</code></pre>
+<h4 id="52配置静态文件收集目录">5.2配置静态文件收集目录</h4>
+<pre><code class="language-python">STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
+</code></pre>
+<h3 id="6收集文件">6.收集文件</h3>
+<pre><code class="language-python">python3 manage.py collectstatic
+</code></pre>
+<h3 id="7生成数据库">7.生成数据库</h3>
+<pre><code class="language-python">python3 manage.py migrate
+</code></pre>
+<h3 id="8导入数据导出数据-python-managepy-dumpdata-mysite_all_datajson">8.导入数据(导出数据 python manage.py dumpdata &gt; mysite_all_data.json)</h3>
+<pre><code class="language-python">python3 manage.py loaddata mysite_all_data.json
+</code></pre>
+<h3 id="9测试是否能运行">9.测试是否能运行</h3>
+<pre><code class="language-python">python3 manage.py runserver 0.0.0.0:9999
+</code></pre>
+<h3 id="10配置nginx">10.配置nginx</h3>
+<h4 id="101-进入nginx配置文件目录">10.1 进入nginx配置文件目录</h4>
+<pre><code class="language-bash">cd /usr/local/nginx/conf/vhost
+</code></pre>
+<h4 id="102-新建配置文件youdomainconf">10.2 新建配置文件youdomain.conf</h4>
+<pre><code class="language-python">server {
+    charset utf-8;
+    listen 80;
+    server_name suwandratour.com www.suwandratour.com;
+
+    location /static {
+        alias /home/juhe/suwandratour.com/collected_static;
+    }
+    location /media {
+        alias /home/juhe/suwandratour.com/media;
+    }
+
+    location / {
+        proxy_set_header Host $host;
+        proxy_pass http://127.0.0.1:8003;
+    }
+}
+</code></pre>
+<h3 id="11安装gunicorn-pip3-install-gunicorn">11.安装gunicorn （pip3 install gunicorn）</h3>
+<p>在项目根目录执行</p>
+<pre><code class="language-python">gunicorn 项目名称.wsgi -w 2 -k gthread -b 127.0.0.1:Nginx配置端口
+</code></pre>
+<h3 id="12重启lnmp">12.重启lnmp</h3>
+<p>至此，项目配置完毕</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%94%9F%E6%88%90%E6%89%80%E9%9C%80%E4%BE%9D%E8%B5%96">1.在本地生成所需依赖</a></li>
+<li><a href="#2%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%9F%E6%88%90%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83">2.在服务器生成虚拟环境</a></li>
+<li><a href="#3%E6%BF%80%E6%B4%BB%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83">3.激活虚拟环境</a></li>
+<li><a href="#4%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96">4.安装依赖</a></li>
+<li><a href="#5%E4%BF%AE%E6%94%B9settingspy">5.修改settings.py</a>
+<ul>
+<li><a href="#51%E9%85%8D%E7%BD%AEallowed_hosts">5.1配置ALLOWED_HOSTS</a></li>
+<li><a href="#52%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E6%94%B6%E9%9B%86%E7%9B%AE%E5%BD%95">5.2配置静态文件收集目录</a></li>
+</ul>
+</li>
+<li><a href="#6%E6%94%B6%E9%9B%86%E6%96%87%E4%BB%B6">6.收集文件</a></li>
+<li><a href="#7%E7%94%9F%E6%88%90%E6%95%B0%E6%8D%AE%E5%BA%93">7.生成数据库</a></li>
+<li><a href="#8%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE-python-managepy-dumpdata-mysite_all_datajson">8.导入数据(导出数据 python manage.py dumpdata &gt; mysite_all_data.json)</a></li>
+<li><a href="#9%E6%B5%8B%E8%AF%95%E6%98%AF%E5%90%A6%E8%83%BD%E8%BF%90%E8%A1%8C">9.测试是否能运行</a></li>
+<li><a href="#10%E9%85%8D%E7%BD%AEnginx">10.配置nginx</a>
+<ul>
+<li><a href="#101-%E8%BF%9B%E5%85%A5nginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95">10.1 进入nginx配置文件目录</a></li>
+<li><a href="#102-%E6%96%B0%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6youdomainconf">10.2 新建配置文件youdomain.conf</a></li>
+</ul>
+</li>
+<li><a href="#11%E5%AE%89%E8%A3%85gunicorn-pip3-install-gunicorn">11.安装gunicorn （pip3 install gunicorn）</a></li>
+<li><a href="#12%E9%87%8D%E5%90%AFlnmp">12.重启lnmp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://zmrw.github.io/post/tong-guo-bing-huo-qu-qian-zai-ke-hu-dian-hua-you-xiang/">
+              <h3 class="post-title">
+                通过bing获取潜在客户电话，邮箱
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://zmrw.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

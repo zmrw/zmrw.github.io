@@ -1,0 +1,288 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>手动迁移 WordPress 网站 | 追梦人物</title>
+<link rel="shortcut icon" href="https://zmrw.github.io/favicon.ico?v=1711418573538">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://zmrw.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="手动迁移 WordPress 网站 | 追梦人物 - Atom Feed" href="https://zmrw.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="下载网站文件
+在原服务器中，将域名根目录所有文件进行打包
+PS: 理论上只需打包 wp-content 这个文件夹即可，我这边为了备份网站进行了全部打包
+
+
+下载压缩好文件到本地计算机
+
+导出网站数据库
+登录phpMyAdmin，选择网站数..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://zmrw.github.io">
+  <img class="avatar" src="https://zmrw.github.io/images/avatar.png?v=1711418573538" alt="">
+  </a>
+  <h1 class="site-title">
+    追梦人物
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="https://zmrw.github.io/post/wo-de-xiang-mu" class="menu">
+          我的项目
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              手动迁移 WordPress 网站
+            </h2>
+            <div class="post-info">
+              <span>
+                2023-11-10
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h2 id="下载网站文件">下载网站文件</h2>
+<p>在原服务器中，将域名根目录所有文件进行打包</p>
+<p><strong>PS:</strong> 理论上只需打包 <code>wp-content</code> 这个文件夹即可，我这边为了备份网站进行了全部打包</p>
+<figure data-type="image" tabindex="1"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697693732048.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697693759653.png" alt="" loading="lazy"></figure>
+<p>下载压缩好文件到本地计算机</p>
+<figure data-type="image" tabindex="3"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697693863925.png" alt="" loading="lazy"></figure>
+<h2 id="导出网站数据库">导出网站数据库</h2>
+<p>登录phpMyAdmin，选择网站数据库进行快速导出</p>
+<figure data-type="image" tabindex="4"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697784261688.png" alt="file" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697694465204.png" alt="" loading="lazy"></figure>
+<p>选择导出后本地便会有一个<code>.sql</code> 的文件</p>
+<figure data-type="image" tabindex="6"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697694634666.png" alt="" loading="lazy"></figure>
+<h2 id="新vps-搭建网站环境">新vps 搭建网站环境</h2>
+<p>我使用的是LNMP 进行vps 环境搭建<br>
+LNMP 环境搭建教程：.....<br>
+LNMP LNMP安装WordPress网站教程：https://zmrw.net/lnmp-an-zhuang-wordpress-wang-zhan/</p>
+<h3 id="通过命令添加域名">通过命令添加域名</h3>
+<pre><code class="language-bash">lnmp vhost add
+</code></pre>
+<figure data-type="image" tabindex="7"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697785832659.png" alt="file" loading="lazy"></figure>
+<p>在这里输入要创建的Mysql 账户密码,如果不想麻烦，可以参考原网站数据库账号密码，这样就不需要修改<code>wp-config.php</code> 中的配置参数，数据库账户信息可以在下载的网站压缩包中找到</p>
+<figure data-type="image" tabindex="8"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697786073851.png" alt="file" loading="lazy"></figure>
+<p>因此设置账户信息可以按照此设置</p>
+<figure data-type="image" tabindex="9"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697786363538.png" alt="file" loading="lazy"></figure>
+<p>出现这个结果就说明网站环境搭建成功</p>
+<figure data-type="image" tabindex="10"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697786461898.png" alt="file" loading="lazy"></figure>
+<h3 id="上传wordpress-安装包">上传Wordpress 安装包</h3>
+<figure data-type="image" tabindex="11"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789193296.png" alt="file" loading="lazy"></figure>
+<h3 id="解压缩">解压缩</h3>
+<pre><code class="language-bash">unzip wordpress-6.3.2.zip
+</code></pre>
+<figure data-type="image" tabindex="12"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789260620.png" alt="file" loading="lazy"></figure>
+<h3 id="迁移文件到域名根目录">迁移文件到域名根目录</h3>
+<pre><code class="language-bash"> mv wordpress/* /home/wwwroot/russia.winsen-sensor.com/
+</code></pre>
+<figure data-type="image" tabindex="13"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789323335.png" alt="file" loading="lazy"></figure>
+<h3 id="安装-wordpress">安装 Wordpress</h3>
+<p>通过浏览器访问域名 <code>russia.winsen-sensor.com</code> 即可进行安装</p>
+<figure data-type="image" tabindex="14"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789622131.png" alt="file" loading="lazy"></figure>
+<p>下一步，按照要求填写数据</p>
+<figure data-type="image" tabindex="15"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789756011.png" alt="file" loading="lazy"></figure>
+<h3 id="填写网站信息">填写网站信息</h3>
+<figure data-type="image" tabindex="16"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789817827.png" alt="file" loading="lazy"></figure>
+<p>出现以下信息则说明网站配置成功</p>
+<figure data-type="image" tabindex="17"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789857230.png" alt="file" loading="lazy"></figure>
+<h2 id="上传-wp-content-文件">上传 <code>wp-content</code> 文件</h2>
+<h3 id="压缩-wp-content-文件到上传到域名根目录">压缩 <code>wp-content</code> 文件到，上传到域名根目录</h3>
+<figure data-type="image" tabindex="18"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697790239896.png" alt="file" loading="lazy"></figure>
+<h3 id="解压缩-2">解压缩</h3>
+<p>您将看到 Target file already exists（目标文件已存在）的警告。选择 Overwrite（覆盖）、Always use this action（始终使用此操作）</p>
+<figure data-type="image" tabindex="19"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697790342494.png" alt="file" loading="lazy"></figure>
+<h2 id="导入数据库">导入数据库</h2>
+<h3 id="删除原有的数据表">删除原有的数据表</h3>
+<figure data-type="image" tabindex="20"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697790530260.png" alt="file" loading="lazy"></figure>
+<h3 id="将备份数据库上传至服务器">将备份数据库上传至服务器</h3>
+<p>在新建数据库时一定要注意数据库编码，否则会出现各种各样问题，一定要保证与原数据库编码一致</p>
+<pre><code class="language-bash">ALTER DATABASE winsenah_wp_6cemw CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+</code></pre>
+<p>我直接上传至域名跟目录</p>
+<figure data-type="image" tabindex="21"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697788124026.png" alt="file" loading="lazy"></figure>
+<h3 id="链接数据库">链接数据库</h3>
+<pre><code class="language-bash">mysql -u***** -p******* --default-character-set=utf8mb4 你的数据库名字
+</code></pre>
+<figure data-type="image" tabindex="22"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697787967382.png" alt="file" loading="lazy"></figure>
+<h3 id="导入数据">导入数据</h3>
+<pre><code class="language-bash">source /home/wwwroot/russia.winsen-sensor.com/*******.sql
+</code></pre>
+<figure data-type="image" tabindex="23"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697788362118.png" alt="file" loading="lazy"></figure>
+<h2 id="更新数据库域名">更新数据库域名</h2>
+<p>如果迁移后你的域名没有更换，这里什么都不需要操作，如果更换了域名，需要vps 登录数据库执行以下命令：</p>
+<pre><code class="language-sql">UPDATE wp_options SET option_value = 'https://russia.winsen-sensor.com/' WHERE option_name = 'siteurl';
+UPDATE wp_options SET option_value = 'https://russia.winsen-sensor.com/' WHERE option_name = 'home' ;
+</code></pre>
+<p>执行后登录后台，打开设置，固定链接，重新保存即可</p>
+<figure data-type="image" tabindex="24"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1698133720439.png" alt="file" loading="lazy"></figure>
+<p>至此，网站迁移完成。</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%96%87%E4%BB%B6">下载网站文件</a></li>
+<li><a href="#%E5%AF%BC%E5%87%BA%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE%E5%BA%93">导出网站数据库</a></li>
+<li><a href="#%E6%96%B0vps-%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%E7%8E%AF%E5%A2%83">新vps 搭建网站环境</a>
+<ul>
+<li><a href="#%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E6%B7%BB%E5%8A%A0%E5%9F%9F%E5%90%8D">通过命令添加域名</a></li>
+<li><a href="#%E4%B8%8A%E4%BC%A0wordpress-%E5%AE%89%E8%A3%85%E5%8C%85">上传Wordpress 安装包</a></li>
+<li><a href="#%E8%A7%A3%E5%8E%8B%E7%BC%A9">解压缩</a></li>
+<li><a href="#%E8%BF%81%E7%A7%BB%E6%96%87%E4%BB%B6%E5%88%B0%E5%9F%9F%E5%90%8D%E6%A0%B9%E7%9B%AE%E5%BD%95">迁移文件到域名根目录</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85-wordpress">安装 Wordpress</a></li>
+<li><a href="#%E5%A1%AB%E5%86%99%E7%BD%91%E7%AB%99%E4%BF%A1%E6%81%AF">填写网站信息</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%8A%E4%BC%A0-wp-content-%E6%96%87%E4%BB%B6">上传 <code>wp-content</code> 文件</a>
+<ul>
+<li><a href="#%E5%8E%8B%E7%BC%A9-wp-content-%E6%96%87%E4%BB%B6%E5%88%B0%E4%B8%8A%E4%BC%A0%E5%88%B0%E5%9F%9F%E5%90%8D%E6%A0%B9%E7%9B%AE%E5%BD%95">压缩 <code>wp-content</code> 文件到，上传到域名根目录</a></li>
+<li><a href="#%E8%A7%A3%E5%8E%8B%E7%BC%A9-2">解压缩</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93">导入数据库</a>
+<ul>
+<li><a href="#%E5%88%A0%E9%99%A4%E5%8E%9F%E6%9C%89%E7%9A%84%E6%95%B0%E6%8D%AE%E8%A1%A8">删除原有的数据表</a></li>
+<li><a href="#%E5%B0%86%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8A%E4%BC%A0%E8%87%B3%E6%9C%8D%E5%8A%A1%E5%99%A8">将备份数据库上传至服务器</a></li>
+<li><a href="#%E9%93%BE%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93">链接数据库</a></li>
+<li><a href="#%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE">导入数据</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%9F%E5%90%8D">更新数据库域名</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://zmrw.github.io/post/seo-ji-chu-zhi-shi-chu-xue-zhe-seo-zhong-ji-zhi-nan/">
+              <h3 class="post-title">
+                SEO 基础知识：初学者 SEO 终极指南
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://zmrw.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

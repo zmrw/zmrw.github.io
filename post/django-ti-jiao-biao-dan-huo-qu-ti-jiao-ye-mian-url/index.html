@@ -1,0 +1,228 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Django提交表单，获取提交页面url | 追梦人物</title>
+<link rel="shortcut icon" href="https://zmrw.github.io/favicon.ico?v=1711418573538">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://zmrw.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Django提交表单，获取提交页面url | 追梦人物 - Atom Feed" href="https://zmrw.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="使用django制作一个网站，每个页面都有一个表单，为了统计表单是通过哪一个url提交，因此是需要获取当前页面url
+本以为在表单中就可以获取到（错误）
+def xunpan(request):
+    if request.method ..." />
+    <meta name="keywords" content="Django" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://zmrw.github.io">
+  <img class="avatar" src="https://zmrw.github.io/images/avatar.png?v=1711418573538" alt="">
+  </a>
+  <h1 class="site-title">
+    追梦人物
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="https://zmrw.github.io/post/wo-de-xiang-mu" class="menu">
+          我的项目
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Django提交表单，获取提交页面url
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-12-14
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://zmrw.github.io/tag/7WQ6WUx3R/" class="post-tag">
+                  # Django
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>使用django制作一个网站，每个页面都有一个表单，为了统计表单是通过哪一个url提交，因此是需要获取当前页面url</p>
+<h3 id="本以为在表单中就可以获取到错误">本以为在表单中就可以获取到（错误）</h3>
+<pre><code class="language-python">def xunpan(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', 0)
+        email = request.POST.get('email', 0)
+        phone = request.POST.get('phone', 0)
+        subject = request.POST.get('subject', 0)
+        body = request.POST.get('body', 0)
+        url = request.get_raw_uri()
+        xunpan = XunPan(name=name, email=email, phone=phone, subject=subject, body=body, url=url)
+        xunpan.save()
+        return redirect(&quot;juhe08:product_list&quot;)
+    else:
+        pass
+</code></pre>
+<p>但是提交后台发现，url是提交页面url,及http://127.0.0.1:8000/xupan ,并不符合我们的要求</p>
+<h3 id="1在提交表单中加入一个隐藏标签记录当前url然后在提交表单中获取">1.在提交表单中，加入一个隐藏标签，记录当前url，然后在提交表单中获取</h3>
+<pre><code class="language-html">&lt;div class=&quot;col-lg-12 col-md-12 col-sm-12 form-group&quot;&gt;
+     &lt;input type=&quot;hidden&quot; name=&quot;url&quot; value=&quot;{{ request.url }}&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="2在后端获取">2.在后端获取</h3>
+<pre><code class="language-python">def xunpan(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', 0)
+        email = request.POST.get('email', 0)
+        phone = request.POST.get('phone', 0)
+        subject = request.POST.get('subject', 0)
+        body = request.POST.get('body', 0)
+        url = request.POST.get('url', 0)
+        xunpan = XunPan(name=name, email=email, phone=phone, subject=subject, body=body, url=url)
+        xunpan.save()
+        return redirect(&quot;juhe08:product_list&quot;)
+    else:
+        pass
+</code></pre>
+<p>这样即可，这可能不是最好的方法，先解决问题，以后在研究</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E6%9C%AC%E4%BB%A5%E4%B8%BA%E5%9C%A8%E8%A1%A8%E5%8D%95%E4%B8%AD%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%8F%96%E5%88%B0%E9%94%99%E8%AF%AF">本以为在表单中就可以获取到（错误）</a></li>
+<li><a href="#1%E5%9C%A8%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%8D%95%E4%B8%AD%E5%8A%A0%E5%85%A5%E4%B8%80%E4%B8%AA%E9%9A%90%E8%97%8F%E6%A0%87%E7%AD%BE%E8%AE%B0%E5%BD%95%E5%BD%93%E5%89%8Durl%E7%84%B6%E5%90%8E%E5%9C%A8%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%8D%95%E4%B8%AD%E8%8E%B7%E5%8F%96">1.在提交表单中，加入一个隐藏标签，记录当前url，然后在提交表单中获取</a></li>
+<li><a href="#2%E5%9C%A8%E5%90%8E%E7%AB%AF%E8%8E%B7%E5%8F%96">2.在后端获取</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://zmrw.github.io/post/ubuntu-xiu-gai-zhong-guo-shi-jian/">
+              <h3 class="post-title">
+                Ubuntu修改中国时间
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://zmrw.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

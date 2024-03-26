@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://zmrw.github.io</id>
+    <title>追梦人物</title>
+    <updated>2024-03-26T02:03:00.161Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://zmrw.github.io"/>
+    <link rel="self" href="https://zmrw.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://zmrw.github.io/images/avatar.png</logo>
+    <icon>https://zmrw.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, 追梦人物</rights>
+    <entry>
+        <title type="html"><![CDATA[Porto Wordpress 主题介绍]]></title>
+        <id>https://zmrw.github.io/post/porto-wordpress-zhu-ti-jie-shao/</id>
+        <link href="https://zmrw.github.io/post/porto-wordpress-zhu-ti-jie-shao/">
+        </link>
+        <updated>2023-12-07T00:28:50.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="porto-介绍">Porto 介绍</h2>
+<p>Porto 是一种非常受欢迎的WordPress主题，被广泛用于创建响应式、专业和现代的网站。它是一个多用途的主题，适用于各种类型的网站，包括企业网站、电子商务商店、创意机构、博客等。</p>
+<p>Porto主题提供了许多功能和定制选项，使用户能够轻松地创建自己的网站。一些主题功能包括：</p>
+<ul>
+<li>
+<p>响应式设计：Porto主题具有响应式布局，可以自动适应各种屏幕尺寸和设备，确保您的网站在桌面、平板和移动设备上都能良好展示。</p>
+</li>
+<li>
+<p>预定义演示内容：Porto主题提供了多个预定义的演示内容，可作为起点来构建您的网站。这些演示内容涵盖了各种行业和网站类型，您可以根据自己的需要选择合适的演示内容，并进行定制。</p>
+</li>
+<li>
+<p>定制选项：Porto主题提供了广泛的定制选项，让您可以轻松修改颜色、字体、布局等方面的设置，以满足您的品牌需求和设计风格。</p>
+</li>
+<li>
+<p>内置功能：主题内置了一些有用的功能，如集成的Mega菜单、产品过滤器、独特的页眉和页脚样式、多种布局选项等，帮助您创建出功能丰富的网站。</p>
+</li>
+<li>
+<p>WooCommerce集成：如果您计划运行电子商务网站，Porto主题与WooCommerce插件完美兼容。它提供了专门设计的电子商务页面模板和布局，帮助您创建出专业的在线商店。</p>
+</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700804935729.png" alt="file" loading="lazy"></figure>
+<h2 id="购买porto-主题">购买Porto 主题</h2>
+<p>本章节会示范，如何在themeforest 主题森林购买Porto WordPress 主题，详细流程请继续学习。</p>
+<p>购买直达链接：<a href="https://1.envato.market/6eR7nK" title="https://1.envato.market/6eR7nK">https://1.envato.market/6eR7nK</a></p>
+<h3 id="添加购物车">添加购物车</h3>
+<figure data-type="image" tabindex="2"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700805481712.png" alt="file" loading="lazy"></figure>
+<h3 id="点击去结账按钮">点击去结账按钮</h3>
+<figure data-type="image" tabindex="3"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700805606408.png" alt="file" loading="lazy"></figure>
+<h3 id="注册账户信息">注册账户信息</h3>
+<p>有Google 账户的可以直接使用Google进行注册登录，也可以自己按照要求填写</p>
+<figure data-type="image" tabindex="4"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700805762034.png" alt="file" loading="lazy"></figure>
+<h3 id="填写结算明细">填写结算明细</h3>
+<figure data-type="image" tabindex="5"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700805942139.png" alt="file" loading="lazy"></figure>
+<h3 id="选择paypal-支付">选择Paypal 支付</h3>
+<p>没有Paypal 的朋友可以加我微信（xiuwuren）, 这边可以代替支付，需要支付5 美元服务费</p>
+<figure data-type="image" tabindex="6"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700806002225.png" alt="file" loading="lazy"></figure>
+<h3 id="登录pyapal">登录Pyapal</h3>
+<figure data-type="image" tabindex="7"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700806118165.png" alt="file" loading="lazy"></figure>
+<p>输入账户信息，点击付款后，即可购买成功</p>
+<h3 id="购买成功页面">购买成功页面</h3>
+<figure data-type="image" tabindex="8"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700812252626.png" alt="file" loading="lazy"></figure>
+<p>至此 Porto 主题购买成功，快去安装主题制作网站吧</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用Wordpress 从0-1 制作一个博客网站]]></title>
+        <id>https://zmrw.github.io/post/shi-yong-wordpress-cong-0-1-zhi-zuo-yi-ge-bo-ke-wang-zhan/</id>
+        <link href="https://zmrw.github.io/post/shi-yong-wordpress-cong-0-1-zhi-zuo-yi-ge-bo-ke-wang-zhan/">
+        </link>
+        <updated>2023-12-07T00:21:38.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="一-做网站准备">一. 做网站准备</h2>
+<h3 id="购买域名">购买域名</h3>
+<p>域名使用的是二级域名：blog.zmrw.net（在浏览器可以提前预览网站制作后效果）</p>
+<h3 id="购买服务器">购买服务器</h3>
+<p>服务器使用A2 Hosting</p>
+<h3 id="购买wordpress-主题">购买Wordpress 主题</h3>
+<p>主题使用的是 <a href="https://1.envato.market/6eR7nK" title="Porto">Porto</a> 主题</p>
+<h2 id="二-开始建站">二. 开始建站</h2>
+<h3 id="1-将域名添加至-cloudflare">1. 将域名添加至 Cloudflare</h3>
+<figure data-type="image" tabindex="1"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700984213085.png" alt="file" loading="lazy"></figure>
+<h3 id="2-将域名添加到-a2-hosting">2. 将域名添加到 A2 Hosting</h3>
+<figure data-type="image" tabindex="2"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700984480109.png" alt="file" loading="lazy"></figure>
+<h3 id="3-给域名安装-wordpress环境">3. 给域名安装 Wordpress环境</h3>
+<figure data-type="image" tabindex="3"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700984738756.png" alt="file" loading="lazy"></figure>
+<p>访问域名，出现以下页面则说明安装成功</p>
+<figure data-type="image" tabindex="4"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700984999153.png" alt="file" loading="lazy"></figure>
+<h3 id="4-wordpress-基本设置">4. Wordpress 基本设置</h3>
+<p>后台登陆链接：https://blog.zmrw.net/wp-login.php</p>
+<p>输入账户密码进行登录。</p>
+<p><strong>修改网站语言和时区</strong></p>
+<figure data-type="image" tabindex="5"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700985358891.png" alt="file" loading="lazy"></figure>
+<p><strong>修改日期显示格式</strong></p>
+<figure data-type="image" tabindex="6"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700985413379.png" alt="file" loading="lazy"></figure>
+<p><strong>修改固定链接</strong></p>
+<figure data-type="image" tabindex="7"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700985500931.png" alt="file" loading="lazy"></figure>
+<h3 id="下载-porto-wordpress-主题">下载 Porto Wordpress 主题</h3>
+<p>从 themeforest 下载购买好的Porto 主题</p>
+<p>如何购买请参考如下链接：https://zmrw.net/porto-wordpress-zhu-ti-jie-shao/</p>
+<h3 id="安装-porto-wordpress-主题">安装 Porto Wordpress 主题</h3>
+<p>选择 <code>外观 〉主题</code>，</p>
+<figure data-type="image" tabindex="8"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700986296299.png" alt="file" loading="lazy"></figure>
+<p>上传主题，</p>
+<figure data-type="image" tabindex="9"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700986408233.png" alt="file" loading="lazy"></figure>
+<p>启用主题</p>
+<figure data-type="image" tabindex="10"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700986678307.png" alt="file" loading="lazy"></figure>
+<h3 id="porto-wordpress-主题基础向导设置">Porto Wordpress 主题基础向导设置</h3>
+<figure data-type="image" tabindex="11"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700989097742.png" alt="file" loading="lazy"></figure>
+<p><strong>填写激活码</strong></p>
+<figure data-type="image" tabindex="12"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700989129607.png" alt="file" loading="lazy"></figure>
+<p><strong>检查系统状况是否满足</strong></p>
+<figure data-type="image" tabindex="13"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700989170302.png" alt="file" loading="lazy"></figure>
+<p><strong>设置子主题</strong></p>
+<figure data-type="image" tabindex="14"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700989202982.png" alt="file" loading="lazy"></figure>
+<p><strong>确认使用子主题</strong></p>
+<figure data-type="image" tabindex="15"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700989239932.png" alt="file" loading="lazy"></figure>
+<p><strong>安装插件</strong></p>
+<p>主要安装两个插件： Elementor，Contact Form 7</p>
+<figure data-type="image" tabindex="16"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700989326912.png" alt="file" loading="lazy"></figure>
+<p><strong>PS</strong>：如果 <code>Porto Functionality</code>插件安装失败，可以从下载包中上传安装</p>
+<p><strong>安装Porto Functionality</strong></p>
+<figure data-type="image" tabindex="17"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700989588469.png" alt="file" loading="lazy"></figure>
+<p><strong>启用插件</strong></p>
+<figure data-type="image" tabindex="18"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700989611555.png" alt="file" loading="lazy"></figure>
+<p><strong>选择演示内容安装</strong></p>
+<p>我这边准备使用 <code>Business Consulting 5</code> 来进行网站部署</p>
+<figure data-type="image" tabindex="19"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700989786066.png" alt="file" loading="lazy"></figure>
+<p>显示还需要安装Alpus插件（在下载的压缩包中包含此插件）</p>
+<p><strong>安装Alpus 插件</strong></p>
+<figure data-type="image" tabindex="20"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700989850291.png" alt="file" loading="lazy"></figure>
+<p><strong>启用插件</strong></p>
+<figure data-type="image" tabindex="21"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700989900027.png" alt="file" loading="lazy"></figure>
+<p><strong>安装Business Consulting 5 演示内容</strong></p>
+<figure data-type="image" tabindex="22"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700989960860.png" alt="file" loading="lazy"></figure>
+<p>显示此信息说明演示内容安装成功</p>
+<figure data-type="image" tabindex="23"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700990108724.png" alt="file" loading="lazy"></figure>
+<p>访问 <code>blog.zmrw.net</code> 即可查看演示网站</p>
+<figure data-type="image" tabindex="24"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1700990185760.png" alt="file" loading="lazy"></figure>
+<p>至此，Porto Wordpress 主题基础向导设置完成，下面就是该进行页面装修及个性化设置。</p>
+<h2 id="三-博客装修">三. 博客装修</h2>
+<h3 id="修改logo">修改Logo</h3>
+<figure data-type="image" tabindex="25"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701053221682.png" alt="file" loading="lazy"></figure>
+<p><strong>修改Logo适当大小</strong></p>
+<figure data-type="image" tabindex="26"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701062432338.png" alt="file" loading="lazy"></figure>
+<h3 id="修改菜单">修改菜单</h3>
+<p>根据自己需求进行菜单设置</p>
+<figure data-type="image" tabindex="27"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701062758482.png" alt="file" loading="lazy"></figure>
+<p>修改电话</p>
+<figure data-type="image" tabindex="28"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701063127320.png" alt="file" loading="lazy"></figure>
+<p>修改留言按钮</p>
+<figure data-type="image" tabindex="29"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701063153562.png" alt="file" loading="lazy"></figure>
+<p>调整后整体样式</p>
+<figure data-type="image" tabindex="30"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701063184521.png" alt="file" loading="lazy"></figure>
+<h3 id="修改底部">修改底部</h3>
+<p>鼠标放在底部，点击 <code>Edit footer</code></p>
+<figure data-type="image" tabindex="31"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701063529918.png" alt="file" loading="lazy"></figure>
+<p>点击对应内容修改信息，最终结果如下</p>
+<figure data-type="image" tabindex="32"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701064312821.png" alt="file" loading="lazy"></figure>
+<h3 id="优化首页">优化首页</h3>
+<figure data-type="image" tabindex="33"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701073251225.png" alt="file" loading="lazy"></figure>
+<p>根据需求修改成自己信息</p>
+<figure data-type="image" tabindex="34"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701073709372.png" alt="file" loading="lazy"></figure>
+<p>修改表格，通过显示信息，我们知道该表格使用的是 <code>contact form7 的 Intro contact</code></p>
+<figure data-type="image" tabindex="35"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701073774926.png" alt="file" loading="lazy"></figure>
+<p>编辑 Tntro contact</p>
+<figure data-type="image" tabindex="36"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701073898203.png" alt="file" loading="lazy"></figure>
+<p>给表格修改成中文以及增加您的网站需求</p>
+<pre><code class="language-php">[text* text-724 placeholder class:w-100 &quot;您的姓名 *&quot;][text* text-540 placeholder class:w-100 class:mt-3 &quot;您的联系方式 *&quot;][text text-540 placeholder class:w-100 class:mt-3 &quot;您的网站&quot;][submit class:btn-br-4 class:w-100 class:mt-3 &quot;现在预约&quot;]
+</code></pre>
+<figure data-type="image" tabindex="37"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701074371767.png" alt="file" loading="lazy"></figure>
+<p>再刷新首页表格已经更新</p>
+<figure data-type="image" tabindex="38"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701074321418.png" alt="file" loading="lazy"></figure>
+<p>依次修改两个移动端显示样式</p>
+<figure data-type="image" tabindex="39"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701074634467.png" alt="file" loading="lazy"></figure>
+<p>安装要求调整业务需求</p>
+<figure data-type="image" tabindex="40"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701077272640.png" alt="file" loading="lazy"></figure>
+<p>如果觉得栏目比较少可以在复制两个</p>
+<figure data-type="image" tabindex="41"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701077329940.png" alt="file" loading="lazy"></figure>
+<p>修改合作伙伴栏目，客户评价</p>
+<figure data-type="image" tabindex="42"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701077736846.png" alt="file" loading="lazy"></figure>
+<p>按照此思路，优化服务流程页面</p>
+<figure data-type="image" tabindex="43"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701078581227.png" alt="file" loading="lazy"></figure>
+<p>修改我的荣誉</p>
+<figure data-type="image" tabindex="44"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701079080536.png" alt="file" loading="lazy"></figure>
+<p>优化call to action</p>
+<figure data-type="image" tabindex="45"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701079204608.png" alt="file" loading="lazy"></figure>
+<p>优化博客栏目</p>
+<figure data-type="image" tabindex="46"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701079322024.png" alt="file" loading="lazy"></figure>
+<p>优化留言栏目</p>
+<figure data-type="image" tabindex="47"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701079502209.png" alt="file" loading="lazy"></figure>
+<p>至此，网站首页安装完毕</p>
+<h3 id="优化关于我们">优化关于我们</h3>
+<figure data-type="image" tabindex="48"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701132804561.png" alt="" loading="lazy"></figure>
+<p>进入页面我们发现显示的是英文，需要在页面中修改成中文</p>
+<figure data-type="image" tabindex="49"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701132840769.png" alt="" loading="lazy"></figure>
+<p>进入页面列表，点击快速编辑</p>
+<figure data-type="image" tabindex="50"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701132880842.png" alt="" loading="lazy"></figure>
+<p>只需要修改标题，点击更新</p>
+<figure data-type="image" tabindex="51"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701132916947.png" alt="" loading="lazy"></figure>
+<p>按照此方法依次修改 博客中心，联系我们，首页，服务中心，合作案例</p>
+<figure data-type="image" tabindex="52"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701133222425.png" alt="" loading="lazy"></figure>
+<p>再次刷新关于我们页面，英文已变成中文</p>
+<figure data-type="image" tabindex="53"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701133266947.png" alt="" loading="lazy"></figure>
+<p>按照修改首页方法，依次修改各部分栏目，改成符合自己的文案</p>
+<figure data-type="image" tabindex="54"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701133810879.png" alt="" loading="lazy"></figure>
+<p>唯一与首页有区别的是底部有一个FAQ页面，FAQ 页面默认是调取全部FAQ, 我们也可以通过 FAQ IDs 来控制显示的faq, 以及调整FAQ 的顺序。</p>
+<figure data-type="image" tabindex="55"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701135532928.png" alt="file" loading="lazy"></figure>
+<p>下面来修改FAQ内容</p>
+<figure data-type="image" tabindex="56"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701135591429.png" alt="file" loading="lazy"></figure>
+<p>修改标题与描述</p>
+<figure data-type="image" tabindex="57"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701135784555.png" alt="file" loading="lazy"></figure>
+<p>依次修改其它FAQ</p>
+<figure data-type="image" tabindex="58"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701135812884.png" alt="file" loading="lazy"></figure>
+<p>我们也可以增加FAQ, 以及给FAQ 设置分类</p>
+<figure data-type="image" tabindex="59"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701135869641.png" alt="file" loading="lazy"></figure>
+<p>再次刷新关于我们页面， FAQ 已经更新</p>
+<figure data-type="image" tabindex="60"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701135949645.png" alt="file" loading="lazy"></figure>
+<p>至此，关于我们制作完成</p>
+<h3 id="优化服务中心">优化服务中心</h3>
+<figure data-type="image" tabindex="61"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701136280242.png" alt="file" loading="lazy"></figure>
+<p>服务中心主要是一个固定导航，这里需要注意一些细节</p>
+<p>首先完成固定导航 中文设置，假设我们服务有网站制作，网站SEO，Google 竞价，社媒营销</p>
+<figure data-type="image" tabindex="62"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701136817615.png" alt="file" loading="lazy"></figure>
+<p>这里一定要记得你设置的 Link ：<code>#web-marketing</code>，这相当于定位符，用来直接定位到对应的 Section, 如第一个板块 css id 就是 <code>web-marketing</code></p>
+<figure data-type="image" tabindex="63"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701136971627.png" alt="file" loading="lazy"></figure>
+<p>依次修改对应的内容</p>
+<figure data-type="image" tabindex="64"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701137297932.png" alt="file" loading="lazy"></figure>
+<p>至此 服务中心 制作完成</p>
+<h3 id="优化联系我们">优化联系我们</h3>
+<figure data-type="image" tabindex="65"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701157096424.png" alt="file" loading="lazy"></figure>
+<p>联系我们同首页，服务中心页面一样，修改需要展示的信息即可</p>
+<figure data-type="image" tabindex="66"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701157445356.png" alt="file" loading="lazy"></figure>
+<p>联系我们需要修改部分较少，也比较简单</p>
+<p>至此，联系我们页面制作完成</p>
+<h3 id="优化博客页面">优化博客页面</h3>
+<p>在优化博客页面，我们发现并没有像之前页面一样，使用Elementor 编辑</p>
+<figure data-type="image" tabindex="67"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701157656031.png" alt="file" loading="lazy"></figure>
+<p>博客页面与其它页面不同，它是由主题进行控制的</p>
+<figure data-type="image" tabindex="68"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701158125965.png" alt="file" loading="lazy"></figure>
+<p>我们观察目前博客页面是没有侧边栏的</p>
+<figure data-type="image" tabindex="69"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701158205401.png" alt="file" loading="lazy"></figure>
+<p>我们只需要修改成带侧边栏的博客列表选项即可</p>
+<figure data-type="image" tabindex="70"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701158259321.png" alt="file" loading="lazy"></figure>
+<p>修改后展示结果如下</p>
+<figure data-type="image" tabindex="71"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701158190890.png" alt="file" loading="lazy"></figure>
+<p>同理文章详情页也是这样设置</p>
+<figure data-type="image" tabindex="72"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701158341632.png" alt="file" loading="lazy"></figure>
+<p>如果想要修改文章列表展示样式，就需要查看模板构建器是哪里控制我们的博客样式</p>
+<figure data-type="image" tabindex="73"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701160085464.png" alt="file" loading="lazy"></figure>
+<p>点击后发现，一个是博客 一个是故事</p>
+<figure data-type="image" tabindex="74"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701160229151.png" alt="file" loading="lazy"></figure>
+<p>我们这次修改的是</p>
+<figure data-type="image" tabindex="75"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701160601569.png" alt="file" loading="lazy"></figure>
+<p>点击后即可进行修改</p>
+<figure data-type="image" tabindex="76"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701161021114.png" alt="file" loading="lazy"></figure>
+<p>通过 Elementor 我们控制 每个博客展示的样式</p>
+<figure data-type="image" tabindex="77"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701161128260.png" alt="file" loading="lazy"></figure>
+<p>每个页面展示的个数</p>
+<figure data-type="image" tabindex="78"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701161151446.png" alt="file" loading="lazy"></figure>
+<p>显示多少列</p>
+<figure data-type="image" tabindex="79"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701161180910.png" alt="file" loading="lazy"></figure>
+<p>根据自己需求进行调整</p>
+<p>至此，博客列表页以及详情页设置完毕</p>
+<h3 id="优化合作案例">优化合作案例</h3>
+<figure data-type="image" tabindex="80"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701158609034.png" alt="file" loading="lazy"></figure>
+<p>直接点击，不出意外会出现报错</p>
+<figure data-type="image" tabindex="81"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701158692474.png" alt="file" loading="lazy"></figure>
+<p>原因是这个页面也是由主题进行控制的,需要参照博客页面修改，在模板构建器找到对应的模块进行修改 <code>Archive Story</code></p>
+<figure data-type="image" tabindex="82"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701161342410.png" alt="file" loading="lazy"></figure>
+<p>控制  <code>Archive Story</code> 样式由 Story Type 控制</p>
+<figure data-type="image" tabindex="83"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701161406172.png" alt="file" loading="lazy"></figure>
+<p>修改 Story Type 即可控制样式展示</p>
+<p>至此，合作案例优化完成</p>
+<h2 id="学习建议">学习建议</h2>
+<h3 id="elementor-设置">Elementor 设置</h3>
+<p>我们需要对Elementor 进行设置，使它允许修改我们的博客页面，因为我们使用的是 Porto 主题，因此也禁用了 Elementor 自带样式</p>
+<figure data-type="image" tabindex="84"><img src="https://zmrw.net/wp-content/uploads/2023/11/image-1701157807505.png" alt="file" loading="lazy"></figure>
+<h3 id="更新网站原有布局">更新网站原有布局</h3>
+<p>新手开始做网站不满意原始布局，建议刚开始接触wordpress 建站的同学开始完全模仿原有模板进行建站，后期熟悉后在进行升级</p>
+<h3 id="发布文章">发布文章</h3>
+<p>在网站上线后，最主要的就是文章的发布，这个将是我们流量的主要来源，也是以后工作的重中之重。</p>
+<p>至此 使用Wordpress 从0-1 制作一个博客网站 教程到此结束。希望想要学习建站的同学都能有所收获。</p>
+<p>如果您觉得文章不错，给一个<strong>关注 + 点赞 + 收藏</strong>吧</p>
+<p>之后也会更新使用Wordpress 从0-1 制作一个B2B网站</p>
+<p>使用Wordpress 从0-1 制作一个在线独立站</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[手动迁移 WordPress 网站]]></title>
+        <id>https://zmrw.github.io/post/shou-dong-qian-yi-wordpress-wang-zhan/</id>
+        <link href="https://zmrw.github.io/post/shou-dong-qian-yi-wordpress-wang-zhan/">
+        </link>
+        <updated>2023-11-10T00:57:31.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="下载网站文件">下载网站文件</h2>
+<p>在原服务器中，将域名根目录所有文件进行打包</p>
+<p><strong>PS:</strong> 理论上只需打包 <code>wp-content</code> 这个文件夹即可，我这边为了备份网站进行了全部打包</p>
+<figure data-type="image" tabindex="1"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697693732048.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697693759653.png" alt="" loading="lazy"></figure>
+<p>下载压缩好文件到本地计算机</p>
+<figure data-type="image" tabindex="3"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697693863925.png" alt="" loading="lazy"></figure>
+<h2 id="导出网站数据库">导出网站数据库</h2>
+<p>登录phpMyAdmin，选择网站数据库进行快速导出</p>
+<figure data-type="image" tabindex="4"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697784261688.png" alt="file" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697694465204.png" alt="" loading="lazy"></figure>
+<p>选择导出后本地便会有一个<code>.sql</code> 的文件</p>
+<figure data-type="image" tabindex="6"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697694634666.png" alt="" loading="lazy"></figure>
+<h2 id="新vps-搭建网站环境">新vps 搭建网站环境</h2>
+<p>我使用的是LNMP 进行vps 环境搭建<br>
+LNMP 环境搭建教程：.....<br>
+LNMP LNMP安装WordPress网站教程：https://zmrw.net/lnmp-an-zhuang-wordpress-wang-zhan/</p>
+<h3 id="通过命令添加域名">通过命令添加域名</h3>
+<pre><code class="language-bash">lnmp vhost add
+</code></pre>
+<figure data-type="image" tabindex="7"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697785832659.png" alt="file" loading="lazy"></figure>
+<p>在这里输入要创建的Mysql 账户密码,如果不想麻烦，可以参考原网站数据库账号密码，这样就不需要修改<code>wp-config.php</code> 中的配置参数，数据库账户信息可以在下载的网站压缩包中找到</p>
+<figure data-type="image" tabindex="8"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697786073851.png" alt="file" loading="lazy"></figure>
+<p>因此设置账户信息可以按照此设置</p>
+<figure data-type="image" tabindex="9"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697786363538.png" alt="file" loading="lazy"></figure>
+<p>出现这个结果就说明网站环境搭建成功</p>
+<figure data-type="image" tabindex="10"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697786461898.png" alt="file" loading="lazy"></figure>
+<h3 id="上传wordpress-安装包">上传Wordpress 安装包</h3>
+<figure data-type="image" tabindex="11"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789193296.png" alt="file" loading="lazy"></figure>
+<h3 id="解压缩">解压缩</h3>
+<pre><code class="language-bash">unzip wordpress-6.3.2.zip
+</code></pre>
+<figure data-type="image" tabindex="12"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789260620.png" alt="file" loading="lazy"></figure>
+<h3 id="迁移文件到域名根目录">迁移文件到域名根目录</h3>
+<pre><code class="language-bash"> mv wordpress/* /home/wwwroot/russia.winsen-sensor.com/
+</code></pre>
+<figure data-type="image" tabindex="13"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789323335.png" alt="file" loading="lazy"></figure>
+<h3 id="安装-wordpress">安装 Wordpress</h3>
+<p>通过浏览器访问域名 <code>russia.winsen-sensor.com</code> 即可进行安装</p>
+<figure data-type="image" tabindex="14"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789622131.png" alt="file" loading="lazy"></figure>
+<p>下一步，按照要求填写数据</p>
+<figure data-type="image" tabindex="15"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789756011.png" alt="file" loading="lazy"></figure>
+<h3 id="填写网站信息">填写网站信息</h3>
+<figure data-type="image" tabindex="16"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789817827.png" alt="file" loading="lazy"></figure>
+<p>出现以下信息则说明网站配置成功</p>
+<figure data-type="image" tabindex="17"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697789857230.png" alt="file" loading="lazy"></figure>
+<h2 id="上传-wp-content-文件">上传 <code>wp-content</code> 文件</h2>
+<h3 id="压缩-wp-content-文件到上传到域名根目录">压缩 <code>wp-content</code> 文件到，上传到域名根目录</h3>
+<figure data-type="image" tabindex="18"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697790239896.png" alt="file" loading="lazy"></figure>
+<h3 id="解压缩-2">解压缩</h3>
+<p>您将看到 Target file already exists（目标文件已存在）的警告。选择 Overwrite（覆盖）、Always use this action（始终使用此操作）</p>
+<figure data-type="image" tabindex="19"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697790342494.png" alt="file" loading="lazy"></figure>
+<h2 id="导入数据库">导入数据库</h2>
+<h3 id="删除原有的数据表">删除原有的数据表</h3>
+<figure data-type="image" tabindex="20"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697790530260.png" alt="file" loading="lazy"></figure>
+<h3 id="将备份数据库上传至服务器">将备份数据库上传至服务器</h3>
+<p>在新建数据库时一定要注意数据库编码，否则会出现各种各样问题，一定要保证与原数据库编码一致</p>
+<pre><code class="language-bash">ALTER DATABASE winsenah_wp_6cemw CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+</code></pre>
+<p>我直接上传至域名跟目录</p>
+<figure data-type="image" tabindex="21"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697788124026.png" alt="file" loading="lazy"></figure>
+<h3 id="链接数据库">链接数据库</h3>
+<pre><code class="language-bash">mysql -u***** -p******* --default-character-set=utf8mb4 你的数据库名字
+</code></pre>
+<figure data-type="image" tabindex="22"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697787967382.png" alt="file" loading="lazy"></figure>
+<h3 id="导入数据">导入数据</h3>
+<pre><code class="language-bash">source /home/wwwroot/russia.winsen-sensor.com/*******.sql
+</code></pre>
+<figure data-type="image" tabindex="23"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1697788362118.png" alt="file" loading="lazy"></figure>
+<h2 id="更新数据库域名">更新数据库域名</h2>
+<p>如果迁移后你的域名没有更换，这里什么都不需要操作，如果更换了域名，需要vps 登录数据库执行以下命令：</p>
+<pre><code class="language-sql">UPDATE wp_options SET option_value = 'https://russia.winsen-sensor.com/' WHERE option_name = 'siteurl';
+UPDATE wp_options SET option_value = 'https://russia.winsen-sensor.com/' WHERE option_name = 'home' ;
+</code></pre>
+<p>执行后登录后台，打开设置，固定链接，重新保存即可</p>
+<figure data-type="image" tabindex="24"><img src="https://zmrw.net/wp-content/uploads/2023/10/image-1698133720439.png" alt="file" loading="lazy"></figure>
+<p>至此，网站迁移完成。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SEO 基础知识：初学者 SEO 终极指南]]></title>
+        <id>https://zmrw.github.io/post/seo-ji-chu-zhi-shi-chu-xue-zhe-seo-zhong-ji-zhi-nan/</id>
+        <link href="https://zmrw.github.io/post/seo-ji-chu-zhi-shi-chu-xue-zhe-seo-zhong-ji-zhi-nan/">
+        </link>
+        <updated>2023-04-13T05:15:54.000Z</updated>
+        <content type="html"><![CDATA[<p>这是面向初学者的完整SEO 指南。</p>
+<p>这份新指南将涵盖您需要了解的所有 SEO 基础知识。（以及您可以立即实施的大量可行技巧、策略和策略。）</p>
+<p>因此，如果您想在 Google 搜索中将您的网站排名更高，这本 SEO 新手指南适合您。</p>
+<h3 id="什么是搜索引擎优化">什么是搜索引擎优化？</h3>
+<p>搜索引擎优化（Search Engine Optimization，简称SEO）是指通过优化网站结构、内容、代码等方面，以提高网站在搜索引擎中的排名和曝光度的一种网络营销技术。其目的是让搜索引擎能够更好地理解和索引网站的内容，并为网站带来更多的有价值的流量。</p>
+<p>具体来说，SEO 就是关于在有机搜索结果中的排名。</p>
+<p>谷歌的搜索结果分为两部分：广告和自然流量<br>
+<img src="https://zmrw.net/wp-content/uploads/2023/03/seo-ads.png" alt="" loading="lazy"></p>
+<h3 id="为什么-seo-很重要">为什么 SEO 很重要？</h3>
+<p>SEO 是为您的企业带来更多流量、潜在客户、客户和收入的好方法。</p>
+<p>事实上，<a href="https://backlinko.com/google-user-behavior" title="81% 的谷歌搜索者">81% 的谷歌搜索者</a>都会点击自然搜索结果。</p>
+<figure data-type="image" tabindex="1"><img src="https://zmrw.net/wp-content/uploads/2023/03/original.png" alt="" loading="lazy"></figure>
+<p>这意味着只有 19% 的人选择点击广告。</p>
+<p>换句话说：与为广告付费相比，通过在有机搜索结果中排名，您可以获得大约 5 倍的流量。</p>
+<p>简而言之，SEO 的主要好处包括：</p>
+<ul>
+<li>
+<p>提高网站的可见性和曝光度：通过SEO优化，网站可以在搜索引擎排名中获得更高的位置，从而提高网站的曝光度和可见性，吸引更多的潜在客户访问网站。</p>
+</li>
+<li>
+<p>增加网站流量和访问量：通过SEO优化，网站可以获得更多的自然流量和访问量，从而吸引更多的潜在客户了解和购买产品或服务。</p>
+</li>
+<li>
+<p>提高网站的用户体验：通过优化网站的结构、内容、速度等方面，提高网站的质量和用户体验，从而增强用户对网站的满意度和忠诚度。</p>
+</li>
+<li>
+<p>提高网站的品牌知名度和认知度：通过SEO优化，网站可以在搜索引擎中获得更高的曝光度和排名，从而提高品牌的知名度和认知度，增强品牌的影响力和竞争力。</p>
+</li>
+<li>
+<p>降低成本，提高ROI：相比于其他的广告宣传方式，SEO优化的成本相对较低，且效果持久，可以长期为网站带来流量和销售，从而提高投资回报率（ROI）。</p>
+</li>
+<li>
+<p>增加竞争优势：通过SEO优化，网站可以在搜素引擎中获得更高的排名和曝光度，从而增加竞争优势，吸引更多的潜在客户和业务机会。</p>
+</li>
+</ul>
+<h3 id="seo-基础知识">SEO 基础知识</h3>
+<p>在我们进入您需要采取的具体步骤之前，您需要采取在 Google 中排名更高，让我们先了解一些基本的 SEO 步骤。</p>
+<p>这些步骤将确保 Google 可以正确抓取您的网站并将其编入索引。并且以下策略对您有用。</p>
+<p>首先，检查您的网站是否已在 Google 中编入索引。</p>
+<p>具体来说，在 Google 上搜索“site:yoursite.com”。</p>
+<figure data-type="image" tabindex="2"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679996111052.png" alt="file" loading="lazy"></figure>
+<p>这将向您显示 Google 是否已经抓取您的网站并将其编入索引。如果是这样，到目前为止他们已经索引了多少页。</p>
+<p>如果您的网站出现在结果中，那就太好了！一切就绪。</p>
+<p>如果不是，则可能仅表示您的网站是新网站。而且谷歌还没有找到。</p>
+<p>这也可能意味着您的网站无意中阻止了搜索引擎对其进行抓取（这非常普遍！）无论哪种方式，您都希望尽快修复此问题。</p>
+<p>本指南解决可抓取性问题将帮助您找出问题所在。并修好它。</p>
+<p>其次，将您的网站与 <a href="https://search.google.com/search-console/about" title="Google Search Console">Google Search Console</a> 相关联。</p>
+<p>Search Console是 Google 的一款免费工具</p>
+<figure data-type="image" tabindex="3"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679996312567.png" alt="file" loading="lazy"></figure>
+<p>具体来说，它可以让您了解以下内容：</p>
+<ul>
+<li>您的网站出现在搜索结果中的频率</li>
+<li>您为哪些关键字排名</li>
+<li>Google 已将您网站中的多少网页编入索引</li>
+<li>抓取、索引或呈现页面的问题</li>
+</ul>
+<p>所以是的，如果您想通过 SEO 取得成功，Google Search Console 是一件大事。</p>
+<p><a href="https://www.semrush.com/blog/definitive-guide-google-search-console/" title="本指南将引导您了解如何使用它。">本指南将引导您了解如何使用它。</a></p>
+<p>最后，创建并提交站点地图。</p>
+<p>站点地图就像它听起来的那样：您站点的“地图”</p>
+<figure data-type="image" tabindex="4"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679996532999.png" alt="file" loading="lazy"></figure>
+<p>Google 和其他搜索引擎使用站点地图来查找您网站上的所有页面。</p>
+<p>这有助于确保他们正在抓取您的所有重要页面并将其编入索引。</p>
+<p>如何创建站点地图取决于您的站点运行在什么平台上（WordPress、Shopify 等）</p>
+<p>无论哪种方式，都值得创建一个 XML 站点地图。</p>
+<p>并通过 Search Console 将该站点地图提交给 Google。</p>
+<figure data-type="image" tabindex="5"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679996636735.png" alt="file" loading="lazy"></figure>
+<p>一旦完成了这些 SEO 基础知识，就该进入本 SEO 初学者指南的内容了。</p>
+<p>从 SEO 的一个更关键的元素开始：<a href="https://www.semrush.com/blog/keyword-research-guide-for-seo/" title="关键词研究">关键词研究</a>。</p>
+<h3 id="关键字研究">关键字研究</h3>
+<p>学习 SEO 基础知识意味着扎实地掌握如何以正确的方式进行关键字研究。让我们看看究竟如何。</p>
+<h4 id="1找到您网站的主要关键字">1.找到您网站的主要关键字</h4>
+<p>通常称为“金钱”关键字，主要关键字是客户在搜索您所售商品时搜索的字词。</p>
+<p>例如，对于 SEO 软件公司，一些主要关键字可能包括：</p>
+<ul>
+<li>搜索引擎优化软件</li>
+<li>搜索引擎优化工具</li>
+<li>关键字研究工具</li>
+<li>排名跟踪</li>
+</ul>
+<p>问题是，主要关键字通常具有竞争力。</p>
+<p>这意味着需要一个新的网站时间才能对这些条款进行排名。</p>
+<p>所以你想在你的 SEO 策略中考虑这些你的长期目标。</p>
+<p>以下是查找您网站的主要关键字的方法：</p>
+<p>首先，记下您希望客户或客户在 Google 上寻找像您这样的企业时使用的不同术语。</p>
+<p>例如，假设您经营一个销售天然狗粮的电子商务网站。</p>
+<p>您网站的主要关键字如下：</p>
+<ul>
+<li>有机狗粮</li>
+<li>天然狗粮</li>
+<li>网上买狗粮</li>
+<li>健康的狗粮</li>
+</ul>
+<p>这里没有对错之分。这实际上更像是一种集思广益的方法。目标是列出尽可能多的相关关键字。</p>
+<p>获得潜在关键字列表后，请转到您选择的关键字研究工具。</p>
+<p>对于此示例，我们将使用我们的关键字概览工具。</p>
+<p>输入列表中的搜索词并选择“分析”。</p>
+<figure data-type="image" tabindex="6"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679997054297.png" alt="file" loading="lazy"></figure>
+<p>该工具返回每个关键词的指标列表，包括它们的每月搜索量和关键词难度 (KD)。</p>
+<p>这里有两个关键统计数据需要注意，您将使用它们从列表中选择最佳主要关键字。</p>
+<figure data-type="image" tabindex="7"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679997095364.png" alt="file" loading="lazy"></figure>
+<p>每月搜索量就像听起来一样：<a href="https://www.semrush.com/kb/683-what-is-search-volume-in-semrush" title="该关键字每月在 Google 上获得的搜索次数。">该关键字每月在 Google 上获得的搜索次数。</a></p>
+<p>显然，搜索量越高，您可以获得的潜在流量就越多。</p>
+<p>另一方面，更高的搜索量也意味着更高的关键字难度（Semrush 中的 KD %）。</p>
+<p>关键字难度本质上是该词在谷歌首页上排名的难度。不用说，这个值越低越好。</p>
+<h4 id="2-寻找长尾关键词和关键词变体">2. 寻找长尾关键词和关键词变体</h4>
+<p>您刚刚提出的主要关键字列表可能很好。但是，也值得为这些术语生成长尾视图。</p>
+<p>长尾关键词是较长的搜索词，通常搜索量较低但意图较高。</p>
+<figure data-type="image" tabindex="8"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679997303990.png" alt="file" loading="lazy"></figure>
+<p>这意味着与主要关键字相比，它们的转化率更高。另外，他们的首页竞争程度往往较低。双赢！</p>
+<p><a href="https://www.semrush.com/analytics/keywordmagic/start" title="关键字魔术工具">关键字魔术工具</a>将根据您的主要关键字建议长尾关键字：</p>
+<figure data-type="image" tabindex="9"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679997376344.png" alt="file" loading="lazy"></figure>
+<p>单击任何关键字可在关键字概览工具中查看该关键字。使用此工具以易于遵循的格式查看每个关键字的指标：、</p>
+<figure data-type="image" tabindex="10"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679997453906.png" alt="file" loading="lazy"></figure>
+<p>在这里，您会看到一个关键字变体框，非常适合构建您的关键字列表。</p>
+<p>您还会看到问题和相关关键字小部件。</p>
+<figure data-type="image" tabindex="11"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679997522820.png" alt="file" loading="lazy"></figure>
+<p>使用这些来产生更多的想法，可以帮助您产生更多的长尾术语。</p>
+<h4 id="3选择你的前-5-10-个关键词">3.选择你的前 5-10 个关键词</h4>
+<p>此时，您已经规划好了您的关键词</p>
+<p>下一步是什么？</p>
+<p>是时候选择您将围绕其创建页面的关键字了。</p>
+<p>决定关键字时有两个主要因素可使用：每月搜索量和竞争。</p>
+<p>例如，您可以看到“狗粮”一词每月有 110,000 次搜索，这已经很多了。</p>
+<figure data-type="image" tabindex="12"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679997661193.png" alt="file" loading="lazy"></figure>
+<p>但是 KD % 是 93%。</p>
+<p>这是超高的。这意味着您的网站不太可能很快针对该词进行排名。</p>
+<p>因此，如果您的网站是新网站，您希望关注 KD % 较低（理想情况下，低于 20%）的关键字。</p>
+<p>所以在我们的狗粮示例中，这个关键字可能很合适：</p>
+<figure data-type="image" tabindex="13"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679997688117.png" alt="file" loading="lazy"></figure>
+<p>它没有得到那么多的搜索（每月只有 110 次）。但 KD 只有 18%，这意味着你有机会为它排名。</p>
+<p>选择关键词绝对是艺术多于科学。一般来说，您首先要定位低竞争条件（即使它们的搜索量不多。）</p>
+<p>随着网站 SEO 的改进，您始终可以扩展到更具竞争力的关键字。</p>
+<h3 id="内容">内容</h3>
+<p>SEO 中有一句名言：“内容为王”。而在 2022 年，它比以往任何时候都更加真实。因此，让我们确切地介绍如何创建对 SEO 友好的内容。</p>
+<h4 id="了解搜索者希望看到的查询内容">了解搜索者希望看到的查询内容</h4>
+<p>创建对 SEO 友好的内容的第一步是确定该关键字的 搜索意图。</p>
+<p>什么是搜索意图，究竟是什么？</p>
+<p>搜索意图是某人搜索给定关键字的根本原因。</p>
+<p>例如，以关键字“有机狗粮”为例。</p>
+<p>他们想买东西吗（商业意图）？他们是否在寻找有关 TK 的信息（信息意图）？或者他们可能正在寻找 organicdogtreats.com（导航意图）。</p>
+<p>为什么这很重要？</p>
+<p>Google 可以确定您的网站是否满足搜索意图。</p>
+<p>如果是这样，您将获得排名提升。否则，您将很难在 Google 的首页上排名。</p>
+<p>因此，在写一个词之前，您需要知道搜索者是要查看信息和教育内容还是商业（产品、类别或服务）页面。</p>
+<p>有几种方法可以做到这一点：</p>
+<p>第一个是最耗时的：前往<a href="https://www.semrush.com/blog/serp-features-guide/" title="SERP">SERP</a>并分析排名前 10 位的页面。</p>
+<p>这样做还可以帮助您了解搜索该词的人的实际需求。</p>
+<p>您还可以使用 Semrush 的“意图”指标来帮助您自动确定该术语的意图。</p>
+<p>您可以在关键字概览工具中查看此指标：</p>
+<figure data-type="image" tabindex="14"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679997856750.png" alt="file" loading="lazy"></figure>
+<p>意图让您快速了解正在处理的关键字类型。</p>
+<p>您可以在本指南中了解有关<a href="https://www.semrush.com/blog/how-to-identify-intent-in-search/" title="如何识别搜索意图">如何识别搜索意图</a>的更多信息。</p>
+<h4 id="创建符合意图的内容">创建符合意图的内容</h4>
+<p>您的下一步是发布与您刚刚确定的搜索意图相匹配的内容。</p>
+<p>因此，如果您发现您的关键字具有商业意图，那么您想创建一个着陆页。</p>
+<p>如果搜索意图是信息性的，那么您应该写一篇博客文章。</p>
+<p>这将确保您的内容至少满足搜索意图的基本需求。</p>
+<p>如果您想更深入一点，您可以扫描 Google 中的前 10 个结果，以准确了解搜索者希望看到的该关键字的内容。</p>
+<figure data-type="image" tabindex="15"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679997965263.png" alt="file" loading="lazy"></figure>
+<p>具体来说，寻找以下内容：</p>
+<ul>
+<li>第一页的内容有多长？</li>
+<li>内容结构如何？</li>
+<li>主要是产品和类别页面吗？还是产品评论？</li>
+<li>博客文章是随便写的还是专业水平的？</li>
+<li>这些页面倾向于涵盖哪些子主题？</li>
+</ul>
+<p>例如，当您阅读“organic dog treats”的第一页结果时，您会注意到许多排名靠前的页面都是评论页面。</p>
+<figure data-type="image" tabindex="16"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998028772.png" alt="file" loading="lazy"></figure>
+<p>尽管有一些是电子商务类别页面：</p>
+<figure data-type="image" tabindex="17"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998050054.png" alt="file" loading="lazy"></figure>
+<p>（这被称为“混合意图”。这很常见。并不总是 100% 的搜索给定关键字的人都想要相同的东西）。</p>
+<p>但考虑到大多数结果都是产品评论页面，这就是您想要创建的页面类型。</p>
+<p>我还会查看内容本身，以了解字数、可读性、布局等。</p>
+<figure data-type="image" tabindex="18"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998090607.png" alt="file" loading="lazy"></figure>
+<p>无论哪种方式，查看其中的内容都会很有帮助。并尽可能模仿第一页的结果。</p>
+<p>（毕竟，它显然有效！）</p>
+<p>如果您真的想确保您的内容符合搜索意图，您可以使用 Semrush <a href="https://www.semrush.com/seo-content-template/" title="SEO 内容模板">SEO 内容模板</a>来帮助您为每个页面制定计划和框架。</p>
+<p>只需输入您在页面中主要定位的关键字，它就会分析该关键字的前 10 个结果，并返回一个模板化框架，您可以使用该框架来为您的页面构建内容。</p>
+<figure data-type="image" tabindex="19"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998153033.png" alt="file" loading="lazy"></figure>
+<p>您将能够深入了解推荐的文本长度、要构建的语义相关词、推荐的反向链接来源等等。</p>
+<p>将此与您从手动分析前 10 个结果中获得的见解相结合，您将专注于创建准备好在 Google 第一页上排名的内容。</p>
+<h4 id="优化您的首屏部分">优化您的首屏部分</h4>
+<p>“首屏”部分是指用户在点击您的网页时首先看到的内容。</p>
+<p>这是一个重要部分，因为它是您网站的“第一印象”。</p>
+<p>如果用户看到表明他们在正确位置的内容，他们可能会向下滚动。</p>
+<p>这是折叠部分上方的漂亮示例：</p>
+<figure data-type="image" tabindex="20"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998218646.png" alt="file" loading="lazy"></figure>
+<p>如果没有，他们会跳回搜索结果以阅读有关该主题的许多其他文章。</p>
+<h3 id="用户体验">用户体验</h3>
+<p>用户体验 (UX) 是指搜索者/用户浏览您网站的整体体验。</p>
+<p>UX 对 SEO 有直接和间接的影响。</p>
+<p>UX 会直接影响您的 SEO，因为糟糕的 UX 可能意味着 Google 用户在您网站上花费的时间更少。并迅速从您的网站反弹</p>
+<figure data-type="image" tabindex="21"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998279631.png" alt="file" loading="lazy"></figure>
+<p>两者都向 Google 表明您的网站不值得出现在首页。</p>
+<p>反之亦然：具有可靠用户体验的网站会向 Google 发送信号，表明您让搜索者感到满意。</p>
+<p>UX 可以间接影响 SEO，因为出色的 UX 会向其他人表明您的网站是有用的资源，从而导致更多反向链接出现。</p>
+<p>例如，个人理财巨头 NerdWallet 早期获得如此多反向链接的原因之一是其值得信赖的设计和出色的用户体验。</p>
+<figure data-type="image" tabindex="22"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998320636.png" alt="file" loading="lazy"></figure>
+<h3 id="使用诱人的-cta">使用诱人的 CTA</h3>
+<p>出色的号召性用语 (CTA) 按钮可以吸引用户，而不会造成干扰或花哨。</p>
+<p>例如，此 CTA 出现在我们一篇文章的末尾。</p>
+<figure data-type="image" tabindex="23"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998354985.png" alt="file" loading="lazy"></figure>
+<p>如您所见，此 CTA 与页面自然流动，实际上为想知道下一步该做什么的用户提供了价值。</p>
+<h3 id="避免文字墙">避免文字墙</h3>
+<p>当您编写和优化您的内容时，重要的是要考虑网页上的空白区域。</p>
+<p>频繁的段落中断让读者从文本墙中获得视觉上的喘息机会，使您的内容更易于阅读和浏览。</p>
+<p>例如，这篇文章使用短段落。这使得它非常“可略读”。</p>
+<figure data-type="image" tabindex="24"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998408790.png" alt="file" loading="lazy"></figure>
+<h3 id="使用清单-项目符号和编号列表">使用清单、项目符号和编号列表</h3>
+<p>除了使用空白作为用户的视觉休息区之外，您还可以将内容分解为项目符号列表和编号列表。</p>
+<p>这是我们博客中的示例：</p>
+<figure data-type="image" tabindex="25"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998437039.png" alt="file" loading="lazy"></figure>
+<h3 id="列表帮助用户">列表帮助用户</h3>
+<p>列表不是直接的排名因素。但是数字和项目符号列表往往有更好的机会获得像下面这样的 <a href="https://www.semrush.com/blog/featured-snippets/" title="特色片段">特色片段</a>。</p>
+<figure data-type="image" tabindex="26"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998510320.png" alt="file" loading="lazy"></figure>
+<h3 id="页面搜索引擎优化">页面搜索引擎优化</h3>
+<p>因此，现在您拥有了一段易于用户阅读和浏览的高质量内容。</p>
+<p>现在是时候围绕关键字优化该页面（也称为“页面搜索引擎优化”）。</p>
+<p>以下是您肯定希望在您网站的每个页面上实施的一些关键的页面搜索引擎优化技术：</p>
+<h4 id="优化您的标题标签">优化您的标题标签</h4>
+<p>标题标签显示为您的 SERP 列表的标题。并且是一个关键的排名因素。</p>
+<figure data-type="image" tabindex="27"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998591745.png" alt="file" loading="lazy"></figure>
+<p>在最基本的层面上，您需要确保网站页面的标题标签包含页面的主要目标关键字（以及可能的变体）。</p>
+<p>但优化这些不仅仅是添加关键字。我们关于<a href="https://www.semrush.com/blog/title-tag/" title="如何编写标题标签">如何编写标题标签</a>的指南概述了在编写标题标签时要牢记的其他一些提示：</p>
+<ol>
+<li>标题长度保持在 55-60 个字符左右</li>
+<li>使用诸如 HOW、WHY、WHAT 和 WHERE 之类的词——这些可以帮助人们理解他们会在页面上找到什么</li>
+<li>使用 BEST、REVIEW 和 ULTIMATE 等词来吸引用户点击</li>
+<li>为每一页写下独特的标题</li>
+<li>把事情简单化</li>
+</ol>
+<h4 id="优化您的元描述">优化您的元描述</h4>
+<p>元描述是显示在 SERP 页面标题下的文本。</p>
+<figure data-type="image" tabindex="28"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998766700.png" alt="file" loading="lazy"></figure>
+<p>这些都是鼓励用户点击您的列表而非竞争对手列表的绝好机会。</p>
+<p>元描述不再是直接的排名因素。但引人注目的描述可以对 CTR（点击率）产生积极影响，这一点至关重要。在我们的<a href="https://www.semrush.com/blog/meta-description/" title="元描述指南">元描述指南</a>中，我们推荐了以下技巧来正确优化它们：</p>
+<ol>
+<li>保持 1-2 个句子（140-160 个字符）长</li>
+<li>不要忘记包含您的关键字</li>
+<li>如果相关，请添加号召性用语</li>
+<li>避免重复的元描述</li>
+<li>让它们有意义且具有描述性，与您的内容相匹配</li>
+<li>针对情绪</li>
+</ol>
+<h4 id="优化标题标签">优化标题标签</h4>
+<p>另一个关键的页面 SEO 因素是标题标签，也称为 H1-H6 标签。</p>
+<p>这些用于将您的内容分成如下部分：</p>
+<figure data-type="image" tabindex="29"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998919986.png" alt="file" loading="lazy"></figure>
+<p>除了使用副标题来组织您的内容外，您还希望在每个副标题中包含您的目标关键字和相关术语。</p>
+<figure data-type="image" tabindex="30"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679998952212.png" alt="file" loading="lazy"></figure>
+<h4 id="优化您的页面-url">优化您的页面 URL</h4>
+<p>您的网址应简明扼要地描述您网页的内容。</p>
+<p>这样想...</p>
+<p>如果您有两个页面 URL：</p>
+<ol>
+<li>/第1页/</li>
+<li>/红鞋子/</li>
+</ol>
+<p>你会说哪个优化得更好？</p>
+<p>第二，当然，原因很简单，它是描述性的。通过查看 URL，您可以确定该页面是关于红鞋的。</p>
+<p>作为一般经验法则，URL：</p>
+<ul>
+<li>应该是描述性的并包括页面的主要关键字</li>
+<li>在单词之间使用连字符而不是下划线</li>
+<li>使用小写字母，而不是混合使用大写字母</li>
+<li>在描述页面内容的同时尽可能简短</li>
+</ul>
+<h4 id="优化图像">优化图像</h4>
+<p>“优化图像”指的是两件不同的事情：</p>
+<ol>
+<li>为 SEO 优化它们</li>
+<li>确保它们经过优化以在任何设备上快速加载</li>
+</ol>
+<p>我们的图像优化指南提供了一些帮助您入门的提示：</p>
+<ul>
+<li>正确命名您的图像以具有描述性。</li>
+<li>将图像调整为它们将显示的尺寸。</li>
+<li>减小文件大小并压缩图像。</li>
+<li>使用描述性文本优化 alt 标签。</li>
+</ul>
+<h4 id="从您网站上的其他页面添加链接">从您网站上的其他页面添加链接</h4>
+<p>没有至少涉及内部链接的 SEO 基础知识指南是不完整的。在您网站上的页面之间建立链接将：</p>
+<ul>
+<li>帮助搜索引擎了解您网站的结构</li>
+<li>页面之间传递权限</li>
+<li>帮助用户在页面之间导航</li>
+</ul>
+<p>您可以使用 Semrush <a href="https://www.semrush.com/siteaudit/" title="Site Audit 工具">Site Audit 工具</a>来帮助构建理想的内部链接结构。</p>
+<figure data-type="image" tabindex="31"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679999141629.png" alt="file" loading="lazy"></figure>
+<figure data-type="image" tabindex="32"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679999153132.png" alt="file" loading="lazy"></figure>
+<p>使用此报告可以发现您使用内部链接来提高 Google 排名的机会.</p>
+<p>您可以在我们的<a href="https://www.semrush.com/blog/internal-links-guide-to-building-strategy-that-works/" title="内部链接指南">内部链接指南</a>中了解有关此过程的更多信息。</p>
+<h3 id="链接建设">链接建设</h3>
+<p>SEO 成功的另一个核心支柱来自于在 Google 眼中建立您的网站的权威。</p>
+<p>你是怎样做的？反向链接。</p>
+<p>简而言之，反向链接是一个网站提供“返回”到您网站的链接——本质上是给您投下信任票并支持您。只要链接回您网站的网站是相关网站，该链接就可以帮助您的网站在 Google 上排名更高。</p>
+<p>我们的帖子“SEO 的链接构建：初学者指南”涵盖了 20 多种您可以尝试的策略。但是，让我们回顾一些最适合 SEO 初学者的链接构建策略。</p>
+<h4 id="1-建立来自协会-供应商和关联企业的链接">1. 建立来自协会、供应商和关联企业的链接</h4>
+<p>建立链接的最快胜利之一就是接触到您的企业所拥有的现实生活中的联系。</p>
+<p>这些连接包括：</p>
+<ul>
+<li>您的供应商</li>
+<li>您所属的协会</li>
+<li>您办公大楼的网站</li>
+<li>您当地的商会</li>
+</ul>
+<p>这是一个例子：</p>
+<figure data-type="image" tabindex="33"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679999341028.png" alt="file" loading="lazy"></figure>
+<p>通常，您需要做的就是联系您在该站点的联系人。他们会很乐意添加您的链接。</p>
+<h4 id="2-将您的站点提交到质量目录">2. 将您的站点提交到质量目录</h4>
+<p>如果您是本地企业或在特定领域工作，您可能会发现您的空间中有目录。这是为您的站点建立一些可靠链接的快速方法，尤其是当您使用 <a href="https://www.semrush.com/local-seo/local-citation-tool/" title="本地引文软件">本地引文软件</a> 来自动化和加速该过程时。</p>
+<p>请注意，这些不是像 DMOZ 这样的老式目录。相反，我们正在谈论这样的利基目录：</p>
+<figure data-type="image" tabindex="34"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679999460618.png" alt="file" loading="lazy"></figure>
+<p>或特定产品类型的目录，例如此电子邮件通讯目录：</p>
+<figure data-type="image" tabindex="35"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679999480593.png" alt="file" loading="lazy"></figure>
+<h4 id="3-使用-haro-从媒体获得链接">3. 使用 Haro 从媒体获得链接</h4>
+<p><a href="https://www.helpareporter.com/" title="HARO">HARO</a>是一个将记者与像您一样的企业主和营销人员联系起来的平台。</p>
+<p>HARO 每天三次，从周一到周五，发送一封电子邮件，其中包含来自记者的请求，如下所示：</p>
+<figure data-type="image" tabindex="36"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679999528816.png" alt="file" loading="lazy"></figure>
+<p>如果有对您的业务有意义的相关请求，请继续执行。这是一个很好的介绍，介绍了从新闻网站建立权威链接并每天监控这些电子邮件应该会发现大多数企业每周都会出现机会。HARO 可能很受欢迎或很失败。但即使来自相关网站的单个链接也会对您的 Google 排名产生影响（特别是如果您的网站是全新的）。</p>
+<h3 id="技术搜索引擎优化">技术搜索引擎优化</h3>
+<p>技术搜索引擎优化就是确保您的网站可以被抓取和索引。如果搜索引擎无法抓取或索引您的网站，它将难以排名。</p>
+<p>开始的方法如下：</p>
+<h4 id="设置谷歌搜索控制台">设置谷歌搜索控制台</h4>
+<p>如果您还没有这样做，请将您的网站连接到 Google Search Console。这个免费工具可帮助您确定 Google 在索引或抓取您的网站时可能遇到的任何问题。</p>
+<h4 id="检查您的网站是否可以编入索引并查找问题">检查您的网站是否可以编入索引并查找问题</h4>
+<p>您要使用 Search Console 做的第一件事是仔细检查是否没有任何问题阻止关键页面被抓取和编入索引。</p>
+<p>您可以使用“覆盖率”报告来做到这一点。从左侧边栏菜单中选择报告：</p>
+<figure data-type="image" tabindex="37"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679999607514.png" alt="file" loading="lazy"></figure>
+<p>**提示：**请特别注意此处的“排除”页面。这些是您会看到与您网站页面状态相关的特定问题的地方。</p>
+<figure data-type="image" tabindex="38"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679999633854.png" alt="file" loading="lazy"></figure>
+<p><a href="https://support.google.com/webmasters/answer/7440203?hl=en" title="您可以在此处">您可以在此处</a>了解有关了解覆盖率报告的更多信息。</p>
+<p>此外，您可以检查站点上的任何 URL（使用页面顶部的 URL 栏）并查看该页面的索引状态。</p>
+<figure data-type="image" tabindex="39"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679999671934.png" alt="file" loading="lazy"></figure>
+<h4 id="检查您的-robottxt-文件">检查您的 Robot.txt 文件</h4>
+<p>根据您网站的 CMS，您可能设置了 robots.txt 文件。它通常位于：https://www.yourdomain.com/robots.txt</p>
+<p>它应该看起来像这样：</p>
+<figure data-type="image" tabindex="40"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679999712872.png" alt="file" loading="lazy"></figure>
+<p>如果您没有，则需要创建一个。</p>
+<p>但是 Robots.txt 到底是做什么用的呢？</p>
+<p>Robots.txt 指示 Googlebot（和其他机器人）如何抓取您的网站。如果您要防止关键站点页面被抓取，请快速解决它们——这可能会导致索引问题。</p>
+<p>同样，如果搜索引擎机器人不应该抓取的页面没有被阻止，这可能会导致太多页面（重复或低价值）被编入索引。</p>
+<p>您可以<a href="https://www.semrush.com/blog/beginners-guide-robots-txt/" title="在此处">在此处</a>了解有关 robots.txt 文件的更多信息。</p>
+<h4 id="优化您的网站速度">优化您的网站速度</h4>
+<p>没有人愿意浏览一个速度慢的网站。这包括用户和搜索引擎。</p>
+<p>网站速度慢会对您的 SEO 性能产生负面影响，跳出率较高，停留时间较短，转化率较低。</p>
+<p>此外，网站速度是谷歌在其算法中使用的 <a href="https://developers.google.com/search/docs/advanced/experience/page-experience" title="直接排名因素">直接排名因素</a>。</p>
+<figure data-type="image" tabindex="41"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679999782147.png" alt="file" loading="lazy"></figure>
+<p>您的第一步是对您网站的速度进行基准测试。这样，您就会确切地知道需要修复什么（如果有的话）。</p>
+<p>前往您的 Semrush 站点审核工具仪表板并选择“问题”选项卡。在这里您会看到所有被标记为页面速度慢的页面：</p>
+<figure data-type="image" tabindex="42"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679999803399.png" alt="file" loading="lazy"></figure>
+<p>从这里开始，了解导致页面速度缓慢的具体问题以及进行改进的机会至关重要。</p>
+<p><a href="https://developers.google.com/speed/pagespeed/insights/" title="您可以首先通过Google 的 PageSpeed Insights 工具">您可以首先通过Google 的 PageSpeed Insights 工具</a>运行您的网站，您将在其中获得减少加载时间的建议。</p>
+<figure data-type="image" tabindex="43"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1679999839392.png" alt="file" loading="lazy"></figure>
+<p>您可以<a href="https://www.semrush.com/blog/how-to-improve-your-google-pagespeed-insights-score/" title="在此处">在此处</a>详细了解如何提高您的 PageSpeed Insights 分数。</p>
+<h4 id="设置-https">设置 HTTPS</h4>
+<p>自 2014 年以来， HTTPS 一直是排名因素。</p>
+<p>然而，仍然有一些不安全的站点仍然位于 HTTP 域中。检查您是否可以使用 https:// 而不是 http:// 访问您的网站。</p>
+<p>如果你是，那就太好了！无需进一步操作。如果您发现您的站点仍然位于 HTTP 上，请与您的开发人员交谈并仔细规划向 HTTPS 的迁移或遵循本指南。</p>
+<h3 id="手机搜索引擎优化">手机搜索引擎优化</h3>
+<p>谷歌使用移动页面速度作为<a href="https://www.businessnewsdaily.com/7808-google-search-ranking-mobile.html" title="关键排名指标">关键排名指标</a>。他们还使用<a href="https://www.semrush.com/blog/mobile-first-indexiing/" title="移动优先索引">移动优先索引</a>（换句话说，您网站的移动版本是 Google 眼中的“主要”版本）。</p>
+<p>因此可以肯定地说，针对移动设备进行优化是技术 SEO 的重要组成部分。</p>
+<p>您可以使用Google 的<a href="https://search.google.com/test/mobile-friendly" title="移动设备友好测试">移动设备友好测试</a>来查看您的网站对移动用户的显示效果。如果移动用户在使用您的网站时可能遇到任何问题。</p>
+<figure data-type="image" tabindex="44"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1680053566614.png" alt="file" loading="lazy"></figure>
+<p>以下是使您的网站适合移动设备的一些基本准则：</p>
+<ul>
+<li>确保使用适合移动设备的网站架构，例如响应式网站（意味着所有平台的体验都相同）或动态网站（意味着体验专门针对用于浏览的平台量身定制）</li>
+<li>不要让你的导航栏变得太杂乱或太长，因为这会让移动用户更难进行分类</li>
+<li>谨慎使用动画，因为它们会降低移动页面速度</li>
+</ul>
+<h3 id="衡量-seo-成功">衡量 SEO 成功</h3>
+<p>现在您已将此 SEO 初学者指南付诸实践，是时候跟踪您的结果了。<br>
+但是你如何衡量 SEO 的成功呢？就像定期跟踪一些关键指标一样简单。</p>
+<h4 id="有机交通">有机交通</h4>
+<p>有机流量是指从 Google 的有机结果访问您网站的访问者数量。</p>
+<p>衡量自然流量的最佳方法是使用<a href="https://analytics.google.com/" title="Google Analytics (GA)">Google Analytics (GA)</a>。</p>
+<figure data-type="image" tabindex="45"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1680053676382.png" alt="file" loading="lazy"></figure>
+<p>（还没有设置 GA？不用担心，我们有一个5 步指南来说明如何完成所有设置）</p>
+<p>如果您的自然流量数字在上升，则这是一个很好的指标，表明您的内容引起了人们的共鸣，您的关键字不太具有竞争力，并且您正在建立的链接正在发挥作用。</p>
+<p>如果您的流量数字呈下降趋势，则您的网站可能遇到了技术性 SEO 问题，针对竞争过度的关键字，或者您的网站只是需要更多时间才能开始看到 SEO 结果。</p>
+<h4 id="平均会话持续时间和跳出率">平均会话持续时间和跳出率</h4>
+<p>平均会话持续时间和跳出率是两个指标，可帮助确定您的内容是否能引起受众的共鸣。您可以在 Google Analytics 中找到这两个指标。</p>
+<p>平均会话持续时间衡量两次点击之间的时间：第一次点击将用户带到您的页面，第二次点击将他们带到其他地方。</p>
+<figure data-type="image" tabindex="46"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1680053789042.png" alt="file" loading="lazy"></figure>
+<p>“其他地方”可以是您网站上的另一个页面，返回到 SERP……或任何其他页面。</p>
+<p>平均。会话持续时间可以告诉您很多有关内容性能的信息。</p>
+<p>如果用户没有找到他们查询的答案，或者如果您的内容很无聊，用户很可能会点击转到另一个站点。</p>
+<p>跳出率描述了您的页面有多少单页会话——也就是说，有多少人来到您网站上的一个页面并在之后立即离开。</p>
+<figure data-type="image" tabindex="47"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1680053832729.png" alt="file" loading="lazy"></figure>
+<p>高跳出率可能表明您的内容与用户的搜索查询不一致。您可能需要做进一步的关键字研究或简化您的内容以更好地为您的网站访问者服务。</p>
+<p>转换定义为执行您网站所需操作的用户数量（或百分比）。在这种情况下所需的操作可能是提交他们的电子邮件地址和联系信息或购买产品页面。</p>
+<p>要计算您的转化率，请将转化次数除以您网站的访问者数量。一旦你有了这个数字，乘以 100。这将给你一个百分比。</p>
+<p><a href="https://www.semrush.com/analytics/traffic/overview/ebay.com" title="您可以通过在我们的流量分析工具">您可以通过在我们的流量分析工具</a>中输入域来获取网站的唯一身份访问者数量。</p>
+<figure data-type="image" tabindex="48"><img src="https://zmrw.net/wp-content/uploads/2023/03/image-1680053922463.png" alt="file" loading="lazy"></figure>
+<p>确定所需的操作/转换将取决于您的业务目标。它可以像为您的联系页面设置一定数量的页面访问计划一样简单，也可以像进行购买这样更广泛的事情。</p>
+<p>如果您的 SEO 成功，您将有望看到更多自然流量。如果您注意到您未能将用户转化为潜在客户和买家，您需要确定是否：</p>
+<ul>
+<li>您期望的转化是合理的（例如注册时事通讯的新访客）</li>
+<li>您正在定位目标客户用来在 Google 中查找信息的关键字</li>
+<li>您的网站具有鼓励人们留在您网站上的用户体验</li>
+</ul>
+<h3 id="最后的想法">最后的想法</h3>
+<p>首先，恭喜您迈出了进入 SEO 世界的第一步！</p>
+<p>SEO 是最强大的数字营销渠道之一。您还能从哪里获得源源不断的目标流量来您的网站？</p>
+<p>现在您已经完成了本 SEO 初学者指南，请查看我们的其他文章以扩展您的知识：</p>
+<ul>
+<li><a href="https://www.semrush.com/blog/learn-seo/" title="学习 SEO：搜索引擎优化简介">学习 SEO：搜索引擎优化简介</a></li>
+<li><a href="https://www.semrush.com/blog/on-page-seo/" title="页面搜索引擎优化：深入指南">页面搜索引擎优化：深入指南</a></li>
+<li><a href="https://www.semrush.com/blog/learning-technical-seo/" title="什么是技术搜索引擎优化？您的入门指南">什么是技术搜索引擎优化？您的入门指南</a></li>
+</ul>
+<p>或者，如果您正在寻找更实际的学习体验，您可以在<a href="https://www.semrush.com/academy/?kw=semrush%20academy&amp;cmp=US_SRCH_Brand_Semrush_EN&amp;label=brand_semrush&amp;Network=g&amp;Device=c&amp;utm_content=570383724156&amp;kwid=kwd-828307408948&amp;cmpid=11915062068&amp;agpid=124220900317&amp;BU=Brand_Semrush&amp;extid=&amp;adpos=&amp;gclid=CjwKCAiAsNKQBhAPEiwAB-I5zQwnKBGbr6QZuyWT-pkeSKEyYKOAVl7hAXQv-oZwMbPDhHA69bFzmRoCQwYQAvD_BwE" title="Semrush 学院">Semrush 学院</a>参加我们数十种免费在线 SEO 课程之一！</p>
+<p>本文翻译自：<a href="https://www.semrush.com/blog/seo-basics/" title="https://www.semrush.com/blog/seo-basics/">https://www.semrush.com/blog/seo-basics/</a></p>
+<p>参考链接：<a href="https://zmrw.net/seo-basics/%22">https://zmrw.net/seo-basics/</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何选择Winsen二氧化碳传感器]]></title>
+        <id>https://zmrw.github.io/post/ru-he-xuan-ze-winsen-er-yang-hua-tan-chuan-gan-qi/</id>
+        <link href="https://zmrw.github.io/post/ru-he-xuan-ze-winsen-er-yang-hua-tan-chuan-gan-qi/">
+        </link>
+        <updated>2022-06-28T09:04:01.000Z</updated>
+        <content type="html"><![CDATA[<p>二氧化碳是衡量室内空气质量的标准之一，但与其他污染物不同的是，二氧化碳没有颜色和气味，单靠感官无法检测到二氧化碳。随着科技的发展和人们环保意识的提高，对二氧化碳气体进行定量监测与控制已经成为家居、商场、农业、医疗、汽车及环保等领域日益增长的新需求。因此需要通过传感器来帮助我们测量二氧化碳浓度</p>
+<h3 id="二氧化碳传感器的类型">二氧化碳传感器的类型</h3>
+<p>二氧化碳传感器是专门用来检测空气中二氧化碳含量的传感器，在很多个领域都有着非常广泛的应用。常用的有非色散红外型、固体电解质型、热导型等几种，其中又以非色散红外原理的二氧化碳传感器应用最为广泛。为了能够正确选择最适合您的传感器，您应该在决定使用哪种传感器之前了解每种传感器的优缺点。</p>
+<ul>
+<li>非色散红外二氧化碳传感器</li>
+<li>固体电解质二氧化碳传感器</li>
+<li>热导二氧化碳传感器</li>
+</ul>
+<h4 id="1非色散红外二氧化碳传感器">1.非色散红外二氧化碳传感器</h4>
+<p><strong>优点</strong>：灵敏度高、分析速度快、稳定性好、使用寿命长。<br>
+<strong>缺点</strong>：价格相对昂贵......<br>
+<strong>主要型号有</strong>：MH-Z19C...</p>
+<h4 id="2固体电解质二氧化碳传感器">2.固体电解质二氧化碳传感器</h4>
+<p><strong>优点</strong>：...<br>
+<strong>缺点</strong>：...<br>
+<strong>主要型号有</strong>：...</p>
+<h4 id="3热导二氧化碳传感器">3.热导二氧化碳传感器</h4>
+<p><strong>优点</strong>：...<br>
+<strong>缺点</strong>：...<br>
+<strong>主要型号有</strong>：...</p>
+<h3 id="如何选择winsen二氧化碳传感器">如何选择Winsen二氧化碳传感器</h3>
+<h4 id="1民用领域二氧化碳监测">1.民用领域二氧化碳监测</h4>
+<p>在家庭生活、商场、医院、车站等场景中，二氧化碳传感器通常会被集成到空调、新风系统、空气净化器等设备中，为我们改善室内空气质量，同时节能减排，营造良好的居住环境。<br>
+非色散红外型和固体电解质型二氧化碳传感器，都可以用于民用领域的二氧化碳气体检测。其中，固体电解质型属于化学类传感器，非线性输出、成本低，适合需要严格控制成本的产品，红外二氧化碳传感器具有良好的选择性、抗干扰性能比较好，线性输出，精度高、寿命长等优势，可以应用于大部分室内空气监测场景。<br>
+<strong>推荐</strong>：MH-Z19C,MH-Z19E,MH-Z19D...<br>
+这里写一下各个产品的优略势，不同应用场景推荐不同产品(如：有成本要求推荐Z19E )</p>
+<h4 id="2农业大棚-养殖舍二氧化碳监测">2.农业大棚、养殖舍二氧化碳监测</h4>
+<p>温室大棚中需要合理使用二氧化碳气肥，保障蔬菜、鲜花、菌类等高质高产；养殖舍内需要保持良好的通风率，保障禽畜健康生长。需要在高湿环境下应用，通常会选用双通道的二氧化碳传感器。<br>
+<strong>推荐</strong>：MH-Z14B,...<br>
+这里写一下各个产品的优略势，不同应用场景推荐不同产品</p>
+<h4 id="3工业安全二氧化碳监测">3.工业安全二氧化碳监测</h4>
+<p>在金属加工、纸浆和造纸、清洗和溶剂提取以及低温清洗等与二氧化碳相关行业中，普遍需要对二氧化碳浓度进行监测。高端工业场所环境更为复杂，对传感器的量程、性能等要求也更高，有时还需要具备防爆功能。<br>
+<strong>推荐</strong>：MH-711A,...<br>
+这里写一下各个产品的优略势，不同应用场景推荐不同产品</p>
+<h3 id="扩展知识">扩展知识</h3>
+<h4 id="1单通道红外二氧化碳传感器">1.单通道红外二氧化碳传感器</h4>
+<p>单通道，顾名思义就是红外探测器的内部集成了一个光敏器件和窄带滤波片，使中心波长为4.26μm的光通过的同时反射或衰减其他波长的光。</p>
+<h4 id="2双通道红外二氧化碳传感器">2.双通道红外二氧化碳传感器</h4>
+<p>双通道，即在单通道红外探测器的基础上集成一个参考通道，内部集成2个光敏器件、2个窄带滤波片。其中一个通道使中心波长为4.26um的光通过，而另一个通道则错开特定的波长(常用CO2、CO、SO2、NO无吸收)，信号比较稳定则可作为参考通道。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[thrive-theme主题使用教程]]></title>
+        <id>https://zmrw.github.io/post/thrive-theme-zhu-ti-shi-yong-jiao-cheng/</id>
+        <link href="https://zmrw.github.io/post/thrive-theme-zhu-ti-shi-yong-jiao-cheng/">
+        </link>
+        <updated>2022-04-21T05:56:57.000Z</updated>
+        <content type="html"><![CDATA[<p>在线文档：https://help.thrivethemes.com/</p>
+<h3 id="如何在-thrive-theme-builder-中自定义-woocommerce-产品模板">如何在 Thrive Theme Builder 中自定义 WooCommerce 产品模板</h3>
+<pre><code class="language-url">https://help.thrivethemes.com/en/articles/4426264-how-to-customize-a-woocommerce-product-template-in-thrive-theme-builder
+</code></pre>
+<h3 id="如何在-thrive-theme-builder-中自定义-woocommerce-商店模板">如何在 Thrive Theme Builder 中自定义 WooCommerce 商店模板</h3>
+<pre><code class="language-url">https://thrivethemes.com/tkb_item/how-to-customize-a-woocommerce-shop-template-in-thrive-theme-builder/
+</code></pre>
+<h3 id="如何在-thrive-theme-builder-中自定义-woocommerce-产品类别模板">如何在 Thrive Theme Builder 中自定义 WooCommerce 产品类别模板</h3>
+<pre><code class="language-url">https://help.thrivethemes.com/en/articles/5469070-how-to-customize-a-woocommerce-product-categories-template-in-thrive-theme-builder
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Wordpress破解主题]]></title>
+        <id>https://zmrw.github.io/post/wordpress-po-jie-zhu-ti/</id>
+        <link href="https://zmrw.github.io/post/wordpress-po-jie-zhu-ti/">
+        </link>
+        <updated>2022-04-20T08:18:10.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1thrive-theme主题">1.thrive-theme主题</h3>
+<p>3分钟配置个人网站，多个主题样式，组件<br>
+链接：<br>
+使用教程：zmrw.net<br>
+配合插件使用 thrive architect：<br>
+链接：https://pan.baidu.com/s/1NOISEa8OYYaEe3yF4UHJVA<br>
+thrive theme全家桶：</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[wordpress好用插件]]></title>
+        <id>https://zmrw.github.io/post/wordpress-hao-yong-cha-jian/</id>
+        <link href="https://zmrw.github.io/post/wordpress-hao-yong-cha-jian/">
+        </link>
+        <updated>2022-04-20T06:27:38.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1生成测试文章插件分类">1.生成测试文章插件,分类</h3>
+<pre><code class="language-url">https://cn.wordpress.org/plugins/fakerpress/
+</code></pre>
+<h3 id="2给文章增加额外信息advanced-custom-fields">2.给文章增加额外信息：Advanced Custom Fields</h3>
+<pre><code class="language-url">https://wordpress.org/plugins/advanced-custom-fields/
+</code></pre>
+<h3 id="3原始文本编辑器classic-editor">3.原始文本编辑器：Classic Editor</h3>
+<pre><code class="language-url">https://wordpress.org/plugins/classic-editor/
+</code></pre>
+<h3 id="4页面编辑器elementor">4.页面编辑器：Elementor</h3>
+<pre><code class="language-url">https://wordpress.org/plugins/elementor/
+</code></pre>
+<h3 id="5elementor-pro破解版本">5.Elementor Pro（破解版本）</h3>
+<pre><code class="language-url">https://pan.baidu.com/s/1DbvAom6IS7X3Pkw0UvzhQg 
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu字符串替换]]></title>
+        <id>https://zmrw.github.io/post/ubuntu-zi-fu-chuan-ti-huan/</id>
+        <link href="https://zmrw.github.io/post/ubuntu-zi-fu-chuan-ti-huan/">
+        </link>
+        <updated>2021-12-22T02:37:19.000Z</updated>
+        <content type="html"><![CDATA[<p>公司有两个商务通，今年弃用一个，但是很多网站使用的还是之前商务通，因此需要替换新的商务通<br>
+第一个是要替换的内容，第二个是替换的内容，第三个也是替换的内容</p>
+<pre><code class="language-bash">sed -i &quot;s/要替换的内容/替换的内容/g&quot; `grep 要替换的内容 -rl /home/wwwroot/`
+</code></pre>
+<p>我尝试这样操作</p>
+<pre><code class="language-bash">sed -i &quot;s/&lt;script language=&quot;javascript&quot; src=&quot;https://pqt.zoosnet.net/JS/LsJS.aspx?siteid=PQT59458327&amp;amp;float=1&amp;amp;lng=en&quot;&gt;&lt;/script&gt;/&lt;script language=&quot;javascript&quot; src=&quot;https://lr.zoosnet.net/JS/LsJS.aspx?siteid=LEF55473249&amp;float=1&amp;lng=en&quot;&gt;&lt;/script&gt;/g&quot; `grep &lt;script language=&quot;javascript&quot; src=&quot;https://pqt.zoosnet.net/JS/LsJS.aspx?siteid=PQT59458327&amp;amp;float=1&amp;amp;lng=en&quot;&gt;&lt;/script&gt; -rl /home/wwwroot/strange-red-haired.be`
+</code></pre>
+<p>但是可能符号太多运行不成功</p>
+<p>我观察url分两步完成</p>
+<pre><code class="language-bash">sed -i &quot;s/PQT59458327/LEF55473249/g&quot; `grep PQT59458327 -rl /home/wwwroot`
+</code></pre>
+<pre><code class="language-bash">sed -i &quot;s/pqt.zoosnet.net/lr.zoosnet.net/g&quot; `grep pqt.zoosnet.net -rl /home/wwwroot`
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2021郑州中跨峰会感悟]]></title>
+        <id>https://zmrw.github.io/post/2021-zheng-zhou-zhong-kua-feng-hui-gan-wu/</id>
+        <link href="https://zmrw.github.io/post/2021-zheng-zhou-zhong-kua-feng-hui-gan-wu/">
+        </link>
+        <updated>2021-12-20T08:11:12.000Z</updated>
+        <content type="html"><![CDATA[<p>跨境出海经历了长达九年的高速发展，2020年疫情又将跨境送入超快车道，热度一直不减，但2021年以来，亚马逊平台封号潮持续，独立站成为越来越多企业的首选。我主要参与学习独立站海外营销，结合我们的品牌，主要做以下总结与感悟：</p>
+<h3 id="1独立站从0到1">1.独立站从0到1</h3>
+<p>平台卖家拥有品牌+产品，独立站卖家还拥有直接自有的用户数据+及时细节的反馈。<br>
+独立站建设主要有5个部分，分别是选品，建站，物流，支付，营销，我们作为生产厂家，选品，物流可以不用考虑，我主要从建站，(支付)，营销来进行分析。</p>
+<h4 id="11建站">1.1建站</h4>
+<p>建站途径主要有两种，一种建站平台，Shopify，Shopline，Ueeshop，Shoplazza,另一种是开源系统，Wordpress，Magento，Opencart。我们目前公司网站有两个，都属于开源系统制作，老网站由国内开源系统帝国CMS制作，新网站由Wordpress制作。但是我们两个网站都没有完善的支付体系，货物管理体系，不算是一个合格的独立站。可以理解为仅仅为一个产品展示行网站。</p>
+<h5 id="111-1-3个站">1.1.1 1-3个站</h5>
+<p>品牌化经营之道，经营的是产品，重视用户体验，营销漏斗构建，品牌力强。</p>
+<h5 id="112-100个站">1.1.2 100个站</h5>
+<p>延续平台多账户打法，经营的是流量，轻用户体验，迅速起量，收入可观，打法灵活。</p>
+<h5 id="113-建站最佳做法">1.1.3 建站最佳做法</h5>
+<ul>
+<li>商品信息成熟度：1.商品评分与评价，2.商品库存状况，3.配送选项，4.预计送达日期，时间</li>
+<li>知识库有效性：1.本地语言，2.易于浏览，3.内容实用</li>
+<li>购物流程顺畅度：1.提供优先付款方式，2.优化移动结账流程，3.提供优先付款方式，增强安全防护。</li>
+<li>配送流程完整度：1.加急配送选项，2.免费配送，3.简便退货流程，4.物流跟踪信息与状态更新</li>
+<li>客户收获满意度：1.按照确认的日期交货，2.货物状态良好，3.准确履单，4.免费退货，5.主动提供退货通知</li>
+<li>客户服务有效度：1.提供客户偏好的客服渠道，2.以本地语言提供高质量支持，3.客户咨询需求能顺利满足，4.及时支持，5.就发生的问题积极主</li>
+</ul>
+<h4 id="12-支付">1.2 支付</h4>
+<p>支付就是客户可以直接从我们网站进行下单处理，主要收款有Paypal收款（更安全便捷），信用卡收款。具体如何支付，还需要与公司协商开户。</p>
+<h4 id="13-营销">1.3 营销</h4>
+<p>这里的营销分为自然流量与付费流量，我们老网站经过多年的积累，已经有了一定的自然流量，正常情况我们需要对我们新老网站进行SEO处理，目前我们是没有人做的。付费流量，我们目前做的只有一种途径，Google Ads，后面我会分析今天学到的新的营销方法。</p>
+<h5 id="131-facebook推广">1.3.1 Facebook推广</h5>
+<p>Facebook应用是全球最大的社交平台，有28亿活跃用户，真实用户身份是Facebook应用产品和服务的核心。</p>
+<p>人找产品转化为产品找人，先客户一步发现他们的需求，同时捕捉已出现的购物意向，不仅只展现客户正在寻找的产品，而会展现能取悦客户的产品。</p>
+<p>依靠受众的好友关系网，网红和专业人士，打通营销渠道，让他们认识你的品牌，通过数据信号了解客户，为他们打造更具个性化，相关性和信息全面的购物体验。</p>
+<p>无缝购买，保证用户发现的所有商品均可立即购买，整合所有平台，做到无缝链接，确保不会中途弃购。</p>
+<h5 id="132-snapchat">1.3.2 Snapchat</h5>
+<p>3.06亿日活，5亿月活用户，每天产生的Snaps 5B，应用遍布全球，核心市场北美，欧洲，中东等区域。Snapchat热衷网购，越来越多人使用手机和AR互动功能，%84使用手机浏览了线上零售店，移动电子商务的增长是传统电子商务的1.4倍，3.06亿日活跃用户中，%75每天都玩AR。18岁以上年轻人受众率高达80%，其中美国，英国，法国，加拿大，沙特和荷兰覆盖率超过2/3。</p>
+<p>但是个人认为这个应用以潮流，年轻，阅后即焚为特点，并不适合我们产品。</p>
+<h5 id="133-google-ads">1.3.3 Google Ads</h5>
+<p>全球第一大搜索引擎</p>
+<h5 id="134-bing-ads">1.3.4 Bing Ads</h5>
+<p>全球第二大搜索引擎</p>
+<h5 id="135-tiktok">1.3.5 TikTok</h5>
+<p>目前靠谱的玩法有Tiktok for Business和Tiktok Shopping，他们可以对外广告到独立站（Shopify）。经过测试，目前盈利的只有：</p>
+<ul>
+<li>美妆：1.美瞳，2.美甲，3.卷发棒，4.眼影。</li>
+<li>女装：1.cos服饰，2.首饰，3.比基尼</li>
+<li>其他品类：家居用品，3C个别小类目。</li>
+</ul>
+<h4 id="14-独立站终极目标">1.4 独立站终极目标</h4>
+<p>自然流量和复购，让客户为品牌溢价买单</p>
+<h3 id="2电商岗位的搭建">2.电商岗位的搭建</h3>
+<h4 id="21-选品">2.1 选品</h4>
+<p>以用户为中心，传递产品价值。工具有谷歌趋势，商机洞察，关键字规划师，消费者行为晴雨表等。</p>
+<h4 id="22-美工">2.2 美工</h4>
+<p>以客户体验为中心，制作符合客户页面。用户特征，行为，喜好，为品牌建立活动和板块。打磨用户体验，关注留存和用户忠诚度。</p>
+<h4 id="23-投放">2.3 投放</h4>
+<ul>
+<li>商业目标：公司顶层策略目标：1.增加营收，2.增加利润，3.增加市场份额，4.增加品牌力</li>
+<li>营销目标：公司层面制定用以支撑商业目标：1.建立认知，2.影响考虑度，3.刺激购买，4.提升忠诚度</li>
+<li>媒体目标：选择不同的媒体渠道配合达成营销目标：1.利用展示网络触达新客户，2.使用Youtube增加互动，3.购物广告提升购买。</li>
+<li>广告目标：个人层面的指标用来衡量广告成效：1.达到x%展示份额，2.正向广告回报率</li>
+<li>消费者人口特征，行为特征，喜好，广泛，精确，广泛扩展</li>
+</ul>
+<h4 id="24-客服">2.4 客服</h4>
+<p>在线服务，实时为客户解决答疑，提高用户体验</p>
+<h4 id="25-研发">2.5 研发</h4>
+<p>时刻把握市场最新动向，研发符合客户需求产品。</p>
+<h4 id="26-供应链">2.6 供应链</h4>
+<p>必须保证货物充充足，满足客户需求。</p>
+<h4 id="27-精细化运营团队的构成">2.7 精细化运营团队的构成</h4>
+<ul>
+<li>项目筹备期：1.选品团队，市场策略团队，网站技术团队</li>
+<li>项目推进期：内容创意团队，社群运营团队，UIUX设计团队</li>
+<li>项目发展期：流量投放团队，PR品宣团队，数据分析团队</li>
+</ul>
+<h3 id="3如何做好独立站">3.如何做好独立站</h3>
+<h4 id="1统一思想">(1)统一思想</h4>
+<p>组织裂变为小的“公司”独立核算自负亏盈，带动员工参与企业经营，培养人人都是经营者意识。</p>
+<h4 id="2工作效率">(2)工作效率</h4>
+<p>目标一致，结果导向，跨岗位之间协作高效，工作积极性高，敢于创新。</p>
+<h4 id="3参与经营">(3)参与经营</h4>
+<p>企业与员工利益保持一致，决策统一高效，人员配置合理</p>
+<h4 id="4培养人才">(4)培养人才</h4>
+<p>通过组织和经营理念粹炼出一批人才<br>
+避免信息闭塞，各自为营，效率低下，决策复杂，组织臃肿</p>
+<h3 id="4个人思考">4.个人思考</h3>
+<p>未来的30年到50年，都是跨境电商的机遇。2020年上半年，全国新增跨境电商企业2356家，其中6月份单月注册量最高，达到了637家。预计2023年，跨境电商在全球零售电商中占比将达到60%。</p>
+<p>本次峰会主要在分享独立站，供应链的重要性，以及推广方式，作为传感器制造厂家，有一个属于自己品牌的独立站至关重要。</p>
+<p>我们目前的网站有两个，完全不符合各项独立站指标，我觉得有必要使用shopify制作一个独立站。</p>
+<p>但是独立站并不是一个人可以完成的，它需要一个团队共同维护，并且品牌独立站从发展期到稳定期，是需要一个长期的过程，这个期间肯定会有大量人力，资金投入，这个就需要企业的支持。<br>
+<img src="https://zmrw.github.io/post-images/1639988849291.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+</feed>

@@ -1,0 +1,214 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>wordpress更新主题插件需要提供ftp信息 | 追梦人物</title>
+<link rel="shortcut icon" href="https://zmrw.github.io/favicon.ico?v=1711418573538">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://zmrw.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="wordpress更新主题插件需要提供ftp信息 | 追梦人物 - Atom Feed" href="https://zmrw.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="第一次在ubuntu安装wordpress,更新主题时，提示
+
+To perform the requested action, WordPress needs to access your web server. Please enter..." />
+    <meta name="keywords" content="Wordpress" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://zmrw.github.io">
+  <img class="avatar" src="https://zmrw.github.io/images/avatar.png?v=1711418573538" alt="">
+  </a>
+  <h1 class="site-title">
+    追梦人物
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="https://zmrw.github.io/post/wo-de-xiang-mu" class="menu">
+          我的项目
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              wordpress更新主题插件需要提供ftp信息
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-12-14
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://zmrw.github.io/tag/F0VoFcSNT/" class="post-tag">
+                  # Wordpress
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>第一次在ubuntu安装wordpress,更新主题时，提示</p>
+<blockquote>
+<p>To perform the requested action, WordPress needs to access your web server. Please enter your FTP credentials to proceed. If you do not remember your credentials, you should contact your web host.</p>
+</blockquote>
+<p>原因是php-fpm的用户并没有wordpress解压目录的写权限</p>
+<h2 id="1查看php-fpm的用户是谁">1.查看php-fpm的用户是谁</h2>
+<pre><code class="language-bash">ps -ef | grep &quot;php-fpm&quot;
+</code></pre>
+<p>结果如下：</p>
+<pre><code class="language-bash">root@ubuntu:/home/lnmp1.8# ps -ef | grep &quot;php-fpm&quot;
+root      3848     1  0 09:49 ?        00:00:00 php-fpm: master process (/usr/local/php/etc/php-fpm.conf)
+www       3850  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3851  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3852  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3853  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3854  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3855  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3856  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3857  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3858  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3859  3848  0 09:49 ?        00:00:00 php-fpm: pool www
+www       3891  3848  0 09:50 ?        00:00:00 php-fpm: pool www
+root      3949 18961  0 09:56 pts/2    00:00:00 grep --color=auto php-fpm
+</code></pre>
+<p>这里用户为www</p>
+<h2 id="2修改wordpress解压所在的目录权限">2.修改wordpress解压所在的目录权限</h2>
+<pre><code class="language-bash">sudo chown -R www /home/wordpress/wordpress.keinder.nl
+</code></pre>
+<p>sudo chown -R www 加上部署路径<br>
+重新更新主题，插件即可</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1%E6%9F%A5%E7%9C%8Bphp-fpm%E7%9A%84%E7%94%A8%E6%88%B7%E6%98%AF%E8%B0%81">1.查看php-fpm的用户是谁</a></li>
+<li><a href="#2%E4%BF%AE%E6%94%B9wordpress%E8%A7%A3%E5%8E%8B%E6%89%80%E5%9C%A8%E7%9A%84%E7%9B%AE%E5%BD%95%E6%9D%83%E9%99%90">2.修改wordpress解压所在的目录权限</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://zmrw.github.io/post/django-ti-jiao-biao-dan-huo-qu-ti-jiao-ye-mian-url/">
+              <h3 class="post-title">
+                Django提交表单，获取提交页面url
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://zmrw.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

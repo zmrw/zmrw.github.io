@@ -1,0 +1,317 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>本地初始化一个django项目 | 追梦人物</title>
+<link rel="shortcut icon" href="https://zmrw.github.io/favicon.ico?v=1711418573538">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://zmrw.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="本地初始化一个django项目 | 追梦人物 - Atom Feed" href="https://zmrw.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="一.配置虚拟环境
+1.打开cmd，新建文件夹，并进入该文件夹
+F:\&gt;mkdir DjangoWeb
+F:\&gt;cd DjangoWeb
+F:\DjangoWeb&gt;
+
+2.配置venv的命令，其中的env为虚拟环境的放置目录..." />
+    <meta name="keywords" content="Python,Django" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://zmrw.github.io">
+  <img class="avatar" src="https://zmrw.github.io/images/avatar.png?v=1711418573538" alt="">
+  </a>
+  <h1 class="site-title">
+    追梦人物
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="https://zmrw.github.io/post/wo-de-xiang-mu" class="menu">
+          我的项目
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              本地初始化一个django项目
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-12-09
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://zmrw.github.io/tag/t8DfkWnYM/" class="post-tag">
+                  # Python
+                </a>
+              
+                <a href="https://zmrw.github.io/tag/7WQ6WUx3R/" class="post-tag">
+                  # Django
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h2 id="一配置虚拟环境">一.配置虚拟环境</h2>
+<h3 id="1打开cmd新建文件夹并进入该文件夹">1.打开cmd，新建文件夹，并进入该文件夹</h3>
+<pre><code class="language-bash">F:\&gt;mkdir DjangoWeb
+F:\&gt;cd DjangoWeb
+F:\DjangoWeb&gt;
+</code></pre>
+<h3 id="2配置venv的命令其中的env为虚拟环境的放置目录">2.配置venv的命令，其中的env为虚拟环境的放置目录</h3>
+<pre><code class="language-bash">F:\DjangoWeb&gt;python -m venv env
+</code></pre>
+<h3 id="3输入envscriptsactivatebat即可进入虚拟环境">3.输入env\Scripts\activate.bat，即可进入虚拟环境</h3>
+<pre><code class="language-bash">F:\DjangoWeb&gt;env\Scripts\activate.bat
+(env) F:\DjangoWeb&gt;
+</code></pre>
+<h2 id="二安装django">二.安装Django</h2>
+<pre><code class="language-bash">pip install django==2.2
+</code></pre>
+<h2 id="三创建django项目">三.创建Django项目</h2>
+<pre><code class="language-bash">django-admin startproject blog
+</code></pre>
+<h2 id="四运行django服务器">四.运行Django服务器</h2>
+<pre><code class="language-bash">(env) F:\DjangoWeb&gt;cd blog
+
+(env) F:\DjangoWeb\blog&gt;python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+October 21, 2020 - 19:32:43
+Django version 2.2, using settings 'blog.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+</code></pre>
+<p>系统打印出这些信息，说明服务器启动成功了</p>
+<h2 id="五使用mysql作为数据库">五.使用mysql作为数据库</h2>
+<h3 id="1-安装mysql">1. 安装mysql</h3>
+<pre><code class="language-bash">(env) F:\DjangoWeb\blog&gt;pip install mysqlclient
+</code></pre>
+<h3 id="2在settingspy修改默认数据库为mysql">2.在settings.py修改默认数据库为mysql</h3>
+<pre><code class="language-python">DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
+        'NAME': 'name',  # 数据库名，先前创建的
+        'USER': 'root',  # 用户名，可以自己创建用户
+        'PASSWORD': 'root',  # 密码
+        'HOST': '127.0.0.1',  # mysql服务所在的主机ip
+        'PORT': '3306',  # mysql服务端口
+    }
+}
+</code></pre>
+<h3 id="3在settingspy设置成中文以及中国时区">3.在settings.py设置成中文，以及中国时区</h3>
+<pre><code class="language-python"># 把英文改为中文
+LANGUAGE_CODE = 'zh-hans'
+ 
+# 把国际时区改为中国时区
+TIME_ZONE = 'Asia/Shanghai'
+ 
+USE_I18N = True
+ 
+USE_L10N = True
+ 
+USE_TZ = False
+</code></pre>
+<h3 id="4在settingspy里设置static_url和media">4.在settings.py里设置STATIC_URL和MEDIA</h3>
+<pre><code class="language-python">STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, &quot;static&quot;), ]
+ 
+# specify media root for user uploaded files,
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+</code></pre>
+<h3 id="5在settingspy配置模板路径">5.在settings.py配置模板路径</h3>
+<pre><code class="language-python">TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+</code></pre>
+<h3 id="6在urlspy配置静态文件路径">6.在urls.py配置静态文件路径</h3>
+<pre><code class="language-python">from django.conf.urls.static import static
+from django.conf import settings
+ 
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+</code></pre>
+<h3 id="7重新启动">7.重新启动</h3>
+<pre><code class="language-bash">October 21, 2020 - 23:35:37
+Django version 2.2, using settings 'blog.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+</code></pre>
+<p>系统打印出这些信息，说明服务器启动成功了</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%80%E9%85%8D%E7%BD%AE%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83">一.配置虚拟环境</a>
+<ul>
+<li><a href="#1%E6%89%93%E5%BC%80cmd%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%B9%B6%E8%BF%9B%E5%85%A5%E8%AF%A5%E6%96%87%E4%BB%B6%E5%A4%B9">1.打开cmd，新建文件夹，并进入该文件夹</a></li>
+<li><a href="#2%E9%85%8D%E7%BD%AEvenv%E7%9A%84%E5%91%BD%E4%BB%A4%E5%85%B6%E4%B8%AD%E7%9A%84env%E4%B8%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%94%BE%E7%BD%AE%E7%9B%AE%E5%BD%95">2.配置venv的命令，其中的env为虚拟环境的放置目录</a></li>
+<li><a href="#3%E8%BE%93%E5%85%A5envscriptsactivatebat%E5%8D%B3%E5%8F%AF%E8%BF%9B%E5%85%A5%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83">3.输入env\Scripts\activate.bat，即可进入虚拟环境</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C%E5%AE%89%E8%A3%85django">二.安装Django</a></li>
+<li><a href="#%E4%B8%89%E5%88%9B%E5%BB%BAdjango%E9%A1%B9%E7%9B%AE">三.创建Django项目</a></li>
+<li><a href="#%E5%9B%9B%E8%BF%90%E8%A1%8Cdjango%E6%9C%8D%E5%8A%A1%E5%99%A8">四.运行Django服务器</a></li>
+<li><a href="#%E4%BA%94%E4%BD%BF%E7%94%A8mysql%E4%BD%9C%E4%B8%BA%E6%95%B0%E6%8D%AE%E5%BA%93">五.使用mysql作为数据库</a>
+<ul>
+<li><a href="#1-%E5%AE%89%E8%A3%85mysql">1. 安装mysql</a></li>
+<li><a href="#2%E5%9C%A8settingspy%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%BAmysql">2.在settings.py修改默认数据库为mysql</a></li>
+<li><a href="#3%E5%9C%A8settingspy%E8%AE%BE%E7%BD%AE%E6%88%90%E4%B8%AD%E6%96%87%E4%BB%A5%E5%8F%8A%E4%B8%AD%E5%9B%BD%E6%97%B6%E5%8C%BA">3.在settings.py设置成中文，以及中国时区</a></li>
+<li><a href="#4%E5%9C%A8settingspy%E9%87%8C%E8%AE%BE%E7%BD%AEstatic_url%E5%92%8Cmedia">4.在settings.py里设置STATIC_URL和MEDIA</a></li>
+<li><a href="#5%E5%9C%A8settingspy%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%9D%BF%E8%B7%AF%E5%BE%84">5.在settings.py配置模板路径</a></li>
+<li><a href="#6%E5%9C%A8urlspy%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84">6.在urls.py配置静态文件路径</a></li>
+<li><a href="#7%E9%87%8D%E6%96%B0%E5%90%AF%E5%8A%A8">7.重新启动</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://zmrw.github.io/post/django-chang-yong-ming-ling/">
+              <h3 class="post-title">
+                Django常用命令
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://zmrw.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

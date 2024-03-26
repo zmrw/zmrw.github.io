@@ -1,0 +1,221 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>digitalocean创建16.04版本水滴 | 追梦人物</title>
+<link rel="shortcut icon" href="https://zmrw.github.io/favicon.ico?v=1711418573538">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://zmrw.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="digitalocean创建16.04版本水滴 | 追梦人物 - Atom Feed" href="https://zmrw.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="因为程序只能在ubuntu16.04上运行，但是digitalocean停止该镜像，创建不成功
+data = {
+    &quot;name&quot;: &quot;ceshi&quot;,
+    &quot;region&quot;..." />
+    <meta name="keywords" content="Ubuntu" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://zmrw.github.io">
+  <img class="avatar" src="https://zmrw.github.io/images/avatar.png?v=1711418573538" alt="">
+  </a>
+  <h1 class="site-title">
+    追梦人物
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="https://zmrw.github.io/post/wo-de-xiang-mu" class="menu">
+          我的项目
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              digitalocean创建16.04版本水滴
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-12-09
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://zmrw.github.io/tag/F-yxl5uXn/" class="post-tag">
+                  # Ubuntu
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>因为程序只能在ubuntu16.04上运行，但是digitalocean停止该镜像，创建不成功</p>
+<pre><code class="language-python">data = {
+    &quot;name&quot;: &quot;ceshi&quot;,
+    &quot;region&quot;: &quot;nyc3&quot;,
+    &quot;size&quot;: &quot;s-1vcpu-2gb&quot;,
+    &quot;image&quot;: &quot;ubuntu-16-04-x64&quot;,
+}
+b = requests.post(url='https://api.digitalocean.com/v2/droplets', data=json.dumps(data), headers=headers)
+print(b.text)
+# {&quot;id&quot;:&quot;unprocessable_entity&quot;,&quot;message&quot;:&quot;You specified an invalid image for Droplet creation.&quot;}
+</code></pre>
+<p>给他们技术发送邮件，可以通过自建镜像创建</p>
+<h3 id="方法链接">方法链接</h3>
+<pre><code class="language-python">https://docs.digitalocean.com/products/images/custom-images/how-to/
+</code></pre>
+<h3 id="镜像下载">镜像下载</h3>
+<pre><code class="language-python">https://cloud-images.ubuntu.com/releases/xenial/release/
+</code></pre>
+<p><em><strong>注意：digitalocean不支持iso，需要下载img格式</strong></em></p>
+<p>镜像创建好申请vps就可以选择自己的镜像，但是只能通过密钥方式来申请，通过密钥来登录十分不习惯，因此我们只能申请后在进行修改</p>
+<h3 id="设置root账户密码">设置root账户密码</h3>
+<pre><code class="language-python">sudo passwd root
+</code></pre>
+<h3 id="修改sshd_config">修改sshd_config</h3>
+<pre><code class="language-python">vi /etc/ssh/sshd_config
+</code></pre>
+<h3 id="重启sshd">重启sshd</h3>
+<pre><code class="language-python">service sshd restart
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E6%96%B9%E6%B3%95%E9%93%BE%E6%8E%A5">方法链接</a></li>
+<li><a href="#%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD">镜像下载</a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AEroot%E8%B4%A6%E6%88%B7%E5%AF%86%E7%A0%81">设置root账户密码</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9sshd_config">修改sshd_config</a></li>
+<li><a href="#%E9%87%8D%E5%90%AFsshd">重启sshd</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://zmrw.github.io/post/python-requests-mo-kuai-shi-yong-dai-li/">
+              <h3 class="post-title">
+                Python requests模块使用代理
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://zmrw.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

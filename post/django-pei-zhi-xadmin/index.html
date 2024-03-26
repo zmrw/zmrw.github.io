@@ -1,0 +1,257 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Django 配置xadmin | 追梦人物</title>
+<link rel="shortcut icon" href="https://zmrw.github.io/favicon.ico?v=1711418573538">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://zmrw.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Django 配置xadmin | 追梦人物 - Atom Feed" href="https://zmrw.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="1.安装xamin
+pip install https://codeload.github.com/sshwsfc/xadmin/zip/django2
+
+2.将xadmin app 添加到setthing中
+'xadmin',
+'cris..." />
+    <meta name="keywords" content="Django" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://zmrw.github.io">
+  <img class="avatar" src="https://zmrw.github.io/images/avatar.png?v=1711418573538" alt="">
+  </a>
+  <h1 class="site-title">
+    追梦人物
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="https://zmrw.github.io/post/wo-de-xiang-mu" class="menu">
+          我的项目
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Django 配置xadmin
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-12-14
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+                <a href="https://zmrw.github.io/tag/7WQ6WUx3R/" class="post-tag">
+                  # Django
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h3 id="1安装xamin">1.安装xamin</h3>
+<pre><code class="language-python">pip install https://codeload.github.com/sshwsfc/xadmin/zip/django2
+</code></pre>
+<h3 id="2将xadmin-app-添加到setthing中">2.将xadmin app 添加到setthing中</h3>
+<pre><code class="language-python">'xadmin',
+'crispy_forms',
+'reversion',
+</code></pre>
+<h3 id="3执行python-managepy-migrate">3.执行python manage.py migrate</h3>
+<pre><code class="language-python">python manage.py migrate
+</code></pre>
+<p>我使用的是django2.2,这里会报错</p>
+<pre><code class="language-python">Traceback (most recent call last):
+  File &quot;manage.py&quot;, line 21, in &lt;module&gt;
+    main()
+  File &quot;manage.py&quot;, line 17, in main
+    execute_from_command_line(sys.argv)
+  File &quot;F:\djangoweb\env\lib\site-packages\django\core\management\__init__.py&quot;, line 381, in execute_from_command_line
+    utility.execute()
+  File &quot;F:\djangoweb\env\lib\site-packages\django\core\management\__init__.py&quot;, line 357, in execute
+    django.setup()
+  File &quot;F:\djangoweb\env\lib\site-packages\django\__init__.py&quot;, line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File &quot;F:\djangoweb\env\lib\site-packages\django\apps\registry.py&quot;, line 122, in populate
+    app_config.ready()
+  File &quot;F:\djangoweb\env\lib\site-packages\xadmin\apps.py&quot;, line 14, in ready
+    self.module.autodiscover()
+  File &quot;F:\djangoweb\env\lib\site-packages\xadmin\__init__.py&quot;, line 49, in autodiscover
+    register_builtin_plugins(site)
+  File &quot;F:\djangoweb\env\lib\site-packages\xadmin\plugins\__init__.py&quot;, line 41, in register_builtin_plugins
+    [import_module('xadmin.plugins.%s' % plugin) for plugin in PLUGINS if plugin not in exclude_plugins]
+  File &quot;F:\djangoweb\env\lib\site-packages\xadmin\plugins\__init__.py&quot;, line 41, in &lt;listcomp&gt;
+    [import_module('xadmin.plugins.%s' % plugin) for plugin in PLUGINS if plugin not in exclude_plugins]
+  File &quot;C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\importlib\__init__.py&quot;, line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1014, in _gcd_import
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 991, in _find_and_load
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 975, in _find_and_load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 671, in _load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap_external&gt;&quot;, line 848, in exec_module
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 219, in _call_with_frames_removed
+  File &quot;F:\djangoweb\env\lib\site-packages\xadmin\plugins\importexport.py&quot;, line 48, in &lt;module&gt;
+    from import_export.admin import DEFAULT_FORMATS, SKIP_ADMIN_LOG, TMP_STORAGE_CLASS
+ImportError: cannot import name 'SKIP_ADMIN_LOG' from 'import_export.admin' (F:\djangoweb\env\lib\site-packages\import_export\admin.py)
+
+</code></pre>
+<p>百度查找之后可以使用这个方法解决（<a href="https://blog.csdn.net/weixin_40459875/article/details/112412145" title="python报错 ImportError: cannot import name ‘SKIP_ADMIN_LOG‘ from ‘import_export.admin">python报错 ImportError: cannot import name ‘SKIP_ADMIN_LOG‘ from ‘import_export.admin</a>）<br>
+但是水平有限，看的云里雾里，只能继续查找，最终使用如下方法</p>
+<h3 id="1注释报错48行代码">1.注释报错48行代码</h3>
+<pre><code class="language-python">from import_export.admin import DEFAULT_FORMATS, SKIP_ADMIN_LOG, TMP_STORAGE_CLASS
+</code></pre>
+<h3 id="2添加如下代码">2.添加如下代码</h3>
+<pre><code class="language-python">from import_export.admin import DEFAULT_FORMATS,ImportMixin
+</code></pre>
+<p><strong>参考链接（<a href="https://blog.csdn.net/qq_42092076/article/details/114787517?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-1.control" title="django xadmin的安装及出错的解决方法">django xadmin的安装及出错的解决方法</a>）</strong></p>
+<h3 id="3配置url即可">3.配置url即可</h3>
+<pre><code class="language-python">path('xadmin/', xadmin.site.urls),
+</code></pre>
+<p>将xadmin部署至服务器时，发现没有样式，执行</p>
+<pre><code class="language-python">python3 manage.py collectstatic
+</code></pre>
+<p>重启服务器，即可</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1%E5%AE%89%E8%A3%85xamin">1.安装xamin</a></li>
+<li><a href="#2%E5%B0%86xadmin-app-%E6%B7%BB%E5%8A%A0%E5%88%B0setthing%E4%B8%AD">2.将xadmin app 添加到setthing中</a></li>
+<li><a href="#3%E6%89%A7%E8%A1%8Cpython-managepy-migrate">3.执行python manage.py migrate</a></li>
+<li><a href="#1%E6%B3%A8%E9%87%8A%E6%8A%A5%E9%94%9948%E8%A1%8C%E4%BB%A3%E7%A0%81">1.注释报错48行代码</a></li>
+<li><a href="#2%E6%B7%BB%E5%8A%A0%E5%A6%82%E4%B8%8B%E4%BB%A3%E7%A0%81">2.添加如下代码</a></li>
+<li><a href="#3%E9%85%8D%E7%BD%AEurl%E5%8D%B3%E5%8F%AF">3.配置url即可</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://zmrw.github.io/post/django-xadmin-zhong-guan-lian-shu-ju-de-xian-shi-fang-shi-pei-zhi/">
+              <h3 class="post-title">
+                Django Xadmin中关联数据的显示方式配置
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://zmrw.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
